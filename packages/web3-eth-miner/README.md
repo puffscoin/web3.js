@@ -17,7 +17,7 @@ npm install web3-eth-miner
 import {Miner} from 'web3-eth-miner';
 
 const miner = new Miner(
-    'http://127.0.0.1:8546',
+    'http://127.0.0.1:11364',
     null,
     options
 );
