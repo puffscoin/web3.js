@@ -31,7 +31,7 @@ const options = {
         }
     ]
 };
-const provider = new HttpProvider('http://localhost:8545', options);
+const provider = new HttpProvider('http://localhost:11363', options);
 const providerResolver = new ProviderResolver();
 
 // $ExpectType provider
