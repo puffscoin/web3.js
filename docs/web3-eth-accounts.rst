@@ -192,7 +192,7 @@ Example
         gas: 2000000,
         gasPrice: '234567897654321',
         nonce: 0,
-        chainId: 1
+        chainId: 420
     }, '0x4c0883a69102937d6231471b5dbb6204fe5129617082792ae468d01a3f362318')
     .then(console.log);
     > {
