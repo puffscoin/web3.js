@@ -18,7 +18,7 @@
  */
 import {Accounts} from 'web3-eth-accounts';
 
-const accounts = new Accounts('http://localhost:8545');
+const accounts = new Accounts('http://localhost:11363');
 
 // $ExpectType Account
 accounts.create();
