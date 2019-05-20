@@ -22,7 +22,7 @@ import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
 import {AbstractWeb3Module} from 'web3-core';
 
-const abstractWeb3Module = new AbstractWeb3Module('http://localhost:8545');
+const abstractWeb3Module = new AbstractWeb3Module('http://localhost:11363');
 const abstractMethod = new AbstractMethod('rpc_method', 1, Utils, formatters, abstractWeb3Module);
 
 // $ExpectType Utils
