@@ -23,7 +23,7 @@
 import {AbstractWeb3Module} from 'web3-core';
 import {HttpProvider} from 'web3-providers';
 
-const httpProvider = new HttpProvider('http://localhost:8545', {
+const httpProvider = new HttpProvider('http://localhost:11363', {
     timeout: 20000,
     headers: [
         {
