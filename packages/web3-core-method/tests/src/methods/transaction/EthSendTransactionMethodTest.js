@@ -103,7 +103,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         const mappedTransaction = {
@@ -111,7 +111,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         formatters.inputTransactionFormatter.mockReturnValueOnce(mappedTransaction);
@@ -146,7 +146,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         const mappedTransaction = {
@@ -154,7 +154,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         formatters.inputTransactionFormatter.mockReturnValueOnce(mappedTransaction);
@@ -184,7 +184,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         method.parameters = [transaction];
@@ -194,7 +194,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         formatters.inputTransactionFormatter.mockReturnValueOnce(mappedTransaction);
@@ -229,7 +229,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         const mappedTransaction = {
@@ -237,7 +237,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         formatters.inputTransactionFormatter.mockReturnValueOnce(mappedTransaction);
@@ -295,7 +295,7 @@ describe('EthSendTransactionMethodTest', () => {
                     gas: 1,
                     gasPrice: 1,
                     nonce: 1,
-                    chainId: 1,
+                    chainId: 420,
                     to: '0x',
                     data: '0x',
                     value: '0x'
@@ -331,7 +331,7 @@ describe('EthSendTransactionMethodTest', () => {
             from: 0,
             gas: 1,
             gasPrice: 1,
-            chainId: 1,
+            chainId: 420,
             nonce: false
         };
 
@@ -344,7 +344,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: false,
-            chainId: 1
+            chainId: 420
         };
 
         formatters.inputTransactionFormatter.mockReturnValueOnce(mappedTransaction);
@@ -359,7 +359,7 @@ describe('EthSendTransactionMethodTest', () => {
                     gas: 1,
                     gasPrice: 1,
                     nonce: 1,
-                    chainId: 1,
+                    chainId: 420,
                     to: '0x',
                     data: '0x',
                     value: '0x'
@@ -396,7 +396,7 @@ describe('EthSendTransactionMethodTest', () => {
             from: 0,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         method.parameters = [transaction];
@@ -406,7 +406,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 10,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         Utils.numberToHex.mockReturnValueOnce(1);
@@ -423,7 +423,7 @@ describe('EthSendTransactionMethodTest', () => {
                     gas: 10,
                     gasPrice: 1,
                     nonce: 1,
-                    chainId: 1,
+                    chainId: 420,
                     to: '0x',
                     data: '0x',
                     value: '0x'
@@ -456,7 +456,7 @@ describe('EthSendTransactionMethodTest', () => {
             from: 0,
             gas: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         method.parameters = [transaction];
@@ -466,7 +466,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 10,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         Utils.numberToHex.mockReturnValueOnce(1);
@@ -483,7 +483,7 @@ describe('EthSendTransactionMethodTest', () => {
                     gas: 1,
                     gasPrice: 10,
                     nonce: 1,
-                    chainId: 1,
+                    chainId: 420,
                     to: '0x',
                     data: '0x',
                     value: '0x'
@@ -517,7 +517,7 @@ describe('EthSendTransactionMethodTest', () => {
             from: 0,
             gas: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         method.parameters = [transaction];
@@ -527,7 +527,7 @@ describe('EthSendTransactionMethodTest', () => {
             gas: 1,
             gasPrice: 10,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         Utils.numberToHex.mockReturnValueOnce(1);
@@ -544,7 +544,7 @@ describe('EthSendTransactionMethodTest', () => {
                     gas: 1,
                     gasPrice: 10,
                     nonce: 1,
-                    chainId: 1,
+                    chainId: 420,
                     to: '0x',
                     data: '0x',
                     value: '0x'
@@ -573,7 +573,7 @@ describe('EthSendTransactionMethodTest', () => {
             from: 0,
             gas: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         method.parameters = [transaction];
@@ -592,7 +592,7 @@ describe('EthSendTransactionMethodTest', () => {
                 gas: 1,
                 gasPrice: 1,
                 nonce: 1,
-                chainId: 1
+                chainId: 420
             }
         ];
 
