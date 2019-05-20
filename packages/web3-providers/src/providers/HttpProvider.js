@@ -33,7 +33,7 @@ export default class HttpProvider {
      *
      * @constructor
      */
-    constructor(host = 'http://localhost:8545', options = {}, providersModuleFactory) {
+    constructor(host = 'http://localhost:11363', options = {}, providersModuleFactory) {
         this.host = host;
         this.timeout = options.timeout || 0;
         this.headers = options.headers;
