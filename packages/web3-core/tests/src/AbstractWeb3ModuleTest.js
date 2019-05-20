@@ -14,7 +14,7 @@ describe('AbstractWeb3ModuleTest', () => {
         });
 
         abstractWeb3Module = new AbstractWeb3Module(
-            'http://localhost:8545',
+            'http://localhost:11363',
             {
                 defaultAccount: '0x03c9a938ff7f54090d0d99e2c6f80380510ea078',
                 defaultBlock: 'latest',
@@ -43,7 +43,7 @@ describe('AbstractWeb3ModuleTest', () => {
 
         expect(abstractWeb3Module.BatchRequest).toBeInstanceOf(Function);
 
-        expect(abstractWeb3Module.currentProvider.host).toEqual('http://localhost:8545');
+        expect(abstractWeb3Module.currentProvider.host).toEqual('http://localhost:11363');
     });
 
     it('gets the BatchRequest property and it is of type BatchRequest', () => {
@@ -118,11 +118,11 @@ describe('AbstractWeb3ModuleTest', () => {
     });
 
     it('calls setProvider and returns false because of the equal host', () => {
-        expect(abstractWeb3Module.setProvider('http://localhost:8545')).toEqual(false);
+        expect(abstractWeb3Module.setProvider('http://localhost:11363')).toEqual(false);
     });
 
     it('calls setProvider and returns false because it is the same provider', () => {
-        expect(abstractWeb3Module.setProvider('http://localhost:8545')).toEqual(false);
+        expect(abstractWeb3Module.setProvider('http://localhost:11363')).toEqual(false);
     });
 
     it('calls isSameProvider without a currentProvider set and returns false', () => {
@@ -153,7 +153,7 @@ describe('AbstractWeb3ModuleTest', () => {
             constructor: {
                 name: 'HttpProvider'
             },
-            host: 'http://localhost:8545'
+            host: 'http://localhost:11363'
         };
 
         expect(abstractWeb3Module.isSameProvider(provider)).toEqual(true);
