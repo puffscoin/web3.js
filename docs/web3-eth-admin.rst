@@ -7,7 +7,7 @@ Admin Module
 ============
 
 
-The ``web3-eth-admin`` package allows you to interact with the Ethereum node's admin management.
+The ``web3-eth-admin`` package allows you to interact with the PUFFScoin node's admin management.
 
 
 .. code-block:: javascript
@@ -15,7 +15,7 @@ The ``web3-eth-admin`` package allows you to interact with the Ethereum node's a
     import Web3 from 'web3';
     import {Admin} from 'web3-eth-admin';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
+    // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const admin = new Admin(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
 
@@ -101,7 +101,7 @@ Example
 
     admin.getDataDirectory()
     .then(console.log);
-    > "/home/ubuntu/.ethereum"
+    > "/home/ubuntu/.puffscoin"
 
 
 ------------------------------------------------------------------------------
@@ -141,7 +141,7 @@ Returns
     - ``difficulty`` - ``number``:  Difficulty level applied during the nonce discovering of this block.
     - ``genesis`` - ``string``: Very first block hash.
     - ``head`` - ``string``: Current block hash.
-    - ``network`` - ``number``: currently used Ethereum networks ids.
+    - ``network`` - ``number``: currently used PUFFScoin networks ids.
 
 
 -------
