@@ -5,7 +5,7 @@
 Web3
 ====
 
-    The Web3 class is a wrapper to house all Ethereum related modules.
+    The Web3 class is a wrapper to house all PUFFScoin related modules.
 
 
 Initiating of Web3
@@ -28,7 +28,7 @@ Example
 
     import Web3 from 'web3';
 
-    // "Web3.givenProvider" will be set in a Ethereum supported browser.
+    // "Web3.givenProvider" will be set in a PUFFScoin supported browser.
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', net, options);
 
     > web3.eth
@@ -50,9 +50,9 @@ Returns
 -------
 
 ``Object``: A list of modules:
-    - ``Eth`` - ``Function``: the Eth module for interacting with the Ethereum network see :ref:`web3.eth <eth>` for more.
+    - ``Eth`` - ``Function``: the Eth module for interacting with the PUFFScoin network see :ref:`web3.eth <eth>` for more.
     - ``Net`` - ``Function``: the Net module for interacting with network properties see :ref:`web3.eth.net <eth-net>` for more.
-    - ``Personal`` - ``Function``: the Personal module for interacting with the Ethereum accounts see :ref:`web3.eth.personal <eth-personal>` for more.
+    - ``Personal`` - ``Function``: the Personal module for interacting with the PUFFScoin accounts see :ref:`web3.eth.personal <eth-personal>` for more.
     - ``Shh`` - ``Function``: the Shh module for interacting with the whisper protocol see :ref:`web3.shh <shh>` for more.
 
 -------
