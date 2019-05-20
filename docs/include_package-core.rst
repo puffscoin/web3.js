@@ -316,12 +316,12 @@ Example
 
     // Using the IPC provider in node.js
     const net = require('net');
-    const web3 = new Web3('/Users/myuser/Library/Ethereum/gpuffs.ipc', net); // mac os path
+    const web3 = new Web3('/Users/myuser/Library/Puffscoin/gpuffs.ipc', net); // mac os path
 
     // or
-    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/gpuffs.ipc', net)); // mac os path
+    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Puffscoin/gpuffs.ipc', net)); // mac os path
     // on windows the path is: '\\\\.\\pipe\\gpuffs.ipc'
-    // on linux the path is: '/users/myuser/.ethereum/gpuffs.ipc'
+    // on linux the path is: '/users/myuser/.puffscoin/gpuffs.ipc'
 
 ------------------------------------------------------------------------------
 
@@ -361,11 +361,11 @@ Example
     // Using the IPC provider in node.js
     const net = require('net');
 
-    const web3 = new Web3('/Users/myuser/Library/Ethereum/gpuffs.ipc', net); // mac os path
+    const web3 = new Web3('/Users/myuser/Library/Puffscoin/gpuffs.ipc', net); // mac os path
     // or
-    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/gpuffs.ipc', net)); // mac os path
+    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Puffscoin/gpuffs.ipc', net)); // mac os path
     // on windows the path is: '\\\\.\\pipe\\gpuffs.ipc'
-    // on linux the path is: '/users/myuser/.ethereum/gpuffs.ipc'
+    // on linux the path is: '/users/myuser/.puffscoin/gpuffs.ipc'
 
 ------------------------------------------------------------------------------
 
@@ -379,7 +379,7 @@ givenProvider
     web3.shh.givenProvider
     ...
 
-When using web3.js in an Ethereum compatible browser, it will set with the current native provider by that browser.
+When using web3.js in a PUFFScoin compatible browser, it will set with the current native provider by that browser.
 Will return the given provider by the (browser) environment, otherwise ``null``.
 
 
