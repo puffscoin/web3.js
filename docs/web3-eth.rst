@@ -6,7 +6,7 @@
 web3.eth
 ========
 
-The ``web3-eth`` package allows you to interact with an Ethereum blockchain itself and the deployed smart contracts.
+The ``web3-eth`` package allows you to interact with the PUFFScoin blockchain itself and the deployed smart contracts.
 
 
 .. code-block:: javascript
@@ -14,7 +14,7 @@ The ``web3-eth`` package allows you to interact with an Ethereum blockchain itse
     import Web3 from 'web3';
     import {Eth} from 'web3-eth';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
+    // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const eth = new Eth(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
 
@@ -28,7 +28,7 @@ The ``web3-eth`` package allows you to interact with an Ethereum blockchain itse
 Note on checksum addresses
 =============================
 
-All Ethereum addresses returned by functions of this package are returned as checksum addresses.
+All PUFFScoin addresses returned by functions of this package are returned as checksum addresses.
 This means some letters are uppercase and some are lowercase.
 Based on that it will calculate a checksum for the address and prove its correctness.
 Incorrect checksum addresses will throw an error when passed into functions.
@@ -129,7 +129,7 @@ getProtocolVersion
 
     web3.eth.getProtocolVersion([callback])
 
-Returns the Ethereum protocol version of the node.
+Returns the PUFFScoin protocol version of the node.
 
 -------
 Returns
@@ -1064,7 +1064,7 @@ Example
 
 .. code-block:: javascript
 
-    const Tx = require('ethereumjs-tx');
+    const Tx = require('puffscoinjs-tx');
     const privateKey = new Buffer('e331b6d69882b4cb4ea581d88e0b604039a3de5967688d3dcffdd2270c0fd109', 'hex')
 
     const rawTx = {
