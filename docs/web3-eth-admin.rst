@@ -16,7 +16,7 @@ The ``web3-eth-admin`` package allows you to interact with the Ethereum node's a
     import {Admin} from 'web3-eth-admin';
 
     // "Web3.givenProvider" will be set if in an Ethereum supported browser.
-    const admin = new Admin(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const admin = new Admin(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
 
 ------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ Example
 
 .. code-block:: javascript
 
-    admin.addPeer("enode://a979fb575495b8d6db44f750317d0f4622bf4c2aa3365d6af7c284339968eef29b69ad0dce72a4d8db5ebb4968de0e3bec910127f134779fbcb0cb6d3331163c@52.16.188.185:30303")
+    admin.addPeer("enode://a979fb575495b8d6db44f750317d0f4622bf4c2aa3365d6af7c284339968eef29b69ad0dce72a4d8db5ebb4968de0e3bec910127f134779fbcb0cb6d3331163c@52.16.188.185:31313")
     .then(console.log);
     > true
 
@@ -308,7 +308,7 @@ Parameters
 ----------
 
 1. ``host`` - ``String`` - (optional) The network interface to open the listener socket on (defaults to "localhost").
-2. ``port`` - ``number`` - (optional) The network port to open the listener socket on (defaults to 8545).
+2. ``port`` - ``number`` - (optional) The network port to open the listener socket on (defaults to 11363).
 3. ``cors`` - ``string`` - (optional) Cross-origin resource sharing header to use (defaults to "").
 4. ``apis`` - ``string`` -  (optional) API modules to offer over this interface (defaults to "eth,net,web3").
 5. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
@@ -327,7 +327,7 @@ Example
 
 .. code-block:: javascript
 
-    admin.startRPC("127.0.0.1", 8545)
+    admin.startRPC("127.0.0.1", 11363)
     .then(console.log('RPC Started!'));
     > "RPC Started!"
 
@@ -349,7 +349,7 @@ Parameters
 ----------
 
 1. ``host`` - ``String`` - (optional) The network interface to open the listener socket on (defaults to "localhost").
-2. ``port`` - ``number`` - (optional) The network port to open the listener socket on (defaults to 8545).
+2. ``port`` - ``number`` - (optional) The network port to open the listener socket on (defaults to 11363).
 3. ``cors`` - ``string`` - (optional) Cross-origin resource sharing header to use (defaults to "").
 4. ``apis`` - ``string`` -  (optional) API modules to offer over this interface (defaults to "eth,net,web3").
 5. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
