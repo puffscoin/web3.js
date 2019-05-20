@@ -8,7 +8,7 @@ web3.shh
 
 
 The ``web3-shh`` package allows you to interact with the whisper protocol for broadcasting.
-For more see `Whisper  Overview <https://github.com/ethereum/go-ethereum/wiki/Whisper>`_.
+For more see `Whisper  Overview <http://puffscoin.leafycauldronapothecary.com/services/whisper/>`_.
 
 
 .. code-block:: javascript
@@ -16,7 +16,7 @@ For more see `Whisper  Overview <https://github.com/ethereum/go-ethereum/wiki/Wh
     import Web3 from 'web3';
     import {Shh} import 'web3-shh';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
+    // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const shh = new Shh(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
 
