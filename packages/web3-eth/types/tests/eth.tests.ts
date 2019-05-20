@@ -21,7 +21,7 @@
 import {Log, Transaction, TransactionReceipt, RLPEncodedTransaction} from 'web3-core';
 import {Eth, BlockHeader, Syncing, Block, GetProof} from 'web3-eth';
 
-const eth = new Eth('http://localhost:8545');
+const eth = new Eth('http://localhost:11363');
 
 // $ExpectType new (jsonInterface: AbiItem | AbiItem[], address?: string | undefined, options?: ContractOptions | undefined) => Contract
 eth.Contract;
