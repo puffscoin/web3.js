@@ -30,4 +30,4 @@ const options: WebsocketProviderOptions = {
 };
 
 // $ExpectType boolean
-new WebsocketProvider('http://localhost:8545', options).isConnecting();
+new WebsocketProvider('http://localhost:11363', options).isConnecting();
