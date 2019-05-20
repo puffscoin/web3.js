@@ -38,9 +38,9 @@ describe('ProviderResolverTest', () => {
 
         providersModuleFactoryMock.createHttpProvider.mockReturnValueOnce(httpProviderMock);
 
-        expect(providerResolver.resolve('http://localhost:8545')).toBeInstanceOf(HttpProvider);
+        expect(providerResolver.resolve('http://localhost:11363')).toBeInstanceOf(HttpProvider);
 
-        expect(providersModuleFactoryMock.createHttpProvider).toHaveBeenCalledWith('http://localhost:8545');
+        expect(providersModuleFactoryMock.createHttpProvider).toHaveBeenCalledWith('http://localhost:11363');
     });
 
     it('calls resolve with WebSocket url', () => {
@@ -49,9 +49,9 @@ describe('ProviderResolverTest', () => {
 
         providersModuleFactoryMock.createWebsocketProvider.mockReturnValueOnce(websocketProviderMock);
 
-        expect(providerResolver.resolve('ws://127.0.0.1:8545')).toBeInstanceOf(WebsocketProvider);
+        expect(providerResolver.resolve('ws://127.0.0.1:11363')).toBeInstanceOf(WebsocketProvider);
 
-        expect(providersModuleFactoryMock.createWebsocketProvider).toHaveBeenCalledWith('ws://127.0.0.1:8545');
+        expect(providersModuleFactoryMock.createWebsocketProvider).toHaveBeenCalledWith('ws://127.0.0.1:11363');
     });
 
     it('calls resolve with Ipc path and net object', () => {
