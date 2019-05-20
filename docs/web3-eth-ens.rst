@@ -14,7 +14,7 @@ The ``web3.eth.ens`` functions let you interacting with the Ens smart contracts.
     import {Ens} from 'web3-eth-ens';
     import {Accounts} from 'web3-eth-accounts';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
+    // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const eth = new Ens(
         Web3.givenProvider || 'ws://some.local-or-remote.node:11364',
         null,
@@ -71,7 +71,7 @@ resolver
 
     web3.eth.ens.resolver(name);
 
-Returns the resolver contract to an Ethereum address.
+Returns the resolver contract to a PUFFScoin address.
 
 -------
 Returns
@@ -85,7 +85,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.resolver('ethereum.eth').then((contract) => {
+    web3.eth.ens.resolver('puffscoin.puffs').then((contract) => {
         console.log(contract);
     });
     > Contract<Resolver>
@@ -105,8 +105,8 @@ Checks if the current resolver does support the desired interface.
 Parameters
 ----------
 
-1. ``ENSName`` - ``String``: The Ens name to resolve.
-2. ``interfaceId`` - ``String``: A defined ENS interfaceId.
+1. ``ENSName`` - ``String``: The PUFFScoin-Ens name to resolve.
+2. ``interfaceId`` - ``String``: A defined PUFFScoin-ENS interfaceId.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 -------
@@ -121,7 +121,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.supportsInterface('ethereum.eth', '0xbc1c58d1').then((supportsInterface) => {
+    web3.eth.ens.supportsInterface('puffscoin.puffs', '0xbc1c58d1').then((supportsInterface) => {
         console.log(supportsInterface);
     })
     > true
@@ -135,7 +135,7 @@ getAddress
 
     web3.eth.ens.getAddress(ENSName, [callback]);
 
-Resolves an Ens name to an Ethereum address.
+Resolves an Ens name to a PUFFScoin address.
 
 ----------
 Parameters
@@ -148,7 +148,7 @@ Parameters
 Returns
 -------
 
-``Promise<string>`` - The Ethereum address of the given name.
+``Promise<string>`` - The PUFFScoin address of the given name.
 
 -------
 Example
@@ -156,7 +156,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getAddress('ethereum.eth').then((address) => {
+    web3.eth.ens.getAddress('puffscoin.puffs').then((address) => {
         console.log(address);
     })
     > 0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359
@@ -193,7 +193,7 @@ Example
 .. code-block:: javascript
 
     web3.eth.ens.setAddress(
-        'ethereum.eth',
+        'puffscoin.puffs',
         '0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -206,7 +206,7 @@ Example
     // Or using the event emitter
 
     web3.eth.ens.setAddress(
-        'ethereum.eth',
+        'puffscoin.puffs',
         '0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -225,7 +225,7 @@ Example
 
     // Or listen to the AddrChanged event on the resolver
 
-    web3.eth.ens.resolver('ethereum.eth').then((resolver) => {
+    web3.eth.ens.resolver('puffscoin.puffs').then((resolver) => {
         resolver.events.AddrChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
