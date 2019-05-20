@@ -30,7 +30,7 @@ const options = {
     ]
 };
 const httpProvider = new HttpProvider('http://localhost:11363', options);
-const ipcProvider = new IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', new net.Server());
+const ipcProvider = new IpcProvider('/Users/myuser/Library/Ethereum/gpuffs.ipc', new net.Server());
 const abstractWeb3Module = new AbstractWeb3Module(httpProvider);
 
 // $ExpectType BatchRequest
