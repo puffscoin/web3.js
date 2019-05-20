@@ -6,7 +6,7 @@
 web3.eth.Contract
 =================
 
-The ``web3.eth.Contract`` object makes it easy to interact with smart contracts on the Ethereum blockchain.
+The ``web3.eth.Contract`` object makes it easy to interact with smart contracts on the PUFFScoin blockchain.
 When you create a new contract object you give it the json interface of the respective smart contract
 and web3 will auto convert all calls into low level ABI calls over RPC for you.
 
@@ -147,7 +147,7 @@ jsonInterface
 
     myContract.jsonInterface
 
-The :ref:`json interface <glossary-json-interface>` object derived from the `ABI <https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI>`_ of this contract.
+The :ref:`json interface <glossary-json-interface>` object derived from the ABI of this contract.
 
 
 -------
