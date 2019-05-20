@@ -1485,7 +1485,7 @@ Example
 .. code-block:: javascript
 
     web3.eth.getChainId().then(console.log);
-    > 61
+    > 420
 
 ------------------------------------------------------------------------------
 
