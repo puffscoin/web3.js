@@ -26,7 +26,7 @@ const options = {
     ]
 };
 
-const httpProvider = new HttpProvider('http://localhost:8545', options); 
+const httpProvider = new HttpProvider('http://localhost:11363', options); 
 ```
 
 #### WebsocketProvider
