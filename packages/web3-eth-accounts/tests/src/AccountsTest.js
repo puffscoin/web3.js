@@ -78,7 +78,7 @@ describe('AccountsTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         const account = {privateKey: 'pk', address: '0x0'};
@@ -119,7 +119,7 @@ describe('AccountsTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         const account = {privateKey: 'pk', address: '0x0'};
@@ -156,7 +156,7 @@ describe('AccountsTest', () => {
             gas: 1,
             gasPrice: 0,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         const mappedTransaction = {
@@ -164,7 +164,7 @@ describe('AccountsTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         transactionSignerMock.sign = jest.fn(() => {
@@ -201,7 +201,7 @@ describe('AccountsTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 0,
-            chainId: 1
+            chainId: 420
         };
 
         const mappedTransaction = {
@@ -209,7 +209,7 @@ describe('AccountsTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 0,
-            chainId: 1
+            chainId: 420
         };
 
         transactionSignerMock.sign = jest.fn(() => {
@@ -240,7 +240,7 @@ describe('AccountsTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: undefined,
-            chainId: 1
+            chainId: 420
         };
 
         const mappedTransaction = {
@@ -248,7 +248,7 @@ describe('AccountsTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         transactionSignerMock.sign = jest.fn(() => {
@@ -283,7 +283,7 @@ describe('AccountsTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         const account = {privateKey: 'pk', address: '0x0'};
@@ -310,7 +310,7 @@ describe('AccountsTest', () => {
             gas: 1,
             gasPrice: 1,
             nonce: 1,
-            chainId: 1
+            chainId: 420
         };
 
         const account = {privateKey: 'pk', address: '0x0'};
