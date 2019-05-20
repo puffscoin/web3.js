@@ -72,7 +72,7 @@ describe('AbstractContractTest', () => {
         abiMapperMock.map.mockReturnValueOnce(abiModelMock);
 
         abstractContract = new AbstractContract(
-            'http://localhost:8545',
+            'http://localhost:11363',
             contractModuleFactoryMock,
             {},
             abiCoderMock,
