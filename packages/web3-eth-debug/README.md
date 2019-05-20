@@ -17,7 +17,7 @@ npm install web3-eth-debug
 import {Debug} from 'web3-eth-debug';
 
 const debug = new Debug(
-    'http://127.0.0.1:8546',
+    'http://127.0.0.1:11364',
     null,
     options
 );
