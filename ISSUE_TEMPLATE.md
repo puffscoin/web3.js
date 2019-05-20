@@ -58,7 +58,7 @@ The more details you include, the better the community will be able to help you!
 * web3.js:
 * nodejs:
 * browser:
-* ethereum node:
+* puffscoin node:
 
 
 <!---------------------------------------------------------------------
