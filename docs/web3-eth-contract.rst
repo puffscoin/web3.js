@@ -19,8 +19,8 @@ To use it standalone:
     import {Accounts} from 'web3-eth-accounts;
 
     const contract = new Contract(
-        'ws://localhost:8546',
-        new Accounts('ws://localhost:8546', options),
+        'ws://localhost:11364',
+        new Accounts('ws://localhost:11364', options),
         abi,
         address,
         options
