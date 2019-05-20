@@ -19,7 +19,7 @@
 
 import {Debug, Stats, TransactionTrace, WorldState, MemStats, BlockTraceResult} from 'web3-eth-debug';
 
-const debug = new Debug('http://localhost:8545');
+const debug = new Debug('http://localhost:11363');
 
 // $ExpectType Promise<null>
 debug.setBackTraceAt("server.go:443");
