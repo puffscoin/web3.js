@@ -32,7 +32,7 @@ const httpProvider = new HttpProvider('http://localhost:11363', options);
 #### WebsocketProvider
 
 Instead of setting a authorization header you could also define the credentials over the URL with:
-```ws://username:password@localhost:8546```
+```ws://username:password@localhost:11364```
 
 ```js 
 import {WebsocketProvider} from 'web3-providers';
@@ -43,7 +43,7 @@ const options = {
     }
 };
  
-const websocketProvider = new WebsocketProvider('ws://localhost:8546', options);
+const websocketProvider = new WebsocketProvider('ws://localhost:11364', options);
 ```
 
 #### IpcProvider
@@ -61,7 +61,7 @@ Please read the [documentation][docs] for more.
 ```js 
 import {ProviderResolver, BatchRequest} 'web3-providers';
 
-const provider = new ProviderResolver().resolve('ws://localhost:8546');
+const provider = new ProviderResolver().resolve('ws://localhost:11364');
 const batchRequest = new BatchRequest(provider);
 
 batchRequest.add(web3.eth.getBalance.request(
@@ -89,7 +89,7 @@ Because of the resolves does web3 has internally just one provider interface and
 ```js 
 import {ProviderResolver} 'web3-providers';
 
-const socketProviderAdapter = new ProviderResolver().resolve('ws://localhost:8546');
+const socketProviderAdapter = new ProviderResolver().resolve('ws://localhost:11364');
 ```
 
 ## Types 
@@ -97,4 +97,4 @@ const socketProviderAdapter = new ProviderResolver().resolve('ws://localhost:854
 All the typescript typings are placed in the types folder. 
 
 [docs]: http://web3js.readthedocs.io/en/1.0/
-[repo]: https://github.com/ethereum/web3.js
+[repo]: https://github.com/puffscoin/web3.js
