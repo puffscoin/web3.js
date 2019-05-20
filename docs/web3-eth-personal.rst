@@ -7,7 +7,7 @@ web3.eth.personal
 =================
 
 
-The ``web3-eth-personal`` package allows you to interact with the Ethereum node's accounts.
+The ``web3-eth-personal`` package allows you to interact with the PUFFScoin node's accounts.
 
 .. note:: Many of these functions send sensitive information, like password. Never call these functions over a unsecured Websocket or HTTP provider, as your password will be sent in plain text!
 
@@ -17,7 +17,7 @@ The ``web3-eth-personal`` package allows you to interact with the Ethereum node'
     import Web3 from 'web3';
     import {Personal} from 'web3-eth-personal';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
+    // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const personal = new Personal(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
 
@@ -84,7 +84,7 @@ sign
 
     web3.eth.personal.sign(dataToSign, address, password [, callback])
 
-Signs data using a specific account. This data is before UTF-8 HEX decoded and enveloped as follows: ``"\x19Ethereum Signed Message:\n" + message.length + message``.
+Signs data using a specific account. This data is before UTF-8 HEX decoded and enveloped as follows: ``"\x19Puffscoin Signed Message:\n" + message.length + message``.
 
 
 
