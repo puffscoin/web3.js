@@ -22,11 +22,11 @@ import {NodeInfo, PeerInfo} from 'web3-core';
 const admin = new Admin('http://localhost:11363');
 
 // $ExpectType Promise<boolean>
-admin.addPeer('enode://486cbdc847079d423515a76add04f706f3b76c52120ec195b7dacbe3ad9164cf58bd389e3fc6075457b11a132d3627a625d8b14e0f0b73a86e5a3415fa4c6042@127.0.0.1:30303');
+admin.addPeer('enode://486cbdc847079d423515a76add04f706f3b76c52120ec195b7dacbe3ad9164cf58bd389e3fc6075457b11a132d3627a625d8b14e0f0b73a86e5a3415fa4c6042@127.0.0.1:31313');
 
 // $ExpectType Promise<boolean>
 admin.addPeer(
-    'enode://486cbdc847079d423515a76add04f706f3b76c52120ec195b7dacbe3ad9164cf58bd389e3fc6075457b11a132d3627a625d8b14e0f0b73a86e5a3415fa4c6042@127.0.0.1:30303',
+    'enode://486cbdc847079d423515a76add04f706f3b76c52120ec195b7dacbe3ad9164cf58bd389e3fc6075457b11a132d3627a625d8b14e0f0b73a86e5a3415fa4c6042@127.0.0.1:31313',
     (error: Error, result: boolean) => {}
 );
 
