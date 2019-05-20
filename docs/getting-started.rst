@@ -31,10 +31,10 @@ For  web3.js, check ``Web3.givenProvider``. If this property is ``null`` you sho
     // in node.js use: const Web3 = require('web3');
 
     // use the given Provider, e.g in the browser with Metamask, or instantiate a new websocket provider
-    const web3 = new Web3(Web3.givenProvider || 'ws://localhost:8546', null, {});
+    const web3 = new Web3(Web3.givenProvider || 'ws://localhost:11364', null, {});
 
     // or
-    const web3 = new Web3(Web3.givenProvider || new Web3.providers.WebsocketProvider('ws://localhost:8546'), null, {});
+    const web3 = new Web3(Web3.givenProvider || new Web3.providers.WebsocketProvider('ws://localhost:11364'), null, {});
 
     // Using the IPC provider in node.js
     const net = require('net');
