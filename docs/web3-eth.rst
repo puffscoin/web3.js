@@ -15,12 +15,12 @@ The ``web3-eth`` package allows you to interact with an Ethereum blockchain itse
     import {Eth} from 'web3-eth';
 
     // "Web3.givenProvider" will be set if in an Ethereum supported browser.
-    const eth = new Eth(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const eth = new Eth(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
 
     // or using the web3 umbrella package
 
-    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
     // -> web3.eth
 
