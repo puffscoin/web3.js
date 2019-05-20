@@ -35,13 +35,13 @@ providersModuleFactory.createBatchRequest(
 providersModuleFactory.createProviderResolver();
 
 // $ExpectType HttpProvider
-providersModuleFactory.createHttpProvider('http://localhost:8545');
+providersModuleFactory.createHttpProvider('http://localhost:11363');
 
 // $ExpectType WebsocketProvider
-providersModuleFactory.createWebsocketProvider('http://localhost:8545');
+providersModuleFactory.createWebsocketProvider('http://localhost:11363');
 
 // $ExpectType Web3EthereumProvider
 providersModuleFactory.createWeb3EthereumProvider({});
 
 // $ExpectType IpcProvider
-providersModuleFactory.createIpcProvider('http://localhost:8545', new net.Server());
+providersModuleFactory.createIpcProvider('http://localhost:11363', new net.Server());
