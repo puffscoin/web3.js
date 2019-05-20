@@ -310,7 +310,7 @@ Example
     const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:11363'));
 
     // change provider
-    web3.setProvider('ws://localhost:8546');
+    web3.setProvider('ws://localhost:11364');
     // or
     web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:11364'));
 
@@ -354,7 +354,7 @@ Example
 
     const Web3 = require('web3');
     // use the given Provider, e.g in Mist, or instantiate a new websocket provider
-    const web3 = new Web3(Web3.givenProvider || 'ws://localhost:8546');
+    const web3 = new Web3(Web3.givenProvider || 'ws://localhost:11364');
     // or
     const web3 = new Web3(Web3.givenProvider || new Web3.providers.WebsocketProvider('ws://localhost:11364'));
 
