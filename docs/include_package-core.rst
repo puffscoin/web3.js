@@ -45,7 +45,7 @@ Example
         transactionSigner: new CustomTransactionSigner()
     }
 
-    const web3 = new Web3('http://localhost:8545', null, options);
+    const web3 = new Web3('http://localhost:11363', null, options);
 
 ------------------------------------------------------------------------------
 
@@ -304,15 +304,15 @@ Example
 
     import Web3 from 'web3';
 
-    const web3 = new Web3('http://localhost:8545');
+    const web3 = new Web3('http://localhost:11363');
 
     // or
-    const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+    const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:11363'));
 
     // change provider
     web3.setProvider('ws://localhost:8546');
     // or
-    web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
+    web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:11364'));
 
     // Using the IPC provider in node.js
     const net = require('net');
@@ -356,7 +356,7 @@ Example
     // use the given Provider, e.g in Mist, or instantiate a new websocket provider
     const web3 = new Web3(Web3.givenProvider || 'ws://localhost:8546');
     // or
-    const web3 = new Web3(Web3.givenProvider || new Web3.providers.WebsocketProvider('ws://localhost:8546'));
+    const web3 = new Web3(Web3.givenProvider || new Web3.providers.WebsocketProvider('ws://localhost:11364'));
 
     // Using the IPC provider in node.js
     const net = require('net');
@@ -395,7 +395,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.setProvider(Web3.givenProvider || 'ws://localhost:8546');
+    web3.setProvider(Web3.givenProvider || 'ws://localhost:11364');
 
 
 ------------------------------------------------------------------------------
@@ -427,7 +427,7 @@ Example
 .. code-block:: javascript
 
     if (!web3.currentProvider) {
-        web3.setProvider('http://localhost:8545');
+        web3.setProvider('http://localhost:11363');
     }
 
 ------------------------------------------------------------------------------
