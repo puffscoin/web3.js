@@ -29,7 +29,7 @@ Example
     import Web3 from 'web3';
 
     // "Web3.givenProvider" will be set in a Ethereum supported browser.
-    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', net, options);
+    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', net, options);
 
     > web3.eth
     > web3.shh
