@@ -316,12 +316,12 @@ Example
 
     // Using the IPC provider in node.js
     const net = require('net');
-    const web3 = new Web3('/Users/myuser/Library/Ethereum/geth.ipc', net); // mac os path
+    const web3 = new Web3('/Users/myuser/Library/Ethereum/gpuffs.ipc', net); // mac os path
 
     // or
-    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', net)); // mac os path
-    // on windows the path is: '\\\\.\\pipe\\geth.ipc'
-    // on linux the path is: '/users/myuser/.ethereum/geth.ipc'
+    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/gpuffs.ipc', net)); // mac os path
+    // on windows the path is: '\\\\.\\pipe\\gpuffs.ipc'
+    // on linux the path is: '/users/myuser/.ethereum/gpuffs.ipc'
 
 ------------------------------------------------------------------------------
 
@@ -361,11 +361,11 @@ Example
     // Using the IPC provider in node.js
     const net = require('net');
 
-    const web3 = new Web3('/Users/myuser/Library/Ethereum/geth.ipc', net); // mac os path
+    const web3 = new Web3('/Users/myuser/Library/Ethereum/gpuffs.ipc', net); // mac os path
     // or
-    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', net)); // mac os path
-    // on windows the path is: '\\\\.\\pipe\\geth.ipc'
-    // on linux the path is: '/users/myuser/.ethereum/geth.ipc'
+    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/gpuffs.ipc', net)); // mac os path
+    // on windows the path is: '\\\\.\\pipe\\gpuffs.ipc'
+    // on linux the path is: '/users/myuser/.ethereum/gpuffs.ipc'
 
 ------------------------------------------------------------------------------
 
