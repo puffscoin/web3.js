@@ -16,7 +16,7 @@ The ``web3-eth-txpool`` package gives you access to several non-standard RPC met
     import {TxPool} from 'web3-eth-txpool';
 
     // "Web3.givenProvider" will be set if in an Ethereum supported browser.
-    const txPool = new TxPool(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const txPool = new TxPool(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
 
 ------------------------------------------------------------------------------
