@@ -17,7 +17,7 @@ npm install web3-eth-admin
 import {Admin} from 'web3-eth-admin';
 
 const admin = new Admin(
-    'http://127.0.0.1:8546',
+    'http://127.0.0.1:11364',
     null,
     options
 );
