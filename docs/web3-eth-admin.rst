@@ -368,7 +368,7 @@ Example
 
 .. code-block:: javascript
 
-    admin.startRPC("127.0.0.1", 8546)
+    admin.startRPC("127.0.0.1", 11364)
     .then(console.log('WS Started!'));
     > "WS Started!"
 
