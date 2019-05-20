@@ -38,7 +38,7 @@ meteor npm install --save web3@1.x
 ```js
 import Web3 from 'web3';
 
-const web3 = new Web3('ws://localhost:8546');
+const web3 = new Web3('ws://localhost:11364');
 console.log(web3);
 > {
     eth: ... ,
@@ -51,9 +51,9 @@ console.log(web3);
 Additionally you can set a provider using `web3.setProvider()` (e.g. WebsocketProvider)
 
 ```js
-web3.setProvider('ws://localhost:8546');
+web3.setProvider('ws://localhost:11364');
 // or
-web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
+web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:11364'));
 ```
 
 There you go, now you can use it:
