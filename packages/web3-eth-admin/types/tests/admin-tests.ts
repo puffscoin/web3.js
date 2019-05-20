@@ -19,7 +19,7 @@
 import {Admin} from 'web3-eth-admin';
 import {NodeInfo, PeerInfo} from 'web3-core';
 
-const admin = new Admin('http://localhost:8545');
+const admin = new Admin('http://localhost:11363');
 
 // $ExpectType Promise<boolean>
 admin.addPeer('enode://486cbdc847079d423515a76add04f706f3b76c52120ec195b7dacbe3ad9164cf58bd389e3fc6075457b11a132d3627a625d8b14e0f0b73a86e5a3415fa4c6042@127.0.0.1:30303');
@@ -76,10 +76,10 @@ admin.startRPC("127.0.0.1");
 admin.startRPC("127.0.0.1", null, null, null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startRPC(null, 8545);
+admin.startRPC(null, 11363);
 
 // $ExpectType Promise<boolean>
-admin.startRPC(null, 8545, null, null, (error: Error, result: boolean) => {});
+admin.startRPC(null, 11363, null, null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
 admin.startRPC(null, null, "");
@@ -94,10 +94,10 @@ admin.startRPC(null, null, null, "eth, net, web3");
 admin.startRPC(null, null, null, "eth, net, web3", (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startRPC("127.0.0.1", 8545);
+admin.startRPC("127.0.0.1", 11363);
 
 // $ExpectType Promise<boolean>
-admin.startRPC("127.0.0.1", 8545, null, null, (error: Error, result: boolean) => {});
+admin.startRPC("127.0.0.1", 11363, null, null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
 admin.startRPC("127.0.0.1", null, "");
@@ -112,16 +112,16 @@ admin.startRPC("127.0.0.1", null, null, "eth,web3,net");
 admin.startRPC("127.0.0.1", null, null, "eth,web3,net", (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startRPC(null, 8545, "");
+admin.startRPC(null, 11363, "");
 
 // $ExpectType Promise<boolean>
-admin.startRPC(null, 8545, "", null, (error: Error, result: boolean) => {});
+admin.startRPC(null, 11363, "", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startRPC(null, 8545, null, "eth,web3,net");
+admin.startRPC(null, 11363, null, "eth,web3,net");
 
 // $ExpectType Promise<boolean>
-admin.startRPC(null, 8545, "eth,web3,net", null, (error: Error, result: boolean) => {});
+admin.startRPC(null, 11363, "eth,web3,net", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
 admin.startRPC(null, null, "", "eth,web3,net");
@@ -130,16 +130,16 @@ admin.startRPC(null, null, "", "eth,web3,net");
 admin.startRPC(null, null, "", "eth,web3,net", (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startRPC("127.0.0.1", 8545, "");
+admin.startRPC("127.0.0.1", 11363, "");
 
 // $ExpectType Promise<boolean>
-admin.startRPC("127.0.0.1", 8545, "", null, (error: Error, result: boolean) => {});
+admin.startRPC("127.0.0.1", 11363, "", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startRPC("127.0.0.1", 8545, null, "eth,net,web3");
+admin.startRPC("127.0.0.1", 11363, null, "eth,net,web3");
 
 // $ExpectType Promise<boolean>
-admin.startRPC("127.0.0.1", 8545, "eth,net,web3", null, (error: Error, result: boolean) => {});
+admin.startRPC("127.0.0.1", 11363, "eth,net,web3", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
 admin.startRPC("127.0.0.1", null, "", "eth,net,web3");
@@ -148,17 +148,17 @@ admin.startRPC("127.0.0.1", null, "", "eth,net,web3");
 admin.startRPC("127.0.0.1", null, "", "eth,net,web3", (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startRPC(null, 8545, "", "eth,net,web3");
+admin.startRPC(null, 11363, "", "eth,net,web3");
 
 // $ExpectType Promise<boolean>
-admin.startRPC(null, 8545, "", "eth,net,web3", (error: Error, result: boolean) => {});
+admin.startRPC(null, 11363, "", "eth,net,web3", (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startRPC("127.0.0.1", 8545, "", "eth,net,web3");
+admin.startRPC("127.0.0.1", 11363, "", "eth,net,web3");
 
 // $ExpectType Promise<boolean>
 admin.startRPC(
-    "127.0.0.1", 8545, "", "eth,net,web3",
+    "127.0.0.1", 11363, "", "eth,net,web3",
     (error: Error, result: boolean) => {}
 );
 
@@ -175,10 +175,10 @@ admin.startWS("127.0.0.1");
 admin.startWS("127.0.0.1", null, null, null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startWS(null, 8546);
+admin.startWS(null, 11364);
 
 // $ExpectType Promise<boolean>
-admin.startWS(null, 8546, null, null, (error: Error, result: boolean) => {});
+admin.startWS(null, 11364, null, null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
 admin.startWS(null, null, "");
@@ -193,10 +193,10 @@ admin.startWS(null, null, "eth, net, web3");
 admin.startWS(null, null, null, "eth, net, web3", (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startWS("127.0.0.1", 8546);
+admin.startWS("127.0.0.1", 11364);
 
 // $ExpectType Promise<boolean>
-admin.startWS("127.0.0.1", 8546, null, null, (error: Error, result: boolean) => {});
+admin.startWS("127.0.0.1", 11364, null, null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
 admin.startWS("127.0.0.1", null, "");
@@ -211,16 +211,16 @@ admin.startWS("127.0.0.1", null, null, "eth,web3,net");
 admin.startWS("127.0.0.1", null, null, "eth,web3,net", (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startWS(null, 8546, "");
+admin.startWS(null, 11364, "");
 
 // $ExpectType Promise<boolean>
-admin.startWS(null, 8546, "", null, (error: Error, result: boolean) => {});
+admin.startWS(null, 11364, "", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startWS(null, 8546, null, "eth,web3,net");
+admin.startWS(null, 11364, null, "eth,web3,net");
 
 // $ExpectType Promise<boolean>
-admin.startWS(null, 8546, "eth,web3,net", null, (error: Error, result: boolean) => {});
+admin.startWS(null, 11364, "eth,web3,net", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
 admin.startWS(null, null, "", "eth,web3,net");
@@ -229,16 +229,16 @@ admin.startWS(null, null, "", "eth,web3,net");
 admin.startWS(null, null, "", "eth,web3,net", (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startWS("127.0.0.1", 8546, "");
+admin.startWS("127.0.0.1", 11364, "");
 
 // $ExpectType Promise<boolean>
-admin.startWS("127.0.0.1", 8546, "", null, (error: Error, result: boolean) => {});
+admin.startWS("127.0.0.1", 11364, "", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startWS("127.0.0.1", 8546, null, "eth,net,web3");
+admin.startWS("127.0.0.1", 11364, null, "eth,net,web3");
 
 // $ExpectType Promise<boolean>
-admin.startWS("127.0.0.1", 8546, "eth,net,web3", null, (error: Error, result: boolean) => {});
+admin.startWS("127.0.0.1", 11364, "eth,net,web3", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
 admin.startWS("127.0.0.1", null, "", "eth,net,web3");
@@ -247,17 +247,17 @@ admin.startWS("127.0.0.1", null, "", "eth,net,web3");
 admin.startWS("127.0.0.1", null, "", "eth,net,web3", (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startWS(null, 8546, "", "eth,net,web3");
+admin.startWS(null, 11364, "", "eth,net,web3");
 
 // $ExpectType Promise<boolean>
-admin.startWS(null, 8546, "", "eth,net,web3", (error: Error, result: boolean) => {});
+admin.startWS(null, 11364, "", "eth,net,web3", (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startWS("127.0.0.1", 8546, "", "eth,net,web3");
+admin.startWS("127.0.0.1", 11364, "", "eth,net,web3");
 
 // $ExpectType Promise<boolean>
 admin.startWS(
-    "127.0.0.1", 8546, "", "eth,net,web3",
+    "127.0.0.1", 11364, "", "eth,net,web3",
     (error: Error, result: boolean) => {}
 );
 
