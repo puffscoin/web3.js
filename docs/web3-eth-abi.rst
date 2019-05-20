@@ -21,7 +21,7 @@ This will be used for calling functions of a deployed smart-contract.
 
     import Web3 from 'web3';
 
-    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
     // -> web3.eth.abi
 
 
