@@ -6,7 +6,7 @@
 web3.eth.accounts
 =================
 
-The ``web3.eth.accounts`` contains functions to generate Ethereum accounts and sign transactions and data.
+The ``web3.eth.accounts`` contains functions to generate PUFFScoin accounts and sign transactions and data.
 
 .. note:: This package got NOT audited until now. Take precautions to clear memory properly, store the private keys safely, and test transaction receiving and sending functionality properly before using in production!
 
@@ -135,7 +135,7 @@ signTransaction
 
     web3.eth.accounts.signTransaction(tx, privateKey [, callback]);
 
-Signs an Ethereum transaction with a given private key.
+Signs a PUFFScoin transaction with a given private key.
 
 ----------
 Parameters
@@ -215,7 +215,7 @@ recoverTransaction
 
     web3.eth.accounts.recoverTransaction(rawTransaction);
 
-Recovers the Ethereum address which was used to sign the given RLP encoded transaction.
+Recovers the PUFFScoin address which was used to sign the given RLP encoded transaction.
 
 ----------
 Parameters
@@ -228,7 +228,7 @@ Parameters
 Returns
 -------
 
-``String``: The Ethereum address used to sign this transaction.
+``String``: The PUFFScoin address used to sign this transaction.
 
 -------
 Example
@@ -249,7 +249,7 @@ hashMessage
 
     web3.eth.accounts.hashMessage(message);
 
-Hashes the given message to be passed :ref:`web3.eth.accounts.recover() <accounts-recover>` function. The data  will be UTF-8 HEX decoded and enveloped as follows: ``"\x19Ethereum Signed Message:\n" + message.length + message`` and hashed using keccak256.
+Hashes the given message to be passed :ref:`web3.eth.accounts.recover() <accounts-recover>` function. The data  will be UTF-8 HEX decoded and enveloped as follows: ``"\x19Puffscoin Signed Message:\n" + message.length + message`` and hashed using keccak256.
 
 ----------
 Parameters
@@ -290,7 +290,7 @@ sign
 
     web3.eth.accounts.sign(data, privateKey);
 
-Signs arbitrary data. This data is before UTF-8 HEX decoded and enveloped as follows: ``"\x19Ethereum Signed Message:\n" + message.length + message``.
+Signs arbitrary data. This data is before UTF-8 HEX decoded and enveloped as follows: ``"\x19Puffscoin Signed Message:\n" + message.length + message``.
 
 ----------
 Parameters
@@ -342,26 +342,26 @@ recover
     web3.eth.accounts.recover(message, signature [, preFixed]);
     web3.eth.accounts.recover(message, v, r, s [, preFixed]);
 
-Recovers the Ethereum address which was used to sign the given data.
+Recovers the PUFFScoin address which was used to sign the given data.
 
 ----------
 Parameters
 ----------
 
 1. ``message|signatureObject`` - ``String|Object``: Either signed message or hash, or the signature object as following values:
-    - ``messageHash`` - ``String``: The hash of the given message already prefixed with ``"\x19Ethereum Signed Message:\n" + message.length + message``.
+    - ``messageHash`` - ``String``: The hash of the given message already prefixed with ``"\x19Puffscoin Signed Message:\n" + message.length + message``.
     - ``r`` - ``String``: First 32 bytes of the signature
     - ``s`` - ``String``: Next 32 bytes of the signature
     - ``v`` - ``String``: Recovery value + 27
 2. ``signature`` - ``String``: The raw RLP encoded signature, OR parameter 2-4 as v, r, s values.
-3. ``preFixed`` - ``Boolean`` (optional, default: ``false``): If the last parameter is ``true``, the given message will NOT automatically be prefixed with ``"\x19Ethereum Signed Message:\n" + message.length + message``, and assumed to be already prefixed.
+3. ``preFixed`` - ``Boolean`` (optional, default: ``false``): If the last parameter is ``true``, the given message will NOT automatically be prefixed with ``"\x19Puffscoin Signed Message:\n" + message.length + message``, and assumed to be already prefixed.
 
 
 -------
 Returns
 -------
 
-``String``: The Ethereum address used to sign this data.
+``String``: The PUFFScoin address used to sign this data.
 
 -------
 Example
