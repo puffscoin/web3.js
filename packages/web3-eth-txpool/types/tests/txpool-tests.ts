@@ -20,7 +20,7 @@
 import {Txpool} from 'web3-eth-txpool';
 import {TxPoolContent, TxPoolInspect, TxPoolStatus} from 'web3-core';
 
-const txpool = new Txpool('http://localhost:8545');
+const txpool = new Txpool('http://localhost:11363');
 
 // $ExpectType Promise<TxPoolContent>
 txpool.getContent();
