@@ -51,7 +51,7 @@ const websocketProvider = new WebsocketProvider('ws://localhost:11364', options)
 import {IpcProvider} from 'web3-providers';
 import net from 'net';
 
-const ipcProvider = new IpcProvider('/Users/me/Library/Ethereum/geth.ipc', net);
+const ipcProvider = new IpcProvider('/Users/me/Library/Ethereum/gpuffs.ipc', net);
 ```
 
 #### BatchRequest
