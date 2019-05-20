@@ -7,7 +7,7 @@ Debug Module
 ============
 
 
-The ``web3-eth-debug`` module allows you to interact with the Ethereum node's debug methods.
+The ``web3-eth-debug`` module allows you to interact with the PUFFScoin node's debug methods.
 
 
 .. code-block:: javascript
@@ -15,7 +15,7 @@ The ``web3-eth-debug`` module allows you to interact with the Ethereum node's de
     import Web3 from 'web3';
     import {Debug} from 'web3-eth-debug';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
+    // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const debug = new Debug(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
 
@@ -843,7 +843,7 @@ The possible options are:
 1. ``timeout`` - ``string`` Overrides the default timeout of 5 seconds for JavaScript-based tracing calls
 
 
-JSON-RPC specification for `debug_traceTransaction <https://github.com/ethereum/wiki/wiki/JavaScript-API>`_
+JSON-RPC specification for `debug_traceTransaction <http://puffscoin.leafycauldronapothecary.com/puffwiki/blockchain-protocols/javascript-api/>`_
 
 ----------
 Parameters
