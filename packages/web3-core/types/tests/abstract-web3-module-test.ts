@@ -29,7 +29,7 @@ const options = {
         }
     ]
 };
-const httpProvider = new HttpProvider('http://localhost:8545', options);
+const httpProvider = new HttpProvider('http://localhost:11363', options);
 const ipcProvider = new IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', new net.Server());
 const abstractWeb3Module = new AbstractWeb3Module(httpProvider);
 
@@ -70,10 +70,10 @@ abstractWeb3Module.currentProvider;
 abstractWeb3Module.setProvider(httpProvider);
 
 // $ExpectType boolean
-abstractWeb3Module.setProvider('http://localhost:8545');
+abstractWeb3Module.setProvider('http://localhost:11363');
 
 // $ExpectType boolean
-abstractWeb3Module.isSameProvider('http://localhost:8545');
+abstractWeb3Module.isSameProvider('http://localhost:11363');
 
 // $ExpectType boolean
 abstractWeb3Module.isSameProvider(httpProvider);
