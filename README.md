@@ -1,17 +1,14 @@
 
 ![Web3.js logo](assets/web3js.svg)
 
-# web3.js - Ethereum JavaScript API
+# web3.js - PUFFScoin JavaScript API
 
-[![npm](https://img.shields.io/npm/dm/web3.svg)](https://www.npmjs.com/package/web3) [![Build Status][travis-image]][travis-url] ![Coverage Status](https://coveralls.io/repos/github/ethereum/web3.js/badge.svg?branch=1.0&kill_cache=1)
-[![Join the chat at https://gitter.im/ethereum/web3.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/web3.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+This is the PUFFScoin [JavaScript API](http://puffscoin.leafycauldronapothecary.com/javascript-api/)
+which connects to the [Generic JSON RPC](http://puffscoin.leafycauldronapothecary.com/puffwiki/blockchain-protocols/json-rpc-api/) spec.
 
-This is the Ethereum [JavaScript API][docs]
-which connects to the [Generic JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) spec.
+You need to run a local or remote PUFFScoin node to use this library.
 
-You need to run a local or remote Ethereum node to use this library.
-
-Please read the [documentation][docs] for more.
+Please read the [documentation](http://puffscoin.leafycauldronapothecary.com/puffwiki/) for more.
 
 ## Installation
 
@@ -85,12 +82,7 @@ If you are using the types in a `commonjs` module like for example a node app yo
 
 ## Documentation
 
-Documentation can be found at [read the docs][docs]
-
-## Contributing
-
-- All contributions have to go into the 1.0 branch
-- Please follow the code style of the other files, we use 4 spaces as tabs.
+Documentation can be found at [read the docs](http://puffscoin.leafycauldronapothecary.com/puffwiki/blockchain-protocols/javascript-api/)
 
 ### Requirements
 
@@ -113,12 +105,9 @@ npm run dev # runs rollup with a watcher
 ![browsers](https://img.shields.io/badge/browsers-latest%202%20versions-brightgreen.svg)
 ![node](https://img.shields.io/badge/node->=8-green.svg)
 
-### Community
- - [Gitter](https://gitter.im/ethereum/web3.js?source=orgpage)
- - [Forum](https://forum.ethereum.org/categories/ethereum-js)
-
 
 ### Similar libraries in other languages
+((these will be adapted specific as necessary for development purposes along the PUFFScoin blockchain))
  - Python [Web3.py](https://github.com/pipermerriam/web3.py)
  - Haskell [hs-web3](https://github.com/airalab/hs-web3)
  - Java [web3j](https://github.com/web3j/web3j)
@@ -127,12 +116,12 @@ npm run dev # runs rollup with a watcher
  - PHP [web3.php](https://github.com/sc0Vu/web3.php)
 
 
-[repo]: https://github.com/ethereum/web3.js
-[docs]: http://web3js.readthedocs.io/en/1.0/
+[repo]: https://github.com/puffscoin/web3.js
+[docs]: http://puffscoin.leafycauldronapothecary.com/puffwiki/blockchain-protocols/javascript-api/
 [npm-image]: https://badge.fury.io/js/web3.png
 [npm-url]: https://npmjs.org/package/web3
-[travis-image]: https://travis-ci.org/ethereum/web3.js.svg
-[travis-url]: https://travis-ci.org/ethereum/web3.js
+[travis-image]: https://travis-ci.org/puffscoin/web3.js.svg
+[travis-url]: https://travis-ci.org/puffscoin/web3.js
 [dep-image]: https://david-dm.org/ethereum/web3.js.svg
 [dep-url]: https://david-dm.org/ethereum/web3.js
 [dep-dev-image]: https://david-dm.org/ethereum/web3.js/dev-status.svg
