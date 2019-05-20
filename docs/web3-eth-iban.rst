@@ -6,7 +6,7 @@
 web3.eth.Iban
 =============
 
-The ``web3.eth.Iban`` function lets convert Ethereum addresses from and to IBAN and BBAN.
+The ``web3.eth.Iban`` function lets convert PUFFScoin addresses from and to IBAN and BBAN.
 
 .. code-block:: javascript
 
@@ -47,7 +47,7 @@ toAddress
 
     web3.eth.Iban.toAddress(ibanAddress)
 
-Singleton: Converts a direct IBAN address into an Ethereum address.
+Singleton: Converts a direct IBAN address into an PUFFScoin address.
 
 .. note:: This method also exists on the IBAN instance.
 
@@ -61,7 +61,7 @@ Parameters
 Returns
 -------
 
-``String`` - The Ethereum address.
+``String`` - The PUFFScoin address.
 
 -------
 Example
@@ -86,13 +86,13 @@ toIban
 
     web3.eth.Iban.toIban(address)
 
-Singleton: Converts an Ethereum address to a direct IBAN address.
+Singleton: Converts an PUFFScoin address to a direct IBAN address.
 
 ----------
 Parameters
 ----------
 
-1. ``String``: the Ethereum address to convert.
+1. ``String``: the PUFFScoin address to convert.
 
 -------
 Returns
@@ -123,13 +123,13 @@ fromAddress
 
     web3.eth.Iban.fromAddress(address)
 
-Singleton: Converts an Ethereum address to a direct IBAN instance.
+Singleton: Converts an PUFFScoin address to a direct IBAN instance.
 
 ----------
 Parameters
 ----------
 
-1. ``String``: the Ethereum address to convert.
+1. ``String``: the PUFFScoin address to convert.
 
 -------
 Returns
@@ -465,13 +465,13 @@ prototype.toAddress
 
     web3.eth.Iban.prototype.toString()
 
-Returns the Ethereum address of the IBAN instance.
+Returns the PUFFScoin address of the IBAN instance.
 
 -------
 Returns
 -------
 
-``String``: The Ethereum address of the IBAN
+``String``: The PUFFScoin address of the IBAN
 
 -------
 Example
