@@ -6,7 +6,7 @@
 web3.utils
 ==========
 
-This package provides utility functions for Ethereum dapps and other web3.js packages.
+This package provides utility functions for PUFFScoin dapps and other web3.js packages.
 
 ------------------------------------------------------------------------------
 
@@ -410,7 +410,7 @@ isAddress
 
     web3.utils.isAddress(address,  [, chainId])
 
-Checks if a given string is a valid Ethereum address.
+Checks if a given string is a valid PUFFScoin address.
 It will also check the checksum, if the address has upper and lowercase letters.
 
 ----------
@@ -459,7 +459,7 @@ toChecksumAddress
 
     web3.utils.toChecksumAddress(address[, chainId])
 
-Will convert an upper or lowercase Ethereum address to a checksum address.
+Will convert an upper or lowercase PUFFScoin address to a checksum address.
 
 ----------
 Parameters
@@ -989,9 +989,9 @@ toWei
     web3.utils.toWei(number [, unit])
 
 
-Converts any `ether value <http://ethdocs.org/en/latest/ether.html>`_ value into `wei <http://ethereum.stackexchange.com/questions/253/the-ether-denominations-are-called-finney-szabo-and-wei-what-who-are-these-na>`_.
+Converts any `puffs value <http://ethdocs.org/en/latest/ether.html>`_ value into `wei <http://ethereum.stackexchange.com/questions/253/the-ether-denominations-are-called-finney-szabo-and-wei-what-who-are-these-na>`_.
 
-.. note:: "wei" are the smallest ethere unit, and you should always make calculations in wei and convert only for display reasons.
+.. note:: "wei" are the smallest PUFFScoin unit, and you should always make calculations in wei and convert only for display reasons.
 
 ----------
 Parameters
@@ -1039,7 +1039,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.utils.toWei('1', 'ether');
+    web3.utils.toWei('1', 'puffs');
     > "1000000000000000000"
 
     web3.utils.toWei('1', 'finney');
@@ -1063,7 +1063,7 @@ fromWei
     web3.utils.fromWei(number [, unit])
 
 
-Converts any `wei <http://ethereum.stackexchange.com/questions/253/the-ether-denominations-are-called-finney-szabo-and-wei-what-who-are-these-na>`_ value into a `ether value <http://ethdocs.org/en/latest/ether.html>`_.
+Converts any `wei <http://ethereum.stackexchange.com/questions/253/the-ether-denominations-are-called-finney-szabo-and-wei-what-who-are-these-na>`_ value into a `puffs value <http://ethdocs.org/en/latest/ether.html>`_.
 
 .. note:: "wei" are the smallest ethere unit, and you should always make calculations in wei and convert only for display reasons.
 
