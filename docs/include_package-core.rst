@@ -106,7 +106,7 @@ This default address is used as the default ``"from"`` property, if no ``"from"`
 Returns
 -------
 
-``String`` - 20 Bytes: Any Ethereum address. You need to have the private key for that address in your node or keystore. (Default is ``undefined``)
+``String`` - 20 Bytes: Any PUFFScoin address. You need to have the private key for that address in your node or keystore. (Default is ``undefined``)
 
 ------------------------------------------------------------------------------
 
