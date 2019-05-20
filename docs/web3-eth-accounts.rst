@@ -16,7 +16,7 @@ The ``web3.eth.accounts`` contains functions to generate Ethereum accounts and s
 
     // Passing in the eth or web3 package is necessary to allow retrieving chainId, gasPrice and nonce automatically
     // for accounts.signTransaction().
-    const accounts = new Accounts('ws://localhost:8546', null, options);
+    const accounts = new Accounts('ws://localhost:11364', null, options);
 
 
 ------------------------------------------------------------------------------
