@@ -17,7 +17,7 @@ npm install web3-eth-txpool
 import {TxPool} from 'web3-eth-txpool';
 
 const txPool = new TxPool(
-    'http://127.0.0.1:8546',
+    'http://127.0.0.1:11364',
     null,
     options
 );
