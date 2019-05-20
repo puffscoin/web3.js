@@ -24,7 +24,7 @@ describe('TransactionSignerTest', () => {
 
     it('calls sign and returns the expected resolved promise', async () => {
         const tx = {
-            chainId: '0x11',
+            chainId: '0x1A4',
             data: '0x',
             gas: '0x7530',
             gasPrice: '0x3b9aca00',
@@ -52,7 +52,7 @@ describe('TransactionSignerTest', () => {
 
     it('calls sign with a prefixed pk and returns the expected resolved promise', async () => {
         const tx = {
-            chainId: '0x11',
+            chainId: '0x1A4',
             data: '0x',
             gas: '0x7530',
             gasPrice: '0x3b9aca00',
@@ -76,7 +76,7 @@ describe('TransactionSignerTest', () => {
 
     it('calls sign and returns a rejected promise', async () => {
         const tx = {
-            chainId: '0x11',
+            chainId: '0x1A4',
             data: '0x',
             gas: '0x0',
             gasPrice: '0x3b9aca00',
