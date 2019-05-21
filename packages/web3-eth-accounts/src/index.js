@@ -28,7 +28,7 @@ import AccountsModule from './Accounts';
 /**
  * Returns the Accounts object
  *
- * @param {Web3EthereumProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
+ * @param {Web3PuffscoinProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
  * @param {Object} options
  * @param {Net.Socket} net
  *
