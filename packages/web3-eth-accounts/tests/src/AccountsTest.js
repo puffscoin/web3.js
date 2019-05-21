@@ -419,7 +419,7 @@ describe('AccountsTest', () => {
         expect(Utils.isHexStrict).toHaveBeenCalledWith('message');
 
         expect(Hash.keccak256s).toHaveBeenCalledWith(
-            Buffer.concat([Buffer.from(`\u0019Ethereum Signed Message:\n${'message'.length}`), Buffer.from('message')])
+            Buffer.concat([Buffer.from(`\u0019Puffscoin Signed Message:\n${'message'.length}`), Buffer.from('message')])
         );
 
         expect(recover).toHaveBeenCalledWith('keccak', 'signature');
@@ -441,7 +441,7 @@ describe('AccountsTest', () => {
         expect(Utils.hexToBytes).toHaveBeenCalledWith('message');
 
         expect(Hash.keccak256s).toHaveBeenCalledWith(
-            Buffer.concat([Buffer.from(`\u0019Ethereum Signed Message:\n${'message'.length}`), Buffer.from('message')])
+            Buffer.concat([Buffer.from(`\u0019Puffscoin Signed Message:\n${'message'.length}`), Buffer.from('message')])
         );
 
         expect(recover).toHaveBeenCalledWith('keccak', 'signature');
