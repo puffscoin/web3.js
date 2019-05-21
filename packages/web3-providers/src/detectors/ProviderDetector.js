@@ -40,7 +40,7 @@ export default class ProviderDetector {
             typeof global.puffscoinProvider !== 'undefined' &&
             global.puffscoinProvider.constructor.name === 'PuffscoinProvider'
         ) {
-            return global.ethereumProvider;
+            return global.puffscoinProvider;
         }
 
         if (typeof global.web3 !== 'undefined' && global.web3.currentProvider) {
