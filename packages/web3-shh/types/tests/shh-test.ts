@@ -30,7 +30,7 @@ Shh.providers;
 // $ExpectType any
 shh.givenProvider;
 
-// $ExpectType HttpProvider | IpcProvider | WebsocketProvider | Web3EthereumProvider | CustomProvider
+// $ExpectType HttpProvider | IpcProvider | WebsocketProvider | Web3PuffscoinmProvider | CustomProvider
 shh.currentProvider;
 
 // $ExpectType BatchRequest
