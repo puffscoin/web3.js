@@ -585,7 +585,7 @@ Example
 
     // Or listen to the ContentChanged event on the resolver
 
-    web3.eth.ens.resolver('puffscoin.eth').then((resolver) => {
+    web3.eth.ens.resolver('puffscoin.puffs').then((resolver) => {
         resolver.events.ContentChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
