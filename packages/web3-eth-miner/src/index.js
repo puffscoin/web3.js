@@ -32,7 +32,7 @@ import MinerModule from './Miner.js';
  *
  * @method Miner
  *
- * @param {Web3EthereumProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
+ * @param {Web3PuffscoinProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
  * @param {Net.Socket} net
  * @param {Object} options
  *
