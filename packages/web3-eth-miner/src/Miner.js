@@ -25,7 +25,7 @@ import {AbstractWeb3Module} from 'web3-core';
 export default class Miner extends AbstractWeb3Module {
     /**
      * TODO: Add missing documentation for getAccounts, lockAccount and sendTransaction!
-     * @param {Web3EthereumProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
+     * @param {Web3PuffscoinProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
      * @param {MethodFactory} methodFactory
      * @param {Network} net
      * @param {Utils} utils
