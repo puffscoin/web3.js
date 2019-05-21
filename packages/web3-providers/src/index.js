@@ -95,4 +95,4 @@ export function ProviderResolver() {
 
 // TODO: Do not expose the providers module factory this should only be used in this module
 export ProvidersModuleFactory from './factories/ProvidersModuleFactory';
-export Web3EthereumProvider from './providers/Web3EthereumProvider';
+export Web3PuffscoinProvider from './providers/Web3PuffscoinProvider';
