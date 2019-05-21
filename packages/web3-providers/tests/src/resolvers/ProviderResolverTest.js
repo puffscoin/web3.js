@@ -11,7 +11,7 @@ jest.mock('../../../src/factories/ProvidersModuleFactory');
 jest.mock('../../../src/providers/HttpProvider');
 jest.mock('../../../src/providers/WebsocketProvider');
 jest.mock('../../../src/providers/IpcProvider');
-jest.mock('../../../src/providers/Web3EthereumProvider');
+jest.mock('../../../src/providers/web3PuffscoinProvider');
 jest.mock('../../../src/providers/MetamaskProvider');
 jest.mock('../../../src/providers/CustomProvider');
 
@@ -74,15 +74,15 @@ describe('ProviderResolverTest', () => {
         expect(providerResolver.resolve(httpProviderMock)).toBeInstanceOf(HttpProvider);
     });
 
-    it('calls resolve with the EthereumProvider', () => {
-        const ethereumProviderMock = {};
-        ethereumProviderMock.isEIP1193 = true;
+    it('calls resolve with the PuffscoinProvider', () => {
+        const puffscoinProviderMock = {};
+        puffscoinProviderMock.isEIP1193 = true;
 
-        providersModuleFactoryMock.createWeb3EthereumProvider.mockReturnValueOnce(ethereumProviderMock);
+        providersModuleFactoryMock.createWeb3PuffscoinProvider.mockReturnValueOnce(puffscoinProviderMock);
 
-        expect(providerResolver.resolve(ethereumProviderMock)).toEqual(ethereumProviderMock);
+        expect(providerResolver.resolve(puffscoinProviderMock)).toEqual(puffscoinProviderMock);
 
-        expect(providersModuleFactoryMock.createWeb3EthereumProvider).toHaveBeenCalledWith(ethereumProviderMock);
+        expect(providersModuleFactoryMock.createWeb3PuffscoinProvider).toHaveBeenCalledWith(puffscoinProviderMock);
     });
 
     it('calls resolve with the WebsocketProvider', () => {
