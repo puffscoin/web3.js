@@ -271,7 +271,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getPubkey('ethereum.eth').then((result) => {
+    web3.eth.ens.getPubkey('puffscoin.puffs').then((result) => {
         console.log(result)
     });
     > {
@@ -315,7 +315,7 @@ Example
 .. code-block:: javascript
 
     web3.eth.ens.setPubkey(
-        'ethereum.eth',
+        'puffscoin.puffs',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         {
@@ -329,7 +329,7 @@ Example
     // Or using the event emitter
 
     web3.eth.ens.setPubkey(
-        'ethereum.eth',
+        'puffscoin.puffs',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         {
@@ -349,7 +349,7 @@ Example
 
     // Or listen to the PubkeyChanged event on the resolver
 
-    web3.eth.ens.resolver('ethereum.eth').then((resolver) => {
+    web3.eth.ens.resolver('puffscoin.puffs').then((resolver) => {
         resolver.events.PubkeyChanged({fromBlock: 0}, function(error, event) {
             console.log(event);
         })
@@ -396,7 +396,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getText('ethereum.eth', 'key').then((result) => {
+    web3.eth.ens.getText('puffscoin.puffs', 'key').then((result) => {
         console.log(result);
     });
     > "0000000000000000000000000000000000000000000000000000000000000000"
@@ -435,7 +435,7 @@ Example
 .. code-block:: javascript
 
     web3.eth.ens.setText(
-        'ethereum.eth',
+        'puffscoin.puffs',
         'key',
         'value',
         {
@@ -449,7 +449,7 @@ Example
     // Or using the event emitter
 
     web3.eth.ens.setText(
-        'ethereum.eth',
+        'puffscoin.puffs',
         'key',
         'value',
         {
@@ -469,7 +469,7 @@ Example
 
     // And listen to the TextChanged event on the resolver
 
-    web3.eth.ens.resolver('ethereum.eth').then((resolver) => {
+    web3.eth.ens.resolver('puffscoin.puffs').then((resolver) => {
         resolver.events.TextChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
@@ -515,7 +515,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getContent('ethereum.eth').then((result) => {
+    web3.eth.ens.getContent('puffscoin.puffs').then((result) => {
         console.log(result);
     });
     > "0x0000000000000000000000000000000000000000000000000000000000000000"
@@ -553,7 +553,7 @@ Example
 .. code-block:: javascript
 
     web3.eth.ens.setContent(
-        'ethereum.eth',
+        'puffscoin.puffs',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -566,7 +566,7 @@ Example
     // Or using the event emitter
 
     web3.eth.ens.setContent(
-        'ethereum.eth',
+        'puffscoin.puffs',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -631,7 +631,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getMultihash('ethereum.eth').then((result) => {
+    web3.eth.ens.getMultihash('puffscoin.puffs').then((result) => {
         console.log(result);
     });
     > 'QmXpSwxdmgWaYrgMUzuDWCnjsZo5RxphE3oW7VhTMSCoKK'
@@ -669,7 +669,7 @@ Example
 .. code-block:: javascript
 
     web3.eth.ens.setMultihash(
-        'ethereum.eth',
+        'puffscoin.puffs',
         'QmXpSwxdmgWaYrgMUzuDWCnjsZo5RxphE3oW7VhTMSCoKK',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -682,7 +682,7 @@ Example
     // Or using the event emitter
 
     web3.eth.ens.setMultihash(
-        'ethereum.eth',
+        'puffscoin.puffs',
         'QmXpSwxdmgWaYrgMUzuDWCnjsZo5RxphE3oW7VhTMSCoKK',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -732,10 +732,10 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getContenthash('pac-txt.eth').then((result) => {
+    web3.eth.ens.getContenthash('puffscoin.puffs').then((result) => {
         console.log(result);
     });
-    > '0xe30101701220e08ea2458249e8f26aee72b95b39c33849a992a3eff40bd06d26c12197adef16'
+    > '0x6a98c12ea46750d7f997bfa19272011bae95ac12161be7a97be2756f19ddcf9b'
 
 ------------------------------------------------------------------------------
 
@@ -770,7 +770,7 @@ Example
 .. code-block:: javascript
 
     web3.eth.ens.setContenthash(
-        'ethereum.eth',
+        'puffscoin.puffs',
         '0xe301017012208cd82588c4e08268fa0b824caa93847ac843410076eeedc41d65fb52eccbb9e6',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -783,7 +783,7 @@ Example
     // Or using the event emitter
 
     web3.eth.ens.setContenthash(
-        'ethereum.eth',
+        'puffscoin.puffs',
         '0xe301017012208cd82588c4e08268fa0b824caa93847ac843410076eeedc41d65fb52eccbb9e6',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -828,7 +828,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.resolver('ethereum.eth').then((resolver) => {
+    web3.eth.ens.resolver('puffscoin.puffs').then((resolver) => {
         resolver.events.AddrChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
