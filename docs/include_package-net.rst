@@ -30,7 +30,7 @@ Example
 .. code-block:: javascript
 
     web3.eth.net.getId().then(console.log);
-    > 1
+    > 420
 
 ------------------------------------------------------------------------------
 
