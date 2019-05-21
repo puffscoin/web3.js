@@ -30,7 +30,7 @@ const options = {
     ]
 };
 const httpProvider = new HttpProvider('http://localhost:11363', options);
-const ipcProvider = new IpcProvider('/Users/myuser/Library/Ethereum/gpuffs.ipc', new net.Server());
+const ipcProvider = new IpcProvider('/Users/myuser/Library/Puffscoin/gpuffs.ipc', new net.Server());
 const abstractWeb3Module = new AbstractWeb3Module(httpProvider);
 
 // $ExpectType BatchRequest
@@ -63,7 +63,7 @@ abstractWeb3Module.givenProvider;
 // $ExpectType string | null
 abstractWeb3Module.defaultAccount;
 
-// $ExpectType HttpProvider | IpcProvider | WebsocketProvider | Web3EthereumProvider | CustomProvider
+// $ExpectType HttpProvider | IpcProvider | WebsocketProvider | Web3PuffscoinProvider | CustomProvider
 abstractWeb3Module.currentProvider;
 
 // $ExpectType boolean
