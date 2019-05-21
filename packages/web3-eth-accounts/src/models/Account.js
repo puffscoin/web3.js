@@ -72,7 +72,7 @@ export default class Account {
         }
 
         const messageBuffer = Buffer.from(data);
-        const preamble = `\u0019Ethereum Signed Message:\n${data.length}`;
+        const preamble = `\u0019Puffscoin Signed Message:\n${data.length}`;
         const preambleBuffer = Buffer.from(preamble);
         const ethMessage = Buffer.concat([preambleBuffer, messageBuffer]);
         const hash = Hash.keccak256s(ethMessage);
@@ -198,7 +198,7 @@ export default class Account {
      *
      * Returns an Account object by the given V3Keystore object.
      *
-     * Note: Taken from https://github.com/ethereumjs/ethereumjs-wallet
+     * Note: Taken from https://github.com/puffscoinjs/puffscoinjs-wallet
      *
      * @method fromV3Keystore
      *
