@@ -33,7 +33,7 @@ import Wallet from './models/Wallet';
 // TODO: Rename Accounts module to Wallet and move the Wallet class to the eth module.
 export default class Accounts extends AbstractWeb3Module {
     /**
-     * @param {Web3EthereumProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
+     * @param {Web3PuffscoinProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
      * @param {Object} formatters
      * @param {Utils} utils
      * @param {MethodFactory} methodFactory
@@ -123,7 +123,7 @@ export default class Accounts extends AbstractWeb3Module {
         }
 
         const messageBuffer = Buffer.from(data);
-        const preambleBuffer = Buffer.from(`\u0019Ethereum Signed Message:\n${data.length}`);
+        const preambleBuffer = Buffer.from(`\u0019Puffscoin Signed Message:\n${data.length}`);
         const ethMessage = Buffer.concat([preambleBuffer, messageBuffer]);
 
         return Hash.keccak256s(ethMessage);
@@ -219,7 +219,7 @@ export default class Accounts extends AbstractWeb3Module {
     }
 
     /**
-     * Recovers the Ethereum address which was used to sign the given data.
+     * Recovers the puffscoin address which was used to sign the given data.
      *
      * @method recover
      *
@@ -253,7 +253,7 @@ export default class Accounts extends AbstractWeb3Module {
     /**
      * Decrypts account
      *
-     * Note: Taken from https://github.com/ethereumjs/ethereumjs-wallet
+     * Note: Taken from https://github.com/puffscoinjs/puffscoinjs-wallet
      *
      * @method decrypt
      *
