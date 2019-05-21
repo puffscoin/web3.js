@@ -14,7 +14,7 @@ Functions:
 - ``type``: ``"function"``, ``"constructor"`` (can be omitted, defaulting to ``"function"``; ``"fallback"`` also possible but not relevant in web3.js);
 - ``name``: the name of the function (only present for function types);
 - ``constant``: ``true`` if function is specified to not modify the blockchain state;
-- ``payable``: ``true`` if function accepts ether, defaults to ``false``;
+- ``payable``: ``true`` if function accepts puffs, defaults to ``false``;
 - ``stateMutability``: a string with one of the following values: ``pure`` (specified to not read blockchain state), ``view`` (same as ``constant`` above), ``nonpayable`` and ``payable`` (same as ``payable`` above);
 - ``inputs``: an array of objects, each of which contains:
 
