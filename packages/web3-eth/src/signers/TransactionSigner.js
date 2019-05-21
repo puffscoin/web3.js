@@ -17,7 +17,7 @@
  * @date 2019
  */
 
-import EthereumTx from 'ethereumjs-tx';
+import PuffscoinTx from 'puffscoinjs-tx';
 
 export default class TransactionSigner {
     /**
@@ -59,7 +59,7 @@ export default class TransactionSigner {
             privateKey = privateKey.substring(2);
         }
 
-        const ethTx = new EthereumTx(transaction);
+        const ethTx = new PuffscoinTx(transaction);
         ethTx.sign(Buffer.from(privateKey, 'hex'));
 
         const validationResult = ethTx.validate(true);
