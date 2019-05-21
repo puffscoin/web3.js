@@ -26,7 +26,7 @@ const global =
         // eslint-disable-next-line no-new-func
     })() || new Function('return this')();
 
-// TODO: Remove the detector because of window/global.ethereum
+// TODO: Remove the detector because of window/global.puffscoin
 export default class ProviderDetector {
     /**
      * Detects which provider is given in the current environment
@@ -37,8 +37,8 @@ export default class ProviderDetector {
      */
     static detect() {
         if (
-            typeof global.ethereumProvider !== 'undefined' &&
-            global.ethereumProvider.constructor.name === 'EthereumProvider'
+            typeof global.puffscoinProvider !== 'undefined' &&
+            global.puffscoinProvider.constructor.name === 'PuffscoinProvider'
         ) {
             return global.ethereumProvider;
         }
