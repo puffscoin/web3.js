@@ -33,7 +33,7 @@ import ShhModule from './Shh.js';
  *
  * @method Shh
  *
- * @param {Web3EthereumProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
+ * @param {Web3PuffscoinProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
  * @param {Net} net
  * @param {Object} options
  *
