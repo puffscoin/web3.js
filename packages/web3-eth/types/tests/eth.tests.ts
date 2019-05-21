@@ -84,7 +84,7 @@ eth.defaultAccount;
 // $ExpectType string | number
 eth.defaultBlock;
 
-// $ExpectType HttpProvider | IpcProvider | WebsocketProvider | Web3EthereumProvider | CustomProvider
+// $ExpectType HttpProvider | IpcProvider | WebsocketProvider | Web3PuffscoinProvider | CustomProvider
 eth.currentProvider;
 
 // $ExpectType Promise<string>
