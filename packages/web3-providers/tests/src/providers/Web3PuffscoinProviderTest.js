@@ -5,17 +5,17 @@ import AbstractWeb3Module from '../../__mocks__/AbstractWeb3Module';
 import AbstractSocketProvider from '../../../lib/providers/AbstractSocketProvider';
 
 /**
- * Web3EthereumProvider test
+ * Web3PuffscoinProvider test
  */
-describe('Web3EthereumProviderTest', () => {
-    let ethereumProvider, socketMock;
+describe('Web3PuffscoinProviderTest', () => {
+    let puffscoinProvider, socketMock;
 
     beforeEach(() => {
         socketMock = {
             on: jest.fn()
         };
 
-        ethereumProvider = new Web3PuffscoinProvider(socketMock);
+        puffscoinProvider = new Web3PuffscoinProvider(socketMock);
     });
 
     it('constructor check', () => {
@@ -187,7 +187,7 @@ describe('Web3EthereumProviderTest', () => {
             return Promise.resolve(true);
         });
 
-        const response = await ethereumProvider.send('method', []);
+        const response = await puffscoinProvider.send('method', []);
 
         expect(response).toEqual(true);
 
@@ -207,7 +207,7 @@ describe('Web3EthereumProviderTest', () => {
             return Promise.resolve(false);
         });
 
-        await expect(ethereumProvider.send('method', [])).rejects.toThrow('invalid');
+        await expect(puffscoinProvider.send('method', [])).rejects.toThrow('invalid');
 
         expect(JsonRpcResponseValidator.validate).toHaveBeenCalled();
     });
