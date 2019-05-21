@@ -34,7 +34,7 @@ import {toChecksumAddress} from 'web3-utils';
 
 export default class AbstractWeb3Module {
     /**
-     * @param {AbstractSocketProvider|HttpProvider|String|EthereumProvider} provider
+     * @param {AbstractSocketProvider|HttpProvider|String|PuffscoinProvider} provider
      * @param {Object} options
      * @param {MethodFactory} methodFactory
      * @param {Net.Socket} nodeNet
@@ -261,7 +261,7 @@ export default class AbstractWeb3Module {
      *
      * @method setProvider
      *
-     * @param {Web3EthereumProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
+     * @param {Web3PuffscoinProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
      * @param {Net} net
      *
      * @returns {Boolean|Error}
@@ -283,7 +283,7 @@ export default class AbstractWeb3Module {
      *
      * @method isSameProvider
      *
-     * @param {Web3EthereumProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
+     * @param {Web3PuffscoinProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
      *
      * @returns {Boolean}
      */
