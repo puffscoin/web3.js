@@ -26,7 +26,7 @@ export default class EnsModuleFactory {
      *
      * @method createENS
      *
-     * @param {HttpProvider|WebsocketProvider|IpcProvider|Web3EthereumProvider|String} provider
+     * @param {HttpProvider|WebsocketProvider|IpcProvider|Web3PuffscoinProvider|String} provider
      * @param {ContractModuleFactory} contractModuleFactory
      * @param {Accounts} accounts
      * @param {AbiCoder} abiCoder
@@ -58,7 +58,7 @@ export default class EnsModuleFactory {
      *
      * @method createRegistry
      *
-     * @param {HttpProvider|WebsocketProvider|IpcProvider|Web3EthereumProvider|String} provider
+     * @param {HttpProvider|WebsocketProvider|IpcProvider|Web3PuffscoinProvider|String} provider
      * @param {ContractModuleFactory} contractModuleFactory
      * @param {Accounts} accounts
      * @param {AbiCoder} abiCoder
