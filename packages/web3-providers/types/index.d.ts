@@ -47,7 +47,7 @@ export class ProvidersModuleFactory {
 
     createIpcProvider(path: string, net: net.Server): IpcProvider;
 
-    createWeb3EthereumProvider(connection: object): Web3EthereumProvider;
+    createWeb3PuffscoinProvider(connection: object): Web3PuffscoinProvider;
 }
 
 export class HttpProvider {
@@ -120,8 +120,8 @@ export class WebsocketProvider extends AbstractSocketProvider {
     isConnecting(): boolean;
 }
 
-export class Web3EthereumProvider extends AbstractSocketProvider {
-    constructor(ethereumProvider: any);
+export class Web3PuffscoinProvider extends AbstractSocketProvider {
+    constructor(puffscoinProvider: any);
 }
 
 export class JsonRpcMapper {
@@ -138,7 +138,7 @@ export class JsonRpcResponseValidator {
     static isResponseItemValid(response: JsonRpcPayload): boolean;
 }
 
-export type provider = HttpProvider | IpcProvider | WebsocketProvider | Web3EthereumProvider | CustomProvider | string | null;
+export type provider = HttpProvider | IpcProvider | WebsocketProvider | Web3PuffscoinProvider | CustomProvider | string | null;
 
 export interface JsonRpcPayload {
     jsonrpc: string;
