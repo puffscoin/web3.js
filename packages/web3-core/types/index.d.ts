@@ -23,7 +23,7 @@ import BN = require('bn.js');
 import {AbstractMethodFactory} from 'web3-core-method';
 import {
     BatchRequest,
-    Web3EthereumProvider,
+    Web3PuffscoinProvider,
     HttpProvider,
     HttpProviderOptions,
     IpcProvider,
@@ -50,7 +50,7 @@ export class AbstractWeb3Module {
     defaultGas: number;
     static readonly providers: Providers;
     defaultAccount: string | null;
-    readonly currentProvider: Web3EthereumProvider | HttpProvider | IpcProvider | WebsocketProvider | CustomProvider;
+    readonly currentProvider: Web3PuffscoinProvider | HttpProvider | IpcProvider | WebsocketProvider | CustomProvider;
     readonly givenProvider: any;
 
     setProvider(provider: provider, net?: net.Socket): boolean;
