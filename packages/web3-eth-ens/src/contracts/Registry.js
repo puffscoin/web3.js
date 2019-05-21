@@ -25,7 +25,7 @@ import {RESOLVER_ABI} from '../../ressources/ABI/Resolver';
 
 export default class Registry extends AbstractContract {
     /**
-     * @param {HttpProvider|WebsocketProvider|IpcProvider|Web3EthereumProvider|String} provider
+     * @param {HttpProvider|WebsocketProvider|IpcProvider|Web3PuffscoinProvider|String} provider
      * @param {ContractModuleFactory} contractModuleFactory
      * @param {Accounts} accounts
      * @param {AbiCoder} abiCoder
@@ -82,7 +82,7 @@ export default class Registry extends AbstractContract {
      *
      * @method setProvider
      *
-     * @param {HttpProvider|WebsocketProvider|IpcProvider|Web3EthereumProvider|String} provider
+     * @param {HttpProvider|WebsocketProvider|IpcProvider|Web3PuffscoinProvider|String} provider
      * @param {Net} net
      *
      * @returns {Boolean}
