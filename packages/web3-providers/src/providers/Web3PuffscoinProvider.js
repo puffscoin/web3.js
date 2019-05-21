@@ -12,7 +12,7 @@
     along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * @file Web3EthereumProvider.js
+ * @file Web3PuffscoinProvider.js
  * @author Samuel Furter <samuel@ethereum.org>
  * @date 2018
  */
@@ -20,9 +20,9 @@
 import JsonRpcResponseValidator from '../validators/JsonRpcResponseValidator';
 import AbstractSocketProvider from '../../lib/providers/AbstractSocketProvider';
 
-export default class Web3EthereumProvider extends AbstractSocketProvider {
+export default class Web3PuffscoinProvider extends AbstractSocketProvider {
     /**
-     * @param {EthereumProvider} connection
+     * @param {PuffscoinProvider} connection
      *
      * @constructor
      */
@@ -90,7 +90,7 @@ export default class Web3EthereumProvider extends AbstractSocketProvider {
     }
 
     /**
-     * This is the listener for the 'networkChanged' event of the EthereumProvider.
+     * This is the listener for the 'networkChanged' event of the PuffscoinProvider.
      *
      * @param {Number} networkId
      */
@@ -99,7 +99,7 @@ export default class Web3EthereumProvider extends AbstractSocketProvider {
     }
 
     /**
-     * This is the listener for the 'accountsChanged' event of the EthereumProvider.
+     * This is the listener for the 'accountsChanged' event of the PuffscoinProvider.
      *
      * @param {Array} accounts
      */
@@ -108,7 +108,7 @@ export default class Web3EthereumProvider extends AbstractSocketProvider {
     }
 
     /**
-     * This is the listener for the 'message' events of the current EthereumProvider connection.
+     * This is the listener for the 'message' events of the current PuffscoinProvider connection.
      *
      * @method onMessage
      *
