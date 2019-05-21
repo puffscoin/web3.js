@@ -28,7 +28,7 @@ export default class Web3PuffscoinProvider extends AbstractSocketProvider {
      */
     constructor(connection) {
         super(connection, null);
-        this.host = 'Web3EthereumProvider';
+        this.host = 'Web3PuffscoinProvider';
     }
 
     /**
