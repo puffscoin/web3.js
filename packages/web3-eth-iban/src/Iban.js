@@ -96,7 +96,7 @@ export default class Iban {
     }
 
     /**
-     * This method should be used to create an ethereum address from a direct iban address
+     * This method should be used to create a Puffscoin address from a direct iban address
      *
      * @method toAddress
      *
@@ -115,7 +115,7 @@ export default class Iban {
     }
 
     /**
-     * This method should be used to create iban address from an ethereum address
+     * This method should be used to create iban address from a Puffscoin address
      *
      * @method toIban
      *
@@ -128,7 +128,7 @@ export default class Iban {
     }
 
     /**
-     * This method should be used to create iban object from an ethereum address
+     * This method should be used to create iban object from a Puffscoin address
      *
      * @method fromAddress
      *
@@ -276,7 +276,7 @@ export default class Iban {
      *
      * @method toAddress
      *
-     * @returns {String} ethereum address
+     * @returns {String} Puffscoin address
      */
     toAddress() {
         if (this.isDirect()) {
