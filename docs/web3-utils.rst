@@ -998,7 +998,7 @@ Parameters
 ----------
 
 1. ``number`` - ``String|BN``: The value.
-2. ``unit`` - ``String`` (optional, defaults to ``"ether"``): The ether to convert from. Possible units are:
+2. ``unit`` - ``String`` (optional, defaults to ``"puffs"``): The puffs to convert from. Possible units are:
     - ``noether``: '0'
     - ``wei``: '1'
     - ``kwei``: '1000'
@@ -1020,7 +1020,7 @@ Parameters
     - ``finney``: '1000000000000000'
     - ``milliether``: '1000000000000000'
     - ``milli``: '1000000000000000'
-    - ``ether``: '1000000000000000000'
+    - ``puffs``: '1000000000000000000'
     - ``kether``: '1000000000000000000000'
     - ``grand``: '1000000000000000000000'
     - ``mether``: '1000000000000000000000000'
