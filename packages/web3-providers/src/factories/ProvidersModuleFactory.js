@@ -28,9 +28,9 @@ import WebsocketProvider from '../providers/WebsocketProvider';
 import IpcProvider from '../providers/IpcProvider';
 import HttpProvider from '../providers/HttpProvider';
 import BatchRequest from '../batch-request/BatchRequest';
-import Web3EthereumProvider from '../providers/Web3EthereumProvider';
+import Web3PuffscoinProvider from '../providers/Web3PuffscoinProvider';
 import MetamaskProvider from '../providers/MetamaskProvider';
-import MistEthereumProvider from '../providers/MistEthereumProvider';
+import MistPuffscoinProvider from '../providers/MistPuffscoinProvider';
 import CustomProvider from '../providers/CustomProvider';
 
 export default class ProvidersModuleFactory {
@@ -156,16 +156,16 @@ export default class ProvidersModuleFactory {
     }
 
     /**
-     * Returns an Web3EthereumProvider object
+     * Returns an Web3PuffscoinProvider object
      *
-     * @method createWeb3EthereumProvider
+     * @method createWeb3PuffscoinProvider
      *
-     * @param {EthereumProvider} connection
+     * @param {PuffscoinProvider} connection
      *
-     * @returns {Web3EthereumProvider}
+     * @returns {Web3PuffscoinProvider}
      */
-    createWeb3EthereumProvider(connection) {
-        return new Web3EthereumProvider(connection);
+    createWeb3PuffscoinProvider(connection) {
+        return new Web3PuffscoinProvider(connection);
     }
 
     /**
@@ -182,16 +182,16 @@ export default class ProvidersModuleFactory {
     }
 
     /**
-     * Returns an MistEthereumProvider object
+     * Returns an MistPuffscoinProvider object
      *
-     * @method createMistEthereumProvider
+     * @method createMistPuffscoinProvider
      *
-     * @param {MistEthereumProvider} mistEthereumProvider
+     * @param {MistPuffscoinProvider} mistPuffscoinProvider
      *
-     * @returns {MistEthereumProvider}
+     * @returns {MistPuffscoinProvider}
      */
-    createMistEthereumProvider(mistEthereumProvider) {
-        return new MistEthereumProvider(mistEthereumProvider);
+    createMistPuffscoinProvider(mistPuffscoinProvider) {
+        return new MistPuffscoinProvider(mistPuffscoinProvider);
     }
 
     /**
