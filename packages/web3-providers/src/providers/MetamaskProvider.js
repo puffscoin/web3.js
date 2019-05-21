@@ -90,7 +90,7 @@ export default class MetamaskProvider extends AbstractSocketProvider {
     }
 
     /**
-     * This is the listener for the 'networkChanged' event of the EthereumProvider.
+     * This is the listener for the 'networkChanged' event of the PuffscoinProvider.
      *
      * @param {Number} networkId
      */
@@ -99,7 +99,7 @@ export default class MetamaskProvider extends AbstractSocketProvider {
     }
 
     /**
-     * This is the listener for the 'accountsChanged' event of the EthereumProvider.
+     * This is the listener for the 'accountsChanged' event of the PuffscoinProvider.
      *
      * @param {Array} accounts
      */
