@@ -443,7 +443,7 @@ export const isHex = (hex) => {
 };
 
 /**
- * Returns true if given string is a valid Ethereum block header bloom.
+ * Returns true if given string is a valid PUFFScoin block header bloom.
  *
  * TODO UNDOCUMENTED
  *
