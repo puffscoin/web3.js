@@ -19,9 +19,9 @@
 
 import AbstractSocketProvider from '../../lib/providers/AbstractSocketProvider';
 
-export default class MistEthereumProvider extends AbstractSocketProvider {
+export default class MistPuffscoinProvider extends AbstractSocketProvider {
     /**
-     * @param {Web3EthereumProvider} connection
+     * @param {Web3PuffscoinProvider} connection
      *
      * @constructor
      */
