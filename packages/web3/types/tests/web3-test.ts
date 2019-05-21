@@ -30,7 +30,7 @@ Web3.providers;
 
 const web3 = new Web3('https://localhost:5000/');
 
-// $ExpectType HttpProvider | IpcProvider | WebsocketProvider | Web3EthereumProvider | CustomProvider
+// $ExpectType HttpProvider | IpcProvider | WebsocketProvider | Web3PuffscoinProvider | CustomProvider
 web3.currentProvider;
 
 // $ExpectType Utils
