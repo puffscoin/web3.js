@@ -264,7 +264,7 @@ export const toChecksumAddress = (address, chainId = null) => {
     }
 
     if (!/^(0x)?[0-9a-f]{40}$/i.test(address))
-        throw new Error(`Given address "${address}" is not a valid Ethereum address.`);
+        throw new Error(`Given address "${address}" is not a valid PUFFScoin address.`);
 
     const stripAddress = stripHexPrefix(address).toLowerCase();
     const prefix = chainId != null ? chainId.toString() + '0x' : '';
