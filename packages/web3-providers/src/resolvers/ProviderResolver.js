@@ -74,12 +74,12 @@ export default class ProviderResolver {
             return provider;
         }
 
-        if (typeof global.mist !== 'undefined' && provider.constructor.name === 'EthereumProvider') {
-            return this.providersModuleFactory.createMistEthereumProvider(provider);
+        if (typeof global.mist !== 'undefined' && provider.constructor.name === 'PuffscoinProvider') {
+            return this.providersModuleFactory.createMistPuffscoinProvider(provider);
         }
 
         if (provider.isEIP1193) {
-            return this.providersModuleFactory.createWeb3EthereumProvider(provider);
+            return this.providersModuleFactory.createWeb3PuffscoinProvider(provider);
         }
 
         if (this.isMetamaskInpageProvider(provider)) {
