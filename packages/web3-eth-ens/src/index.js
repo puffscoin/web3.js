@@ -30,7 +30,7 @@ import EnsModuleFactory from './factories/EnsModuleFactory';
  *
  * @method Ens
  *
- * @param {HttpProvider|WebsocketProvider|IpcProvider|Web3EthereumProvider|String} provider
+ * @param {HttpProvider|WebsocketProvider|IpcProvider|Web3PuffscoinProvider|String} provider
  * @param {Net.Socket} net
  * @param {Object} options
  * @param {Accounts} accounts
