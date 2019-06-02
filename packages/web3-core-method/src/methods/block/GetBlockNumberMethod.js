@@ -31,7 +31,7 @@ export default class GetBlockNumberMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_blockNumber', 0, utils, formatters, moduleInstance);
+        super('puffs_blockNumber', 0, utils, formatters, moduleInstance);
     }
 
     /**
