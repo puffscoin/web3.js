@@ -989,7 +989,7 @@ toWei
     web3.utils.toWei(number [, unit])
 
 
-Converts any `puffs value <http://ethdocs.org/en/latest/ether.html>`_ value into `wei <http://ethereum.stackexchange.com/questions/253/the-ether-denominations-are-called-finney-szabo-and-wei-what-who-are-these-na>`_.
+Converts any puffs value into wei.
 
 .. note:: "wei" are the smallest PUFFScoin unit, and you should always make calculations in wei and convert only for display reasons.
 
@@ -1063,16 +1063,16 @@ fromWei
     web3.utils.fromWei(number [, unit])
 
 
-Converts any `wei <http://ethereum.stackexchange.com/questions/253/the-ether-denominations-are-called-finney-szabo-and-wei-what-who-are-these-na>`_ value into a `puffs value <http://ethdocs.org/en/latest/ether.html>`_.
+Converts any wei value into a puffs value.
 
-.. note:: "wei" are the smallest ethere unit, and you should always make calculations in wei and convert only for display reasons.
+.. note:: "wei" are the smallest PUFFScoin units, and you should always make calculations in wei and convert only for display reasons.
 
 ----------
 Parameters
 ----------
 
 1. ``number`` - ``String|BN``: The value in wei.
-2. ``unit`` - ``String`` (optional, defaults to ``"ether"``): The ether to convert to. Possible units are:
+2. ``unit`` - ``String`` (optional, defaults to ``"puffs"``): The puffs to convert to. Possible units are:
     - ``noether``: '0'
     - ``wei``: '1'
     - ``kwei``: '1000'
@@ -1113,7 +1113,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.utils.fromWei('1', 'ether');
+    web3.utils.fromWei('1', 'puffs');
     > "0.000000000000000001"
 
     web3.utils.fromWei('1', 'finney');
@@ -1135,7 +1135,7 @@ unitMap
     web3.utils.unitMap
 
 
-Shows all possible `ether value <http://ethdocs.org/en/latest/ether.html>`_ and their amount in `wei <http://ethereum.stackexchange.com/questions/253/the-ether-denominations-are-called-finney-szabo-and-wei-what-who-are-these-na>`_.
+Shows all possible puffs values and their amount in wei.
 
 ----------
 Return value
@@ -1163,7 +1163,7 @@ Return value
     - ``finney``: '1000000000000000'
     - ``milliether``: '1000000000000000'
     - ``milli``: '1000000000000000'
-    - ``ether``: '1000000000000000000'
+    - ``puffs``: '1000000000000000000'
     - ``kether``: '1000000000000000000000'
     - ``grand``: '1000000000000000000000'
     - ``mether``: '1000000000000000000000000'
@@ -1200,7 +1200,7 @@ Example
         finney:     '1000000000000000',
         milliether: '1000000000000000',
         milli:      '1000000000000000',
-        ether:      '1000000000000000000',
+        puffs:      '1000000000000000000',
         kether:     '1000000000000000000000',
         grand:      '1000000000000000000000',
         mether:     '1000000000000000000000000',
