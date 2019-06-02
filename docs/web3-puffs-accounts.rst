@@ -12,7 +12,7 @@ The ``web3.puffs.accounts`` contains functions to generate PUFFScoin accounts an
 
     import {Accounts} from 'web3-puffs-accounts';
 
-    // Passing in the eth or web3 package is necessary to allow retrieving chainId, gasPrice and nonce automatically
+    // Passing in the puffs or web3 package is necessary to allow retrieving chainId, gasPrice and nonce automatically
     // for accounts.signTransaction().
     const accounts = new Accounts('ws://localhost:11364', null, options);
 
@@ -26,7 +26,7 @@ create
 
 .. code-block:: javascript
 
-    web3.eth.accounts.create([entropy]);
+    web3.puffs.accounts.create([entropy]);
 
 Generates an account object with private key and public key. It's different from
 :ref:`web3.puffs.personal.newAccount() <personal-newaccount>` which creates an account
@@ -336,9 +336,9 @@ recover
 
 .. code-block:: javascript
 
-    web3.eth.accounts.recover(signatureObject);
-    web3.eth.accounts.recover(message, signature [, preFixed]);
-    web3.eth.accounts.recover(message, v, r, s [, preFixed]);
+    web3.puffs.accounts.recover(signatureObject);
+    web3.puffs.accounts.recover(message, signature [, preFixed]);
+    web3.puffs.accounts.recover(message, v, r, s [, preFixed]);
 
 Recovers the PUFFScoin address which was used to sign the given data.
 
@@ -594,7 +594,7 @@ Adds an account using a private key or account object to the wallet.
 Parameters
 ----------
 
-1. ``account`` - ``String|Object``: A private key or account object created with :ref:`web3.eth.accounts.create() <accounts-create>`.
+1. ``account`` - ``String|Object``: A private key or account object created with :ref:`web3.puffs.accounts.create() <accounts-create>`.
 
 
 -------
