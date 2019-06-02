@@ -31,7 +31,7 @@ export default class GetProtocolVersionMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_protocolVersion', 0, utils, formatters, moduleInstance);
+        super('puffs_protocolVersion', 0, utils, formatters, moduleInstance);
     }
 
     /**
