@@ -1,18 +1,18 @@
-.. _eth-ens:
+.. _puffs-ens:
 
 .. include:: include_announcement.rst
 
 ============
-web3.eth.ens
+web3.puffs.ens
 ============
 
-The ``web3.eth.ens`` functions let you interacting with the Ens smart contracts.
+The ``web3.puffs.ens`` functions let you interacting with the Ens smart contracts.
 
 .. code-block:: javascript
 
     import Web3 from 'web3';
-    import {Ens} from 'web3-eth-ens';
-    import {Accounts} from 'web3-eth-accounts';
+    import {Ens} from 'web3-puffs-ens';
+    import {Accounts} from 'web3-puffs-accounts';
 
     // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const eth = new Ens(
@@ -36,7 +36,7 @@ registry
 
 .. code-block:: javascript
 
-    web3.eth.ens.registry;
+    web3.puffs.ens.registry;
 
 Returns the network specific Ens registry.
 
@@ -52,7 +52,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.registry;
+    web3.puffs.ens.registry;
     > {
         ens: Ens,
         resolverContract: Contract | null,
@@ -69,7 +69,7 @@ resolver
 
 .. code-block:: javascript
 
-    web3.eth.ens.resolver(name);
+    web3.puffs.ens.resolver(name);
 
 Returns the resolver contract to a PUFFScoin address.
 
@@ -85,7 +85,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.resolver('puffscoin.puffs').then((contract) => {
+    web3.puffs.ens.resolver('puffscoin.puffs').then((contract) => {
         console.log(contract);
     });
     > Contract<Resolver>
@@ -97,7 +97,7 @@ supportsInterface
 
 .. code-block:: javascript
 
-    web3.eth.ens.supportsInterface(ENSName, interfaceId, [callback]);
+    web3.puffs.ens.supportsInterface(ENSName, interfaceId, [callback]);
 
 Checks if the current resolver does support the desired interface.
 
@@ -121,7 +121,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.supportsInterface('puffscoin.puffs', '0xbc1c58d1').then((supportsInterface) => {
+    web3.puffs.ens.supportsInterface('puffscoin.puffs', '0xbc1c58d1').then((supportsInterface) => {
         console.log(supportsInterface);
     })
     > true
@@ -133,7 +133,7 @@ getAddress
 
 .. code-block:: javascript
 
-    web3.eth.ens.getAddress(ENSName, [callback]);
+    web3.puffs.ens.getAddress(ENSName, [callback]);
 
 Resolves an Ens name to a PUFFScoin address.
 
@@ -156,7 +156,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getAddress('puffscoin.puffs').then((address) => {
+    web3.puffs.ens.getAddress('puffscoin.puffs').then((address) => {
         console.log(address);
     })
     > 0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359
@@ -168,7 +168,7 @@ setAddress
 
 .. code-block:: javascript
 
-    web3.eth.ens.setAddress(ENSName, address, options, [callback]);
+    web3.puffs.ens.setAddress(ENSName, address, options, [callback]);
 
 Sets the address of an Ens name in his resolver.
 
@@ -192,7 +192,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setAddress(
+    web3.puffs.ens.setAddress(
         'puffscoin.puffs',
         '0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359',
         {
@@ -205,7 +205,7 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setAddress(
+    web3.puffs.ens.setAddress(
         'puffscoin.puffs',
         '0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359',
         {
@@ -225,7 +225,7 @@ Example
 
     // Or listen to the AddrChanged event on the resolver
 
-    web3.eth.ens.resolver('puffscoin.puffs').then((resolver) => {
+    web3.puffs.ens.resolver('puffscoin.puffs').then((resolver) => {
         resolver.events.AddrChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
@@ -248,7 +248,7 @@ getPubkey
 
 .. code-block:: javascript
 
-    web3.eth.ens.getPubkey(ENSName, [callback]);
+    web3.puffs.ens.getPubkey(ENSName, [callback]);
 
 Returns the X and Y coordinates of the curve point for the public key.
 
@@ -271,7 +271,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getPubkey('puffscoin.puffs').then((result) => {
+    web3.puffs.ens.getPubkey('puffscoin.puffs').then((result) => {
         console.log(result)
     });
     > {
@@ -288,7 +288,7 @@ setPubkey
 
 .. code-block:: javascript
 
-    web3.eth.ens.setPubkey(ENSName, x, y, options, [callback]);
+    web3.puffs.ens.setPubkey(ENSName, x, y, options, [callback]);
 
 Sets the SECP256k1 public key associated with an Ens node
 
@@ -314,7 +314,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setPubkey(
+    web3.puffs.ens.setPubkey(
         'puffscoin.puffs',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
@@ -328,7 +328,7 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setPubkey(
+    web3.puffs.ens.setPubkey(
         'puffscoin.puffs',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
@@ -349,7 +349,7 @@ Example
 
     // Or listen to the PubkeyChanged event on the resolver
 
-    web3.eth.ens.resolver('puffscoin.puffs').then((resolver) => {
+    web3.puffs.ens.resolver('puffscoin.puffs').then((resolver) => {
         resolver.events.PubkeyChanged({fromBlock: 0}, function(error, event) {
             console.log(event);
         })
@@ -372,7 +372,7 @@ getText
 
 .. code-block:: javascript
 
-    web3.eth.ens.getText(ENSName, key, [callback]);
+    web3.puffs.ens.getText(ENSName, key, [callback]);
 
 Returns the text by the given key.
 
@@ -396,7 +396,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getText('puffscoin.puffs', 'key').then((result) => {
+    web3.puffs.ens.getText('puffscoin.puffs', 'key').then((result) => {
         console.log(result);
     });
     > "0000000000000000000000000000000000000000000000000000000000000000"
@@ -408,7 +408,7 @@ setText
 
 .. code-block:: javascript
 
-    web3.eth.ens.setText(ENSName, key, value, options, [callback]);
+    web3.puffs.ens.setText(ENSName, key, value, options, [callback]);
 
 Sets the content hash associated with an Ens node.
 
@@ -434,7 +434,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setText(
+    web3.puffs.ens.setText(
         'puffscoin.puffs',
         'key',
         'value',
@@ -448,7 +448,7 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setText(
+    web3.puffs.ens.setText(
         'puffscoin.puffs',
         'key',
         'value',
@@ -469,7 +469,7 @@ Example
 
     // And listen to the TextChanged event on the resolver
 
-    web3.eth.ens.resolver('puffscoin.puffs').then((resolver) => {
+    web3.puffs.ens.resolver('puffscoin.puffs').then((resolver) => {
         resolver.events.TextChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
@@ -492,7 +492,7 @@ getContent
 
 .. code-block:: javascript
 
-    web3.eth.ens.getContent(ENSName, [callback]);
+    web3.puffs.ens.getContent(ENSName, [callback]);
 
 Returns the content hash associated with an Ens node.
 
@@ -515,7 +515,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getContent('puffscoin.puffs').then((result) => {
+    web3.puffs.ens.getContent('puffscoin.puffs').then((result) => {
         console.log(result);
     });
     > "0x0000000000000000000000000000000000000000000000000000000000000000"
@@ -527,7 +527,7 @@ setContent
 
 .. code-block:: javascript
 
-    web3.eth.ens.setContent(ENSName, hash, options, [callback]);
+    web3.puffs.ens.setContent(ENSName, hash, options, [callback]);
 
 Sets the content hash associated with an Ens node.
 
@@ -552,7 +552,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setContent(
+    web3.puffs.ens.setContent(
         'puffscoin.puffs',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         {
@@ -608,7 +608,7 @@ getMultihash
 
 .. code-block:: javascript
 
-    web3.eth.ens.getMultihash(ENSName, [callback]);
+    web3.puffs.ens.getMultihash(ENSName, [callback]);
 
 Returns the multihash associated with an Ens node.
 
@@ -631,7 +631,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getMultihash('puffscoin.puffs').then((result) => {
+    web3.puffs.ens.getMultihash('puffscoin.puffs').then((result) => {
         console.log(result);
     });
     > 'QmXpSwxdmgWaYrgMUzuDWCnjsZo5RxphE3oW7VhTMSCoKK'
@@ -643,7 +643,7 @@ setMultihash
 
 .. code-block:: javascript
 
-    web3.eth.ens.setMultihash(ENSName, hash, options, [callback]);
+    web3.puffs.ens.setMultihash(ENSName, hash, options, [callback]);
 
 Sets the multihash associated with an Ens node.
 
@@ -668,7 +668,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setMultihash(
+    web3.puffs.ens.setMultihash(
         'puffscoin.puffs',
         'QmXpSwxdmgWaYrgMUzuDWCnjsZo5RxphE3oW7VhTMSCoKK',
         {
@@ -681,7 +681,7 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setMultihash(
+    web3.puffs.ens.setMultihash(
         'puffscoin.puffs',
         'QmXpSwxdmgWaYrgMUzuDWCnjsZo5RxphE3oW7VhTMSCoKK',
         {
@@ -709,7 +709,7 @@ getContenthash
 
 .. code-block:: javascript
 
-    web3.eth.ens.getContenthash(ENSName, [callback]);
+    web3.puffs.ens.getContenthash(ENSName, [callback]);
 
 Returns the contenthash associated with an Ens node. `contenthash` encoding is defined in [EIP1577](http://eips.ethereum.org/EIPS/eip-1577)
 
@@ -732,7 +732,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getContenthash('puffscoin.puffs').then((result) => {
+    web3.puffs.ens.getContenthash('puffscoin.puffs').then((result) => {
         console.log(result);
     });
     > '0x6a98c12ea46750d7f997bfa19272011bae95ac12161be7a97be2756f19ddcf9b'
@@ -744,7 +744,7 @@ setContenthash
 
 .. code-block:: javascript
 
-    web3.eth.ens.setContenthash(ENSName, hash, options, [callback]);
+    web3.puffs.ens.setContenthash(ENSName, hash, options, [callback]);
 
 Sets the contenthash associated with an Ens node.
 
@@ -769,7 +769,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setContenthash(
+    web3.puffs.ens.setContenthash(
         'puffscoin.puffs',
         '0xe301017012208cd82588c4e08268fa0b824caa93847ac843410076eeedc41d65fb52eccbb9e6',
         {
@@ -782,7 +782,7 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setContenthash(
+    web3.puffs.ens.setContenthash(
         'puffscoin.puffs',
         '0xe301017012208cd82588c4e08268fa0b824caa93847ac843410076eeedc41d65fb52eccbb9e6',
         {
@@ -828,7 +828,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.resolver('puffscoin.puffs').then((resolver) => {
+    web3.puffs.ens.resolver('puffscoin.puffs').then((resolver) => {
         resolver.events.AddrChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
@@ -877,7 +877,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.resistry.then((registry) => {
+    web3.puffs.ens.resistry.then((registry) => {
         registry.events.Transfer({fromBlock: 0}, (error, event) => {
               console.log(event);
           })
