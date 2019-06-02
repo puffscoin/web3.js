@@ -31,7 +31,7 @@ export default class IsSyncingMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_syncing', 0, utils, formatters, moduleInstance);
+        super('puffs_syncing', 0, utils, formatters, moduleInstance);
     }
 
     /**
