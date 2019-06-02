@@ -1,17 +1,17 @@
-.. _eth-abi:
+.. _puffs-abi:
 
 .. include:: include_announcement.rst
 
 ============
-web3.eth.abi
+web3.puffs.abi
 ============
 
-The ``web3-eth-abi`` package allows you to de- and encode parameters from a ABI (Application Binary Interface).
+The ``web3-puffs-abi`` package allows you to de- and encode parameters from a ABI (Application Binary Interface).
 This will be used for calling functions of a deployed smart-contract.
 
 .. code-block:: javascript
 
-    import {AbiCoder} from 'web3-eth-abi';
+    import {AbiCoder} from 'web3-puffs-abi';
 
     const abiCoder = new AbiCoder();
 
@@ -22,7 +22,7 @@ This will be used for calling functions of a deployed smart-contract.
     import Web3 from 'web3';
 
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
-    // -> web3.eth.abi
+    // -> web3.puffs.abi
 
 
 
@@ -35,7 +35,7 @@ encodeFunctionSignature
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeFunctionSignature(functionName);
+    web3.puffs.abi.encodeFunctionSignature(functionName);
 
 Encodes the function name to its ABI signature, which are the first 4 bytes of the sha3 hash of the function name including types.
 
@@ -59,7 +59,7 @@ Example
 .. code-block:: javascript
 
     // From a JSON interface object
-    web3.eth.abi.encodeFunctionSignature({
+    web3.puffs.abi.encodeFunctionSignature({
         name: 'myMethod',
         type: 'function',
         inputs: [{
@@ -73,7 +73,7 @@ Example
     > 0x24ee0097
 
     // Or string
-    web3.eth.abi.encodeFunctionSignature('myMethod(uint256,string)')
+    web3.puffs.abi.encodeFunctionSignature('myMethod(uint256,string)')
     > '0x24ee0097'
 
 
@@ -84,7 +84,7 @@ encodeEventSignature
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeEventSignature(eventName);
+    web3.puffs.abi.encodeEventSignature(eventName);
 
 Encodes the event name to its ABI signature, which are the sha3 hash of the event name including input types.
 
