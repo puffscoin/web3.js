@@ -57,7 +57,7 @@ defaultBlock
 .. code-block:: javascript
 
     web3.defaultBlock
-    web3.eth.defaultBlock
+    web3.puffs.defaultBlock
     web3.shh.defaultBlock
     ...
 
@@ -66,12 +66,12 @@ You can override it by passing the block parameter if a block is required.
 
 Example:
 
-- :ref:`web3.eth.getBalance() <eth-getbalance>`
-- :ref:`web3.eth.getCode() <eth-code>`
-- :ref:`web3.eth.getTransactionCount() <eth-gettransactioncount>`
-- :ref:`web3.eth.getStorageAt() <eth-getstorageat>`
-- :ref:`web3.eth.call() <eth-call>`
-- :ref:`new web3.eth.Contract() -> myContract.methods.myMethod().call() <contract-call>`
+- :ref:`web3.puffs.getBalance() <puffs-getbalance>`
+- :ref:`web3.puffs.getCode() <puffs-code>`
+- :ref:`web3.puffs.getTransactionCount() <puffs-gettransactioncount>`
+- :ref:`web3.puffs.getStorageAt() <puffs-getstorageat>`
+- :ref:`web3.puffs.call() <puffs-call>`
+- :ref:`new web3.puffs.Contract() -> myContract.methods.myMethod().call() <contract-call>`
 
 -------
 Returns
@@ -96,7 +96,7 @@ defaultAccount
 .. code-block:: javascript
 
     web3.defaultAccount
-    web3.eth.defaultAccount
+    web3.puffs.defaultAccount
     web3.shh.defaultAccount
     ...
 
@@ -118,7 +118,7 @@ defaultGasPrice
 .. code-block:: javascript
 
     web3.defaultGasPrice
-    web3.eth.defaultGasPrice
+    web3.puffs.defaultGasPrice
     web3.shh.defaultGasPrice
     ...
 
@@ -141,7 +141,7 @@ defaultGas
 .. code-block:: javascript
 
     web3.defaultGas
-    web3.eth.defaultGas
+    web3.puffs.defaultGas
     web3.shh.defaultGas
     ...
 
@@ -163,7 +163,7 @@ transactionBlockTimeout
 .. code-block:: javascript
 
     web3.transactionBlockTimeout
-    web3.eth.transactionBlockTimeout
+    web3.puffs.transactionBlockTimeout
     web3.shh.transactionBlockTimeout
     ...
 
@@ -187,7 +187,7 @@ transactionConfirmationBlocks
 .. code-block:: javascript
 
     web3.transactionConfirmationBlocks
-    web3.eth.transactionConfirmationBlocks
+    web3.puffs.transactionConfirmationBlocks
     web3.shh.transactionConfirmationBlocks
     ...
 
@@ -211,7 +211,7 @@ transactionPollingTimeout
 .. code-block:: javascript
 
     web3.transactionPollingTimeout
-    web3.eth.transactionPollingTimeout
+    web3.puffs.transactionPollingTimeout
     web3.shh.transactionPollingTimeout
     ...
 
@@ -235,13 +235,13 @@ transactionSigner
 
 .. code-block:: javascript
 
-    web3.eth.transactionSigner
+    web3.puffs.transactionSigner
     ...
 
 
 
 The ``transactionSigner`` property does provide us the possibility to customize the signing process
-of the ``Eth`` module and the related sub-modules.
+of the ``Puffs`` module and the related sub-modules.
 
 The interface of a ``TransactionSigner``:
 
@@ -275,13 +275,13 @@ setProvider
 .. code-block:: javascript
 
     web3.setProvider(myProvider)
-    web3.eth.setProvider(myProvider)
+    web3.puffs.setProvider(myProvider)
     web3.shh.setProvider(myProvider)
     ...
 
 Will change the provider for its module.
 
-.. note:: When called on the umbrella package ``web3`` it will also set the provider for all sub modules ``web3.eth``, ``web3.shh``, etc.
+.. note:: When called on the umbrella package ``web3`` it will also set the provider for all sub modules ``web3.puffs``, ``web3.shh``, etc.
 
 ----------
 Parameters
@@ -331,7 +331,7 @@ providers
 .. code-block:: javascript
 
     Web3.providers
-    Eth.providers
+    Puffs.providers
     ...
 
 Contains the current available providers.
@@ -375,7 +375,7 @@ givenProvider
 .. code-block:: javascript
 
     Web3.givenProvider
-    web3.eth.givenProvider
+    web3.puffs.givenProvider
     web3.shh.givenProvider
     ...
 
@@ -407,7 +407,7 @@ currentProvider
 .. code-block:: javascript
 
     web3.currentProvider
-    web3.eth.currentProvider
+    web3.puffs.currentProvider
     web3.shh.currentProvider
     ...
 
@@ -438,7 +438,7 @@ BatchRequest
 .. code-block:: javascript
 
     new web3.BatchRequest()
-    new web3.eth.BatchRequest()
+    new web3.puffs.BatchRequest()
     new web3.shh.BatchRequest()
     ...
 
@@ -465,9 +465,9 @@ Example
 
 .. code-block:: javascript
 
-    const contract = new web3.eth.Contract(abi, address);
+    const contract = new web3.puffs.Contract(abi, address);
 
     const batch = new web3.BatchRequest();
-    batch.add(web3.eth.getBalance.request('0x0000000000000000000000000000000000000000', 'latest'));
+    batch.add(web3.puffs.getBalance.request('0x0000000000000000000000000000000000000000', 'latest'));
     batch.add(contract.methods.balance(address).call.request({from: '0x0000000000000000000000000000000000000000'}));
     batch.execute().then(...);
