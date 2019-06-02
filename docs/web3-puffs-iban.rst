@@ -463,7 +463,7 @@ prototype.toAddress
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.toString()
+    web3.puffs.Iban.prototype.toString()
 
 Returns the PUFFScoin address of the IBAN instance.
 
