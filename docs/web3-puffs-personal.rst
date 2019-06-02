@@ -185,7 +185,7 @@ Parameters
 ----------
 
 
-1. ``Object`` - The transaction data to sign :ref:`web3.eth.sendTransaction() <eth-sendtransaction>` for more.
+1. ``Object`` - The transaction data to sign :ref:`web3.puffs.sendTransaction() <puffs-sendtransaction>` for more.
 2. ``String`` - The password of the ``from`` account, to sign the transaction with.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
@@ -195,7 +195,7 @@ Returns
 -------
 
 
-``Promise<Object>`` - The RLP encoded transaction. The ``raw`` property can be used to send the transaction using :ref:`web3.eth.sendSignedTransaction <eth-sendsignedtransaction>`.
+``Promise<Object>`` - The RLP encoded transaction. The ``raw`` property can be used to send the transaction using :ref:`web3.puffs.sendSignedTransaction <puffs-sendsignedtransaction>`.
 
 
 -------
