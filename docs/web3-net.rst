@@ -22,7 +22,7 @@ The ``web3-net`` package allows you to interact with the PUFFScoin nodes network
     // or using the web3 umbrella package
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
-    // -> web3.eth.net
+    // -> web3.puffs.net
     // -> web3.shh.net
 
 
