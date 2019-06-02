@@ -6,7 +6,7 @@ Getting Started
 
 The web3.js library is a collection of modules which contain specific functionality for the PUFFScoin ecosystem.
 
-- The ``web3-eth`` library is for the PUFFScoin blockchain and smart contracts
+- The ``web3-puffs`` library is for the PUFFScoin blockchain and smart contracts
 - The ``web3-shh`` library is for the whisper protocol to communicate p2p and broadcast
 - The ``web3-utils`` library contains useful helper functions for dApp developers.
 
