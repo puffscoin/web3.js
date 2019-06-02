@@ -108,7 +108,7 @@ Example
         }
 
         sign() {
-            const method = new AbstractMethod('eth_sign', 2, utils, formatters, this);
+            const method = new AbstractMethod('puffs_sign', 2, utils, formatters, this);
             method.setArguments(arguments)
 
             return method.execute();
