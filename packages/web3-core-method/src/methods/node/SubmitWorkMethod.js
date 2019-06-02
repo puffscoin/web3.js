@@ -31,6 +31,6 @@ export default class SubmitWorkMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_submitWork', 3, utils, formatters, moduleInstance);
+        super('puffs_submitWork', 3, utils, formatters, moduleInstance);
     }
 }
