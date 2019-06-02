@@ -38,7 +38,7 @@ import Web3 from 'web3';
 const web3 = new Web3('ws://localhost:11364');
 console.log(web3);
 > {
-    eth: ... ,
+    puffs: ... ,
     shh: ... ,
     utils: ...,
     ...
@@ -56,7 +56,7 @@ web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:11364'));
 There you go, now you can use it:
 
 ```js
-web3.eth.getAccounts()
+web3.puffs.getAccounts()
 .then(console.log);
 ```
 
@@ -122,11 +122,11 @@ npm run dev # runs rollup with a watcher
 [npm-url]: https://npmjs.org/package/web3
 [travis-image]: https://travis-ci.org/puffscoin/web3.js.svg
 [travis-url]: https://travis-ci.org/puffscoin/web3.js
-[dep-image]: https://david-dm.org/ethereum/web3.js.svg
-[dep-url]: https://david-dm.org/ethereum/web3.js
-[dep-dev-image]: https://david-dm.org/ethereum/web3.js/dev-status.svg
-[dep-dev-url]: https://david-dm.org/ethereum/web3.js#info=devDependencies
-[coveralls-image]: https://coveralls.io/repos/ethereum/web3.js/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/r/ethereum/web3.js?branch=master
-[waffle-image]: https://badge.waffle.io/ethereum/web3.js.svg?label=ready&title=Ready
-[waffle-url]: https://waffle.io/ethereum/web3.js
+[dep-image]: https://david-dm.org/puffscoin/web3.js.svg
+[dep-url]: https://david-dm.org/puffscoin/web3.js
+[dep-dev-image]: https://david-dm.org/puffscoin/web3.js/dev-status.svg
+[dep-dev-url]: https://david-dm.org/puffscoin/web3.js#info=devDependencies
+[coveralls-image]: https://coveralls.io/repos/puffscoin/web3.js/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/r/puffscoin/web3.js?branch=master
+[waffle-image]: https://badge.waffle.io/puffscoin/web3.js.svg?label=ready&title=Ready
+[waffle-url]: https://waffle.io/puffscoin/web3.js
