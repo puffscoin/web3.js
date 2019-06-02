@@ -31,6 +31,6 @@ export default class GetBlockTransactionCountByHashMethod extends AbstractGetBlo
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_getBlockTransactionCountByHash', utils, formatters, moduleInstance);
+        super('puffs_getBlockTransactionCountByHash', utils, formatters, moduleInstance);
     }
 }
