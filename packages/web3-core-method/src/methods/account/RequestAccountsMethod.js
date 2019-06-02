@@ -28,6 +28,6 @@ export default class RequestAccountsMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_requestAccounts', 0, utils, formatters, moduleInstance);
+        super('puffs_requestAccounts', 0, utils, formatters, moduleInstance);
     }
 }
