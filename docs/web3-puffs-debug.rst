@@ -960,9 +960,9 @@ Example
     debug.setVerbosityPattern('server.go=6').then(console.log);
     > null
 
-    // You can compose these basic patterns. If you want to see all output from peer.go in a package below eth
-    // (eth/peer.go, eth/downloader/peer.go) as well as output from package p2p at level <= 5, use:
-    debug.setVerbosityPattern('eth/*/peer.go=6,p2p=5').then(console.log);
+    // You can compose these basic patterns. If you want to see all output from peer.go in a package below puffs
+    // (puffs/peer.go, puffs/downloader/peer.go) as well as output from package p2p at level <= 5, use:
+    debug.setVerbosityPattern('puffs/*/peer.go=6,p2p=5').then(console.log);
     > null
 
 
