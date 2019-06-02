@@ -31,6 +31,6 @@ export default class IsMiningMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_mining', 0, utils, formatters, moduleInstance);
+        super('puffs_mining', 0, utils, formatters, moduleInstance);
     }
 }
