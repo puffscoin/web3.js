@@ -1,16 +1,16 @@
-.. _eth-iban:
+.. _puffs-iban:
 
 .. include:: include_announcement.rst
 
 =============
-web3.eth.Iban
+web3.puffs.Iban
 =============
 
-The ``web3.eth.Iban`` function lets convert PUFFScoin addresses from and to IBAN and BBAN.
+The ``web3.puffs.Iban`` function lets convert PUFFScoin addresses from and to IBAN and BBAN.
 
 .. code-block:: javascript
 
-    import {Iban} from 'web3-eth-iban';
+    import {Iban} from 'web3-puffs-iban';
 
     const iban = new Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS');
 
@@ -19,7 +19,7 @@ The ``web3.eth.Iban`` function lets convert PUFFScoin addresses from and to IBAN
     import Web3 from 'web3';
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
-    // -> new web3.eth.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS')
+    // -> new web3.puffs.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS')
 
 
 
@@ -36,7 +36,7 @@ This's instance of Iban
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-toaddress:
+.. _puffs-iban-toaddress:
 
 toAddress
 =====================
@@ -45,7 +45,7 @@ toAddress
 
 .. code-block:: javascript
 
-    web3.eth.Iban.toAddress(ibanAddress)
+    web3.puffs.Iban.toAddress(ibanAddress)
 
 Singleton: Converts a direct IBAN address into an PUFFScoin address.
 
@@ -69,13 +69,13 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.toAddress("XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS");
+    web3.puffs.Iban.toAddress("XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS");
     > "0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8"
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-toiban:
+.. _puffs-iban-toiban:
 
 toIban
 =====================
@@ -84,7 +84,7 @@ toIban
 
 .. code-block:: javascript
 
-    web3.eth.Iban.toIban(address)
+    web3.puffs.Iban.toIban(address)
 
 Singleton: Converts an PUFFScoin address to a direct IBAN address.
 
@@ -106,13 +106,13 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.toIban("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
+    web3.puffs.Iban.toIban("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
     > "XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS"
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-fromaddress:
+.. _puffs-iban-fromaddress:
 
     static function, return IBAN instance
 
@@ -121,7 +121,7 @@ fromAddress
 
 .. code-block:: javascript
 
-    web3.eth.Iban.fromAddress(address)
+    web3.puffs.Iban.fromAddress(address)
 
 Singleton: Converts an PUFFScoin address to a direct IBAN instance.
 
@@ -143,13 +143,13 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.fromAddress("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
+    web3.puffs.Iban.fromAddress("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
     > Iban {_iban: "XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS"}
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-frombban:
+.. _puffs-iban-frombban:
 
     static function, return IBAN instance
 
@@ -158,7 +158,7 @@ fromBban
 
 .. code-block:: javascript
 
-    web3.eth.Iban.fromBban(bbanAddress)
+    web3.puffs.Iban.fromBban(bbanAddress)
 
 Singleton: Converts an BBAN address to a direct IBAN instance.
 
@@ -180,13 +180,13 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.fromBban('ETHXREGGAVOFYORK');
+    web3.puffs.Iban.fromBban('PUFFSXREGGAVOFYORK');
     > Iban {_iban: "XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS"}
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-createindirect:
+.. _puffs-iban-createindirect:
 
     static function, return IBAN instance
 
@@ -195,7 +195,7 @@ createIndirect
 
 .. code-block:: javascript
 
-    web3.eth.Iban.createIndirect(options)
+    web3.puffs.Iban.createIndirect(options)
 
 Singleton: Creates an indirect IBAN address from a institution and identifier.
 
@@ -219,7 +219,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.createIndirect({
+    web3.puffs.Iban.createIndirect({
         institution: "XREG",
         identifier: "GAVOFYORK"
     });
@@ -228,7 +228,7 @@ Example
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-isvalid:
+.. _puffs-iban-isvalid:
 
     static function, return boolean
 
@@ -237,7 +237,7 @@ isValid
 
 .. code-block:: javascript
 
-    web3.eth.Iban.isValid(ibanAddress)
+    web3.puffs.Iban.isValid(ibanAddress)
 
 Singleton: Checks if an IBAN address is valid.
 
@@ -261,10 +261,10 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.isValid("XE81ETHXREGGAVOFYORK");
+    web3.puffs.Iban.isValid("XE81PUFFSXREGGAVOFYORK");
     > true
 
-    web3.eth.Iban.isValid("XE82ETHXREGGAVOFYORK");
+    web3.puffs.Iban.isValid("XE82PUFFSXREGGAVOFYORK");
     > false // because the checksum is incorrect
 
 
@@ -277,7 +277,7 @@ prototype.isValid
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.isValid()
+    web3.puffs.Iban.prototype.isValid()
 
 Singleton: Checks if an IBAN address is valid.
 
@@ -301,7 +301,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.puffs.Iban("XE81PUFFSXREGGAVOFYORK");
     iban.isValid();
     > true
 
@@ -315,7 +315,7 @@ prototype.isDirect
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.isDirect()
+    web3.puffs.Iban.prototype.isDirect()
 
 Checks if the IBAN instance is direct.
 
@@ -331,7 +331,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.puffs.Iban("XE81PUFFSXREGGAVOFYORK");
     iban.isDirect();
     > false
 
@@ -344,7 +344,7 @@ prototype.isIndirect
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.isIndirect()
+    web3.puffs.Iban.prototype.isIndirect()
 
 Checks if the IBAN instance is indirect.
 
@@ -360,7 +360,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.puffs.Iban("XE81PUFFSXREGGAVOFYORK");
     iban.isIndirect();
     > true
 
@@ -373,7 +373,7 @@ prototype.checksum
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.checksum()
+    web3.puffs.Iban.prototype.checksum()
 
 Returns the checksum of the IBAN instance.
 
@@ -389,7 +389,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.puffs.Iban("XE81PUFFSXREGGAVOFYORK");
     iban.checksum();
     > "81"
 
@@ -404,7 +404,7 @@ prototype.institution
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.institution()
+    web3.puffs.Iban.prototype.institution()
 
 Returns the institution of the IBAN instance.
 
@@ -420,7 +420,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.puffs.Iban("XE81PUFFSXREGGAVOFYORK");
     iban.institution();
     > 'XREG'
 
@@ -434,7 +434,7 @@ prototype.client
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.client()
+    web3.puffs.Iban.prototype.client()
 
 Returns the client of the IBAN instance.
 
@@ -450,7 +450,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.puffs.Iban("XE81PUFFSXREGGAVOFYORK");
     iban.client();
     > 'GAVOFYORK'
 
@@ -479,7 +479,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS');
+    const iban = new web3.puffs.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS');
     iban.toAddress();
     > '0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8'
 
@@ -493,7 +493,7 @@ prototype.toString
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.toString()
+    web3.puffs.Iban.prototype.toString()
 
 Returns the IBAN address of the IBAN instance.
 
@@ -509,7 +509,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS');
+    const iban = new web3.puffs.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS');
     iban.toString();
     > 'XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS'
 
