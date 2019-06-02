@@ -78,7 +78,7 @@ clearSubscriptions
 
 .. code-block:: javascript
 
-    web3.eth.clearSubscriptions()
+    web3.puffs.clearSubscriptions()
 
 Resets subscriptions.
 
@@ -96,7 +96,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.subscribe('logs', {} ,function(){ ... });
+    web3.puffs.subscribe('logs', {} ,function(){ ... });
 
     ...
 
@@ -111,7 +111,7 @@ subscribe("pendingTransactions")
 
 .. code-block:: javascript
 
-    web3.eth.subscribe('pendingTransactions' [, callback]);
+    web3.puffs.subscribe('pendingTransactions' [, callback]);
 
 Subscribes to incoming pending transactions.
 
@@ -263,7 +263,7 @@ Parameters
 Returns
 -------
 
-``EventEmitter``: An :ref:`subscription instance <eth-subscription-return>` as an event emitter with the following events:
+``EventEmitter``: An :ref:`subscription instance <puffs-subscription-return>` as an event emitter with the following events:
 
 - ``"data"`` returns ``Object``: Fires on each incoming sync object as argument.
 - ``"changed"`` returns ``Object``: Fires when the synchronisation is started with ``true`` and when finished with ``false``.
@@ -314,7 +314,7 @@ subscribe("logs")
 
 .. code-block:: javascript
 
-    web3.eth.subscribe('logs', options [, callback]);
+    web3.puffs.subscribe('logs', options [, callback]);
 
 Subscribes to incoming logs, filtered by the given options.
 
@@ -333,20 +333,20 @@ Parameters
 Returns
 -------
 
-``EventEmitter``: An :ref:`subscription instance <eth-subscription-return>` as an event emitter with the following events:
+``EventEmitter``: An :ref:`subscription instance <puffs-subscription-return>` as an event emitter with the following events:
 
 - ``"data"`` returns ``Object``: Fires on each incoming log with the log object as argument.
 - ``"changed"`` returns ``Object``: Fires on each log which was removed from the blockchain. The log will have the additional property ``"removed: true"``.
 - ``"error"`` returns ``Object``: Fires when an error in the subscription occurs.
 
-For the structure of a returned event ``Object`` see :ref:`web3.eth.getPastEvents return values <eth-getpastlogs-return>`.
+For the structure of a returned event ``Object`` see :ref:`web3.puffs.getPastEvents return values <puffs-getpastlogs-return>`.
 
 ----------------
 Notification returns
 ----------------
 
 1. ``Object|Null`` - First parameter is an error object if the subscription failed.
-2. ``Object`` - The log object like in :ref:`web3.eth.getPastEvents return values <eth-getpastlogs-return>`.
+2. ``Object`` - The log object like in :ref:`web3.puffs.getPastEvents return values <puffs-getpastlogs-return>`.
 
 -------
 Example
