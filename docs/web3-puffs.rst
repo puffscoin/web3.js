@@ -12,7 +12,7 @@ The ``web3-puffs`` package allows you to interact with the PUFFScoin blockchain 
 .. code-block:: javascript
 
     import Web3 from 'web3';
-    import {Eth} from 'web3-puffs';
+    import {Puffs} from 'web3-puffs';
 
     // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const puffs = new Puffs(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
@@ -279,7 +279,7 @@ Example
 
 ------------------------------------------------------------------------------
 
-.. _eth-gasprice:
+.. _puffs-gasprice:
 
 
 getGasPrice
@@ -809,7 +809,7 @@ Parameters
 ----------
 
 
-1. ``String`` - A block number or hash. Or the string ``"genesis"``, ``"latest"`` or ``"pending"`` as in the :ref:`default block parameter <eth-defaultblock>`.
+1. ``String`` - A block number or hash. Or the string ``"genesis"``, ``"latest"`` or ``"pending"`` as in the :ref:`default block parameter <puffs-defaultblock>`.
 2. ``Number`` - The transactions index position.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
@@ -818,7 +818,7 @@ Returns
 -------
 
 
-``Promise<object>`` - A transaction object, see :ref:`web3.eth.getTransaction <eth-gettransaction-return>`:
+``Promise<object>`` - A transaction object, see :ref:`web3.puffs.getTransaction <puffs-gettransaction-return>`:
 
 
 -------
@@ -1050,9 +1050,9 @@ Returns
 -------
 
 
-``PromiEvent``: A :ref:`promise combined event emitter <promiEvent>`. Will be resolved when the transaction :ref:`receipt <eth-gettransactionreceipt-return>` is available.
+``PromiEvent``: A :ref:`promise combined event emitter <promiEvent>`. Will be resolved when the transaction :ref:`receipt <puffs-gettransactionreceipt-return>` is available.
 
-Please see the return values for :ref:`web3.puffs.sendTransaction <eth-sendtransaction-return>` for details.
+Please see the return values for :ref:`web3.puffs.sendTransaction <puffs-sendtransaction-return>` for details.
 
 -------
 Example
