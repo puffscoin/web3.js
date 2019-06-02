@@ -31,6 +31,6 @@ export default class GetBlockByHashMethod extends AbstractGetBlockMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_getBlockByHash', utils, formatters, moduleInstance);
+        super('puffs_getBlockByHash', utils, formatters, moduleInstance);
     }
 }
