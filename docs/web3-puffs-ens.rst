@@ -15,7 +15,7 @@ The ``web3.puffs.ens`` functions let you interacting with the Ens smart contract
     import {Accounts} from 'web3-puffs-accounts';
 
     // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
-    const eth = new Ens(
+    const puffs = new Ens(
         Web3.givenProvider || 'ws://some.local-or-remote.node:11364',
         null,
         options
@@ -27,7 +27,7 @@ The ``web3.puffs.ens`` functions let you interacting with the Ens smart contract
 
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
-    // -> web3.eth.ens
+    // -> web3.puffs.ens
 
 ------------------------------------------------------------------------------
 
@@ -565,7 +565,7 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setContent(
+    web3.puffs.ens.setContent(
         'puffscoin.puffs',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         {
@@ -585,7 +585,7 @@ Example
 
     // Or listen to the ContentChanged event on the resolver
 
-    web3.eth.ens.resolver('puffscoin.puffs').then((resolver) => {
+    web3.puffs.ens.resolver('puffscoin.puffs').then((resolver) => {
         resolver.events.ContentChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
@@ -711,8 +711,7 @@ getContenthash
 
     web3.puffs.ens.getContenthash(ENSName, [callback]);
 
-Returns the contenthash associated with an Ens node. `contenthash` encoding is defined in [EIP1577](http://eips.ethereum.org/EIPS/eip-1577)
-
+Returns the contenthash associated with an Ens node. 
 ----------
 Parameters
 ----------
