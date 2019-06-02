@@ -31,7 +31,7 @@ Example
     // "Web3.givenProvider" will be set in a PUFFScoin supported browser.
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', net, options);
 
-    > web3.eth
+    > web3.puffs
     > web3.shh
     > web3.utils
     > web3.version
@@ -50,9 +50,9 @@ Returns
 -------
 
 ``Object``: A list of modules:
-    - ``Eth`` - ``Function``: the Eth module for interacting with the PUFFScoin network see :ref:`web3.eth <eth>` for more.
-    - ``Net`` - ``Function``: the Net module for interacting with network properties see :ref:`web3.eth.net <eth-net>` for more.
-    - ``Personal`` - ``Function``: the Personal module for interacting with the PUFFScoin accounts see :ref:`web3.eth.personal <eth-personal>` for more.
+    - ``pUFFS`` - ``Function``: the puffs module for interacting with the PUFFScoin network see :ref:`web3.puffs <puffs>` for more.
+    - ``Net`` - ``Function``: the Net module for interacting with network properties see :ref:`web3.puffs.net <puffs-net>` for more.
+    - ``Personal`` - ``Function``: the Personal module for interacting with the PUFFScoin accounts see :ref:`web3.puffs.personal <puffs-personal>` for more.
     - ``Shh`` - ``Function``: the Shh module for interacting with the whisper protocol see :ref:`web3.shh <shh>` for more.
 
 -------
@@ -63,7 +63,7 @@ Example
 
     Web3.modules
     > {
-        Eth(provider, net?, options?),
+        Puffs(provider, net?, options?),
         Net(provider, net?, options?),
         Personal(provider, net?, options?),
         Shh(provider, net?, options?),
