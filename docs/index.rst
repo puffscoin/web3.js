@@ -29,15 +29,15 @@ Contents:
     :caption: API Reference
 
     web3
-    web3-eth
-    web3-eth-subscribe
-    web3-eth-contract
-    web3-eth-accounts
-    web3-eth-personal
-    web3-eth-ens
-    web3-eth-iban
-    web3-eth-net
-    web3-eth-abi
+    web3-puffs
+    web3-puffs-subscribe
+    web3-puffs-contract
+    web3-puffs-accounts
+    web3-puffs-personal
+    web3-puffs-ens
+    web3-puffs-iban
+    web3-puffs-net
+    web3-puffs-abi
     web3-net
     web3-bzz
     web3-shh
@@ -47,8 +47,8 @@ Contents:
     web3-core
     web3-core-method
     web3-core-subscriptions
-    web3-eth-admin
-    web3-eth-debug
-    web3-eth-miner
-    web3-eth-txpool
+    web3-puffs-admin
+    web3-puffs-debug
+    web3-puffs-miner
+    web3-puffs-txpool
 
