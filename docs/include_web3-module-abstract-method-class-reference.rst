@@ -9,7 +9,7 @@ The static ``readonly`` property ``Type`` will be used in the ``AbstractMethodFa
 Reserved types:
 
  - ``observed-transaction-method`` - ``AbstractObservedTransactionMethod``
- - ``eth-send-transaction-method`` - ``EthSendTransactionMethod``
+ - ``puffs-send-transaction-method`` - ``PuffsSendTransactionMethod``
 
 
 -------
