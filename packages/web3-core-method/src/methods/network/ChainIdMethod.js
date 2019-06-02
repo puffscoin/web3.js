@@ -31,7 +31,7 @@ export default class ChainIdMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_chainId', 0, utils, formatters, moduleInstance);
+        super('puffs_chainId', 0, utils, formatters, moduleInstance);
     }
 
     /**
