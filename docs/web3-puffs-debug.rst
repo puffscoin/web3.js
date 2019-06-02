@@ -1,4 +1,4 @@
-.. _eth-debug:
+.. _puffs-debug:
 
 .. include:: include_announcement.rst
 
@@ -7,13 +7,13 @@ Debug Module
 ============
 
 
-The ``web3-eth-debug`` module allows you to interact with the PUFFScoin node's debug methods.
+The ``web3-puffs-debug`` module allows you to interact with the PUFFScoin node's debug methods.
 
 
 .. code-block:: javascript
 
     import Web3 from 'web3';
-    import {Debug} from 'web3-eth-debug';
+    import {Debug} from 'web3-puffs-debug';
 
     // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const debug = new Debug(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
@@ -949,7 +949,7 @@ Example
 .. code-block:: javascript
 
     // If you want to see messages from a particular Go package (directory) and all subdirectories, use:
-    debug.setVerbosityPattern('eth/*=6').then(console.log);
+    debug.setVerbosityPattern('puffs/*=6').then(console.log);
     > null
 
     // If you want to restrict messages to a particular package (e.g. p2p) but exclude subdirectories, use:
