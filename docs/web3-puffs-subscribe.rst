@@ -1,12 +1,12 @@
-.. _eth-subscribe:
+.. _puffs-subscribe:
 
 .. include:: include_announcement.rst
 
 ==================
-web3.eth.subscribe
+web3.puffs.subscribe
 ==================
 
-The ``web3.eth.subscribe`` function lets you subscribe to specific events in the blockchain.
+The ``web3.puffs.subscribe`` function lets you subscribe to specific events in the blockchain.
 
 
 
@@ -15,7 +15,7 @@ subscribe
 
 .. code-block:: javascript
 
-    web3.eth.subscribe(type [, options] [, callback]);
+    web3.puffs.subscribe(type [, options] [, callback]);
 
 ----------
 Parameters
@@ -25,7 +25,7 @@ Parameters
 2. ``Mixed`` - (optional) Optional additional parameters, depending on the subscription type.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second. Will be called for each incoming subscription, and the subscription itself as 3 parameter.
 
-.. _eth-subscription-return:
+.. _puffs-subscription-return:
 
 -------
 Returns
@@ -55,7 +55,7 @@ Example
 
 .. code-block:: javascript
 
-    const subscription = web3.eth.subscribe('logs', {
+    const subscription = web3.puffs.subscribe('logs', {
         address: '0x123456..',
         topics: ['0x12345...']
     }, function(error, result){
@@ -100,7 +100,7 @@ Example
 
     ...
 
-    web3.eth.clearSubscriptions();
+    web3.puffs.clearSubscriptions();
 
 
 ------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ Parameters
 Returns
 -------
 
-``EventEmitter``: An :ref:`subscription instance <eth-subscription-return>` as an event emitter with the following events:
+``EventEmitter``: An :ref:`subscription instance <puffs-subscription-return>` as an event emitter with the following events:
 
 - ``"data"`` returns ``String``: Fires on each incoming pending transaction and returns the transaction hash.
 - ``"error"`` returns ``Object``: Fires when an error in the subscription occurs.
@@ -145,7 +145,7 @@ Example
 
 .. code-block:: javascript
 
-    const subscription = web3.eth.subscribe('pendingTransactions', function(error, result){
+    const subscription = web3.puffs.subscribe('pendingTransactions', function(error, result){
         if (!error)
             console.log(result);
     })
@@ -168,7 +168,7 @@ subscribe("newBlockHeaders")
 
 .. code-block:: javascript
 
-    web3.eth.subscribe('newBlockHeaders' [, callback]);
+    web3.puffs.subscribe('newBlockHeaders' [, callback]);
 
 Subscribes to incoming block headers. This can be used as timer to check for changes on the blockchain.
 
@@ -183,7 +183,7 @@ Parameters
 Returns
 -------
 
-``EventEmitter``: An :ref:`subscription instance <eth-subscription-return>` as an event emitter with the following events:
+``EventEmitter``: An :ref:`subscription instance <puffs-subscription-return>` as an event emitter with the following events:
 
 - ``"data"`` returns ``Object``: Fires on each incoming block header.
 - ``"error"`` returns ``Object``: Fires when an error in the subscription occurs.
@@ -219,7 +219,7 @@ Example
 
 .. code-block:: javascript
 
-    const subscription = web3.eth.subscribe('newBlockHeaders', function(error, result){
+    const subscription = web3.puffs.subscribe('newBlockHeaders', function(error, result){
         if (!error) {
             console.log(result);
 
@@ -248,7 +248,7 @@ subscribe("syncing")
 
 .. code-block:: javascript
 
-    web3.eth.subscribe('syncing' [, callback]);
+    web3.puffs.subscribe('syncing' [, callback]);
 
 Subscribe to syncing events. This will return an object when the node is syncing and when its finished syncing will return ``FALSE``.
 
@@ -269,7 +269,7 @@ Returns
 - ``"changed"`` returns ``Object``: Fires when the synchronisation is started with ``true`` and when finished with ``false``.
 - ``"error"`` returns ``Object``: Fires when an error in the subscription occurs.
 
-For the structure of a returned event ``Object`` see :ref:`web3.eth.isSyncing return values <eth-issyncing-return>`.
+For the structure of a returned event ``Object`` see :ref:`web3.puffs.isSyncing return values <puffs-issyncing-return>`.
 
 ----------------
 Notification returns
@@ -285,7 +285,7 @@ Example
 
 .. code-block:: javascript
 
-    const subscription = web3.eth.subscribe('syncing', function(error, sync){
+    const subscription = web3.puffs.subscribe('syncing', function(error, sync){
         if (!error)
             console.log(sync);
     })
@@ -355,7 +355,7 @@ Example
 
 .. code-block:: javascript
 
-    const subscription = web3.eth.subscribe('logs', {
+    const subscription = web3.puffs.subscribe('logs', {
         address: '0x123456..',
         topics: ['0x12345...']
     }, (error, result) => {
