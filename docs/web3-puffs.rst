@@ -1,28 +1,28 @@
-.. _eth:
+.. _puffs:
 
 .. include:: include_announcement.rst
 
 ========
-web3.eth
+web3.puffs
 ========
 
-The ``web3-eth`` package allows you to interact with the PUFFScoin blockchain itself and the deployed smart contracts.
+The ``web3-puffs`` package allows you to interact with the PUFFScoin blockchain itself and the deployed smart contracts.
 
 
 .. code-block:: javascript
 
     import Web3 from 'web3';
-    import {Eth} from 'web3-eth';
+    import {Eth} from 'web3-puffs';
 
     // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
-    const eth = new Eth(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
+    const puffs = new Puffs(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
 
     // or using the web3 umbrella package
 
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
 
-    // -> web3.eth
+    // -> web3.puffs
 
 
 Note on checksum addresses
@@ -41,7 +41,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getAccounts(console.log);
+    web3.puffs.getAccounts(console.log);
     > ["0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe" ,"0x85F43D8a49eeB85d32Cf465507DD71d507100C1d"]
 
 
@@ -51,7 +51,7 @@ Example
 subscribe
 =====================
 
-For ``web3.eth.subscribe`` see the :ref:`Subscribe reference documentation <eth-subscribe>`
+For ``web3.puffs.subscribe`` see the :ref:`Subscribe reference documentation <puffs-subscribe>`
 
 
 ------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ For ``web3.eth.subscribe`` see the :ref:`Subscribe reference documentation <eth-
 Contract
 =====================
 
-For ``web3.eth.Contract`` see the :ref:`Contract reference documentation <eth-contract>`
+For ``web3.puffs.Contract`` see the :ref:`Contract reference documentation <puffs-contract>`
 
 
 ------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ For ``web3.eth.Contract`` see the :ref:`Contract reference documentation <eth-co
 Iban
 =====================
 
-For ``web3.eth.Iban`` see the :ref:`Iban reference documentation <eth-iban>`
+For ``web3.puffs.Iban`` see the :ref:`Iban reference documentation <puffs-iban>`
 
 
 ------------------------------------------------------------------------------
@@ -78,7 +78,7 @@ For ``web3.eth.Iban`` see the :ref:`Iban reference documentation <eth-iban>`
 personal
 =====================
 
-For ``web3.eth.personal`` see the :ref:`personal reference documentation <eth-personal>`
+For ``web3.puffs.personal`` see the :ref:`personal reference documentation <puffs-personal>`
 
 
 ------------------------------------------------------------------------------
@@ -86,7 +86,7 @@ For ``web3.eth.personal`` see the :ref:`personal reference documentation <eth-pe
 accounts
 =====================
 
-For ``web3.eth.accounts`` see the :ref:`accounts reference documentation <eth-accounts>`
+For ``web3.puffs.accounts`` see the :ref:`accounts reference documentation <puffs-accounts>`
 
 
 ------------------------------------------------------------------------------
@@ -94,7 +94,7 @@ For ``web3.eth.accounts`` see the :ref:`accounts reference documentation <eth-ac
 ens
 =====================
 
-For ``web3.eth.ens`` see the :ref:`Ens reference documentation <eth-ens>`
+For ``web3.puffs.ens`` see the :ref:`Ens reference documentation <puffs-ens>`
 
 
 
@@ -103,7 +103,7 @@ For ``web3.eth.ens`` see the :ref:`Ens reference documentation <eth-ens>`
 abi
 =====================
 
-For ``web3.eth.abi`` see the :ref:`ABI reference documentation <eth-abi>`
+For ``web3.puffs.abi`` see the :ref:`ABI reference documentation <puffs-abi>`
 
 
 ------------------------------------------------------------------------------
@@ -112,7 +112,7 @@ For ``web3.eth.abi`` see the :ref:`ABI reference documentation <eth-abi>`
 net
 =====================
 
-For ``web3.eth.net`` see the :ref:`net reference documentation <eth-net>`
+For ``web3.puffs.net`` see the :ref:`net reference documentation <puffs-net>`
 
 
 ------------------------------------------------------------------------------
@@ -127,7 +127,7 @@ getProtocolVersion
 
 .. code-block:: javascript
 
-    web3.eth.getProtocolVersion([callback])
+    web3.puffs.getProtocolVersion([callback])
 
 Returns the PUFFScoin protocol version of the node.
 
@@ -144,7 +144,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getProtocolVersion().then(console.log);
+    web3.puffs.getProtocolVersion().then(console.log);
     > "63"
 
 
@@ -155,11 +155,11 @@ isSyncing
 
 .. code-block:: javascript
 
-    web3.eth.isSyncing([callback])
+    web3.puffs.isSyncing([callback])
 
 Checks if the node is currently syncing and returns either a syncing object, or ``false``.
 
-.. _eth-issyncing-return:
+.. _puffs-issyncing-return:
 
 -------
 Returns
@@ -180,7 +180,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.isSyncing()
+    web3.puffs.isSyncing()
     .then(console.log);
 
     > {
@@ -199,7 +199,7 @@ getCoinbase
 
 .. code-block:: javascript
 
-    web3.eth.getCoinbase([callback])
+    web3.puffs.getCoinbase([callback])
 
 Returns the coinbase address to which mining rewards will go.
 
@@ -216,7 +216,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getCoinbase().then(console.log);
+    web3.puffs.getCoinbase().then(console.log);
     > "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe"
 
 
@@ -227,7 +227,7 @@ isMining
 
 .. code-block:: javascript
 
-    web3.eth.isMining([callback])
+    web3.puffs.isMining([callback])
 
 
 Checks whether the node is mining or not.
@@ -245,7 +245,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.isMining().then(console.log);
+    web3.puffs.isMining().then(console.log);
     > true
 
 
@@ -256,7 +256,7 @@ getHashrate
 
 .. code-block:: javascript
 
-    web3.eth.getHashrate([callback])
+    web3.puffs.getHashrate([callback])
 
 Returns the number of hashes per second that the node is mining with.
 
@@ -273,7 +273,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getHashrate().then(console.log);
+    web3.puffs.getHashrate().then(console.log);
     > 493736
 
 
@@ -287,7 +287,7 @@ getGasPrice
 
 .. code-block:: javascript
 
-    web3.eth.getGasPrice([callback])
+    web3.puffs.getGasPrice([callback])
 
 
 Returns the current gas price oracle.
@@ -298,9 +298,7 @@ GasPrice is the wei per unit of gas,.
 Returns
 -------
 
-``Promise<string>`` - Number string of the current gas price in :ref:`wei <what-is-wei>`.
-
-See the :ref:`A note on dealing with big numbers in JavaScript <utils-bn>`.
+``Promise<string>`` - Number string of the current gas price in wei.
 
 -------
 Example
@@ -309,24 +307,24 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getGasPrice().then(console.log);
+    web3.puffs.getGasPrice().then(console.log);
     > "20000000000"
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-getaccounts:
+.. _puffs-getaccounts:
 
 getAccounts
 =====================
 
 .. code-block:: javascript
 
-    web3.eth.getAccounts([callback])
+    web3.puffs.getAccounts([callback])
 
 Will return a list of the unlocked accounts in the Web3 wallet or it will return the accounts from the currently connected node.
 
-This means you can add accounts with :ref:`web3.eth.accounts.create() <accounts-create>` and you will get them returned here.
+This means you can add accounts with :ref:`web3.puffs.accounts.create() <accounts-create>` and you will get them returned here.
 
 -------
 Returns
@@ -342,7 +340,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getAccounts().then(console.log);
+    web3.puffs.getAccounts().then(console.log);
     > ["0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", "0xDCc6960376d6C6dEa93647383FfB245CfCed97Cf"]
 
 
@@ -353,7 +351,7 @@ getBlockNumber
 
 .. code-block:: javascript
 
-    web3.eth.getBlockNumber([callback])
+    web3.puffs.getBlockNumber([callback])
 
 Returns the current block number.
 
@@ -370,20 +368,20 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getBlockNumber().then(console.log);
+    web3.puffs.getBlockNumber().then(console.log);
     > 2744
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-getbalance:
+.. _puffs-getbalance:
 
 getBalance
 =====================
 
 .. code-block:: javascript
 
-    web3.eth.getBalance(address [, defaultBlock] [, callback])
+    web3.puffs.getBalance(address [, defaultBlock] [, callback])
 
 Get the balance of an address at a given block.
 
@@ -392,7 +390,7 @@ Parameters
 ----------
 
 1. ``String`` - The address to get the balance of.
-2. ``Number|String`` - (optional) If you pass this parameter it will not use the default block set with :ref:`web3.eth.defaultBlock <eth-defaultblock>`.
+2. ``Number|String`` - (optional) If you pass this parameter it will not use the default block set with :ref:`web3.puffs.defaultBlock <puffs-defaultblock>`.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 -------
@@ -402,7 +400,6 @@ Returns
 
 ``Promise<string>`` - The current balance for the given address in :ref:`wei <what-is-wei>`.
 
-See the :ref:`A note on dealing with big numbers in JavaScript <big-numbers-in-javascript>`.
 
 -------
 Example
@@ -411,20 +408,20 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.log);
+    web3.puffs.getBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.log);
     > "1000000000000"
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-getstorageat:
+.. _puffs-getstorageat:
 
 getStorageAt
 =====================
 
 .. code-block:: javascript
 
-    web3.eth.getStorageAt(address, position [, defaultBlock] [, callback])
+    web3.puffs.getStorageAt(address, position [, defaultBlock] [, callback])
 
 Get the storage at a specific position of an address.
 
@@ -434,7 +431,7 @@ Parameters
 
 1. ``String`` - The address to get the storage from.
 2. ``Number`` - The index position of the storage.
-3. ``Number|String`` - (optional) If you pass this parameter it will not use the default block set with :ref:`web3.eth.defaultBlock <eth-defaultblock>`.
+3. ``Number|String`` - (optional) If you pass this parameter it will not use the default block set with :ref:`web3.puffs.defaultBlock <puffs-defaultblock>`.
 4. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 
@@ -451,20 +448,20 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getStorageAt("0x407d73d8a49eeb85d32cf465507dd71d507100c1", 0).then(console.log);
+    web3.puffs.getStorageAt("0x407d73d8a49eeb85d32cf465507dd71d507100c1", 0).then(console.log);
     > "0x033456732123ffff2342342dd12342434324234234fd234fd23fd4f23d4234"
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-code:
+.. _puffs-code:
 
 getCode
 =====================
 
 .. code-block:: javascript
 
-    web3.eth.getCode(address [, defaultBlock] [, callback])
+    web3.puffs.getCode(address [, defaultBlock] [, callback])
 
 Get the code at a specific address.
 
@@ -473,7 +470,7 @@ Parameters
 ----------
 
 1. ``String`` - The address to get the code from.
-2. ``Number|String`` - (optional) If you pass this parameter it will not use the default block set with :ref:`web3.eth.defaultBlock <eth-defaultblock>`.
+2. ``Number|String`` - (optional) If you pass this parameter it will not use the default block set with :ref:`web3.puffs.defaultBlock <puffs-defaultblock>`.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 -------
@@ -490,20 +487,20 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getCode("0xd5677cf67b5aa051bb40496e68ad359eb97cfbf8").then(console.log);
+    web3.puffs.getCode("0xd5677cf67b5aa051bb40496e68ad359eb97cfbf8").then(console.log);
     > "0x600160008035811a818181146012578301005b601b6001356025565b8060005260206000f25b600060078202905091905056"
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-getblock:
+.. _puffs-getblock:
 
 getBlock
 =====================
 
 .. code-block:: javascript
 
-     web3.eth.getBlock(blockHashOrBlockNumber [, returnTransactionObjects] [, callback])
+     web3.puffs.getBlock(blockHashOrBlockNumber [, returnTransactionObjects] [, callback])
 
 Returns a block matching the block number or block hash.
 
@@ -511,7 +508,7 @@ Returns a block matching the block number or block hash.
 Parameters
 ----------
 
-1. ``String|Number`` - The block number or block hash. Or the string ``"genesis"``, ``"latest"`` or ``"pending"`` as in the :ref:`default block parameter <eth-defaultblock>`.
+1. ``String|Number`` - The block number or block hash. Or the string ``"genesis"``, ``"latest"`` or ``"pending"`` as in the :ref:`default block parameter <puffs-defaultblock>`.
 2. ``Boolean`` - (optional, default ``false``) If ``true``, the returned block will contain all transactions as objects, if ``false`` it will only contains the transaction hashes.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
@@ -548,7 +545,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getBlock(3150).then(console.log);
+    web3.puffs.getBlock(3150).then(console.log);
     > {
         "number": 3,
         "hash": "0xef95f2f1ed3ca60b048b4bf67cde2195961e0bba6f70bcbea9a2c4e133e34b46",
@@ -581,7 +578,7 @@ getBlockTransactionCount
 
 .. code-block:: javascript
 
-    web3.eth.getBlockTransactionCount(blockHashOrBlockNumber [, callback])
+    web3.puffs.getBlockTransactionCount(blockHashOrBlockNumber [, callback])
 
 Returns the number of transaction in a given block.
 
@@ -590,7 +587,7 @@ Parameters
 ----------
 
 
-1. ``String|Number`` - The block number or hash. Or the string ``"genesis"``, ``"latest"`` or ``"pending"`` as in the :ref:`default block parameter <eth-defaultblock>`.
+1. ``String|Number`` - The block number or hash. Or the string ``"genesis"``, ``"latest"`` or ``"pending"`` as in the :ref:`default block parameter <puffs-defaultblock>`.
 2. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 -------
@@ -607,7 +604,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getBlockTransactionCount("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.log);
+    web3.puffs.getBlockTransactionCount("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.log);
     > 1
 
 
@@ -618,7 +615,7 @@ getUncle
 
 .. code-block:: javascript
 
-    web3.eth.getUncle(blockHashOrBlockNumber, uncleIndex [, callback])
+    web3.puffs.getUncle(blockHashOrBlockNumber, uncleIndex [, callback])
 
 Returns a blocks uncle by a given uncle index position.
 
@@ -626,7 +623,7 @@ Returns a blocks uncle by a given uncle index position.
 Parameters
 ----------
 
-1. ``String|Number`` - The block number or hash. Or the string ``"genesis"``, ``"latest"`` or ``"pending"`` as in the :ref:`default block parameter <eth-defaultblock>`.
+1. ``String|Number`` - The block number or hash. Or the string ``"genesis"``, ``"latest"`` or ``"pending"`` as in the :ref:`default block parameter <puffs-defaultblock>`.
 2. ``Number`` - The index position of the uncle.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
@@ -636,7 +633,7 @@ Returns
 -------
 
 
-``Promise<object>`` - The returned uncle. For a return value see :ref:`web3.eth.getBlock() <eth-getblock>`.
+``Promise<object>`` - The returned uncle. For a return value see :ref:`web3.puffs.getBlock() <puffs-getblock>`.
 
 .. note:: An uncle doesn't contain individual transactions.
 
@@ -647,8 +644,8 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getUncle(500, 0).then(console.log);
-    > // see web3.eth.getBlock
+    web3.puffs.getUncle(500, 0).then(console.log);
+    > // see web3.puffs.getBlock
 
 ------------------------------------------------------------------------------
 
@@ -657,7 +654,7 @@ getTransaction
 
 .. code-block:: javascript
 
-    web3.eth.getTransaction(transactionHash [, callback])
+    web3.puffs.getTransaction(transactionHash [, callback])
 
 Returns a transaction matching the given transaction hash.
 
@@ -669,7 +666,7 @@ Parameters
 2. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 
-.. _eth-gettransaction-return:
+.. _puffs-gettransaction-return:
 
 -------
 Returns
@@ -697,7 +694,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getTransaction('0x9fc76417374aa880d4449a1f7f31ec597f00b1f6f3dd2d66f4c9c6c445836d8b§234').then(console.log);
+    web3.puffs.getTransaction('0x9fc76417374aa880d4449a1f7f31ec597f00b1f6f3dd2d66f4c9c6c445836d8b§234').then(console.log);
     > {
         "hash": "0x9fc76417374aa880d4449a1f7f31ec597f00b1f6f3dd2d66f4c9c6c445836d8b",
         "nonce": 2,
@@ -714,14 +711,14 @@ Example
 
 ------------------------------------------------------------------------------
 
-.. _eth-getpendingtransactions:
+.. _puffs-getpendingtransactions:
 
 getPendingTransactions
 ======================
 
 .. code-block:: javascript
 
-    web3.eth.getPendingTransactions([, callback])
+    web3.puffs.getPendingTransactions([, callback])
 
 Returns a list of pending transactions.
 
@@ -732,7 +729,7 @@ Parameters
 1. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 
-.. _eth-getpendingtransactions-return:
+.. _puffs-getpendingtransactions-return:
 
 -------
 Returns
@@ -748,8 +745,8 @@ Returns
   - ``transactionIndex`` - ``Number``: Integer of the transactions index position in the block. ``null`` when its pending.
   - ``from`` - ``String``: Address of the sender.
   - ``to`` - ``String``: Address of the receiver. ``null`` when its a contract creation transaction.
-  - ``value`` - ``String``: Value transferred in :ref:`wei <what-is-wei>`.
-  - ``gasPrice`` - ``String``: The wei per unit of gas provided by the sender in :ref:`wei <what-is-wei>`.
+  - ``value`` - ``String``: Value transferred in wei.
+  - ``gasPrice`` - ``String``: The wei per unit of gas provided by the sender in wei.
   - ``gas`` - ``Number``: Gas provided by the sender.
   - ``input`` - ``String``: The data sent along with the transaction.
 
@@ -761,7 +758,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getPendingTransactions().then(console.log);
+    web3.puffs.getPendingTransactions().then(console.log);
     >  [
         {
             hash: '0x9fc76417374aa880d4449a1f7f31ec597f00b1f6f3dd2d66f4c9c6c445836d8b',
@@ -831,8 +828,8 @@ Example
 
 .. code-block:: javascript
 
-    const transaction = web3.eth.getTransactionFromBlock('0x4534534534', 2).then(console.log);
-    > // see web3.eth.getTransaction
+    const transaction = web3.puffs.getTransactionFromBlock('0x4534534534', 2).then(console.log);
+    > // see web3.puffs.getTransaction
 
 ------------------------------------------------------------------------------
 
@@ -841,7 +838,7 @@ getTransactionReceipt
 
 .. code-block:: javascript
 
-    web3.eth.getTransactionReceipt(hash [, callback])
+    web3.puffs.getTransactionReceipt(hash [, callback])
 
 Returns the receipt of a transaction by transaction hash.
 
@@ -856,7 +853,7 @@ Parameters
 2. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 
-.. _eth-gettransactionreceipt-return:
+.. _puffs-gettransactionreceipt-return:
 
 -------
 Returns
@@ -883,7 +880,7 @@ Example
 
 .. code-block:: javascript
 
-    const receipt = web3.eth.getTransactionReceipt('0x9fc76417374aa880d4449a1f7f31ec597f00b1f6f3dd2d66f4c9c6c445836d8b')
+    const receipt = web3.puffs.getTransactionReceipt('0x9fc76417374aa880d4449a1f7f31ec597f00b1f6f3dd2d66f4c9c6c445836d8b')
                             .then(console.log);
     > {
       "status": true,
@@ -902,14 +899,14 @@ Example
 
 ------------------------------------------------------------------------------
 
-.. _eth-gettransactioncount:
+.. _puffs-gettransactioncount:
 
 getTransactionCount
 =====================
 
 .. code-block:: javascript
 
-    web3.eth.getTransactionCount(address [, defaultBlock] [, callback])
+    web3.puffs.getTransactionCount(address [, defaultBlock] [, callback])
 
 Get the numbers of transactions sent from this address.
 
@@ -918,7 +915,7 @@ Parameters
 ----------
 
 1. ``String`` - The address to get the numbers of transactions from.
-2. ``Number|String`` - (optional) If you pass this parameter it will not use the default block set with :ref:`web3.eth.defaultBlock <eth-defaultblock>`.
+2. ``Number|String`` - (optional) If you pass this parameter it will not use the default block set with :ref:`web3.puffs.defaultBlock <puffs-defaultblock>`.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 -------
@@ -935,19 +932,19 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getTransactionCount("0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe").then(console.log);
+    web3.puffs.getTransactionCount("0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe").then(console.log);
     > 1
 
 ------------------------------------------------------------------------------
 
-.. _eth-sendtransaction:
+.. _puffs-sendtransaction:
 
 sendTransaction
 =====================
 
 .. code-block:: javascript
 
-    web3.eth.sendTransaction(transactionObject [, callback])
+    web3.puffs.sendTransaction(transactionObject [, callback])
 
 Sends a transaction to the network.
 
@@ -957,18 +954,18 @@ Parameters
 
 
 1. ``Object`` - The transaction object to send:
-  - ``from`` - ``String|Number``: The address for the sending account. Uses the :ref:`web3.eth.defaultAccount <eth-defaultaccount>` property, if not specified. Or an address or index of a local wallet in :ref:`web3.eth.accounts.wallet <eth_accounts_wallet>`.
+  - ``from`` - ``String|Number``: The address for the sending account. Uses the :ref:`web3.puffs.defaultAccount <puffs-defaultaccount>` property, if not specified. Or an address or index of a local wallet in :ref:`web3.puffs.accounts.wallet <puffs>`.
   - ``to`` - ``String``: (optional) The destination address of the message, left undefined for a contract-creation transaction.
   - ``value`` - ``Number|String|BN|BigNumber``: (optional) The value transferred for the transaction in :ref:`wei <what-is-wei>`, also the endowment if it's a contract-creation transaction.
   - ``gas``  - ``Number``: (optional, default: To-Be-Determined) The amount of gas to use for the transaction (unused gas is refunded).
-  - ``gasPrice`` - ``Number|String|BN|BigNumber``: (optional) The price of gas for this transaction in :ref:`wei <what-is-wei>`, defaults to :ref:`web3.eth.gasPrice <eth-gasprice>`.
-  - ``data`` - ``String``: (optional) Either a `ABI byte string <http://solidity.readthedocs.io/en/latest/abi-spec.html>`_ containing the data of the function call on a contract, or in the case of a contract-creation transaction the initialisation code.
+  - ``gasPrice`` - ``Number|String|BN|BigNumber``: (optional) The price of gas for this transaction in :ref:`wei <what-is-wei>`, defaults to :ref:`web3.puffs.gasPrice <puffs-gasprice>`.
+  - ``data`` - ``String``: (optional) Either aN ABI byte string containing the data of the function call on a contract, or in the case of a contract-creation transaction the initialisation code.
   - ``nonce`` - ``Number``: (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.
 2. ``callback`` - ``Function``: (optional) Optional callback, returns an error object as first parameter and the result as second.
 
-.. note:: The ``from`` property can also be an address or index from the :ref:`web3.eth.accounts.wallet <eth_accounts_wallet>`. It will then sign locally using the private key of that account, and send the transaction via :ref:`web3.eth.sendSignedTransaction() <eth-sendsignedtransaction>`.
+.. note:: The ``from`` property can also be an address or index from the :ref:`web3.puffs.accounts.wallet <puffs_accounts_wallet>`. It will then sign locally using the private key of that account, and send the transaction via :ref:`web3.puffs.sendSignedTransaction() <puffs-sendsignedtransaction>`.
 
-.. _eth-sendtransaction-return:
+.. _puffs-sendtransaction-return:
 
 -------
 Returns
@@ -976,11 +973,11 @@ Returns
 
 The **callback** will return the 32 bytes transaction hash.
 
-``PromiEvent``: A :ref:`promise combined event emitter <promiEvent>`. Will be resolved when the transaction :ref:`receipt <eth-gettransactionreceipt-return>` is available. Additionally the following events are available:
+``PromiEvent``: A :ref:`promise combined event emitter <promiEvent>`. Will be resolved when the transaction :ref:`receipt <puffs-gettransactionreceipt-return>` is available. Additionally the following events are available:
 
 - ``"transactionHash"`` returns ``String``: Is fired right after the transaction is sent and a transaction hash is available.
 - ``"receipt"`` returns ``Object``: Is fired when the transaction receipt is available.
-- ``"confirmation"`` returns ``Number``, ``Object``: Is fired for every confirmation up to the 12th confirmation. Receives the confirmation number as the first and the :ref:`receipt <eth-gettransactionreceipt-return>` as the second argument. Fired from confirmation 0 on, which is the block where its minded.
+- ``"confirmation"`` returns ``Number``, ``Object``: Is fired for every confirmation up to the 12th confirmation. Receives the confirmation number as the first and the :ref:`receipt <puffs-gettransactionreceipt-return>` as the second argument. Fired from confirmation 0 on, which is the block where its minded.
 - ``"error"`` returns ``Error``: Is fired if an error occurs during sending. If a out of gas error, the second parameter is the receipt.
 
 
@@ -995,7 +992,7 @@ Example
 
 
     // using the callback
-    web3.eth.sendTransaction({
+    web3.puffs.sendTransaction({
         from: '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe',
         data: code // deploying a contract
     }, function(error, hash){
@@ -1003,7 +1000,7 @@ Example
     });
 
     // using the promise
-    web3.eth.sendTransaction({
+    web3.puffs.sendTransaction({
         from: '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe',
         to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
         value: '1000000000000000'
@@ -1014,7 +1011,7 @@ Example
 
 
     // using the event emitter
-    web3.eth.sendTransaction({
+    web3.puffs.sendTransaction({
         from: '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe',
         to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
         value: '1000000000000000'
@@ -1030,16 +1027,16 @@ Example
 
 ------------------------------------------------------------------------------
 
-.. _eth-sendsignedtransaction:
+.. _puffs-sendsignedtransaction:
 
 sendSignedTransaction
 =====================
 
 .. code-block:: javascript
 
-    web3.eth.sendSignedTransaction(signedTransactionData [, callback])
+    web3.puffs.sendSignedTransaction(signedTransactionData [, callback])
 
-Sends an already signed transaction, generated for example using :ref:`web3.eth.accounts.signTransaction <eth-accounts-signtransaction>`.
+Sends an already signed transaction, generated for example using :ref:`web3.puffs.accounts.signTransaction <puffs-accounts-signtransaction>`.
 
 ----------
 Parameters
@@ -1055,7 +1052,7 @@ Returns
 
 ``PromiEvent``: A :ref:`promise combined event emitter <promiEvent>`. Will be resolved when the transaction :ref:`receipt <eth-gettransactionreceipt-return>` is available.
 
-Please see the return values for :ref:`web3.eth.sendTransaction <eth-sendtransaction-return>` for details.
+Please see the return values for :ref:`web3.puffs.sendTransaction <eth-sendtransaction-return>` for details.
 
 -------
 Example
@@ -1084,10 +1081,10 @@ Example
     // console.log(serializedTx.toString('hex'));
     // 0xf889808609184e72a00082271094000000000000000000000000000000000000000080a47f74657374320000000000000000000000000000000000000000000000000000006000571ca08a8bbf888cfa37bbf0bb965423625641fc956967b81d12e23709cead01446075a01ce999b56a8a88504be365442ea61239198e23d1fce7d00fcfc5cd3b44b7215f
 
-    web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
+    web3.puffs.sendSignedTransaction('0x' + serializedTx.toString('hex'))
     .on('receipt', console.log);
 
-    > // see eth.getTransactionReceipt() for details
+    > // see puffs.getTransactionReceipt() for details
 
 ------------------------------------------------------------------------------
 
@@ -1096,7 +1093,7 @@ sign
 
 .. code-block:: javascript
 
-    web3.eth.sign(dataToSign, address [, callback])
+    web3.puffs.sign(dataToSign, address [, callback])
 
 Signs data using a specific account. This account needs to be unlocked.
 
@@ -1106,10 +1103,10 @@ Parameters
 
 
 1. ``String`` - Data to sign. If String it will be converted using :ref:`web3.utils.utf8ToHex <utils-utf8tohex>`.
-2. ``String|Number`` - Address to sign data with. Or an address or index of a local wallet in :ref:`web3.eth.accounts.wallet <eth_accounts_wallet>`.
+2. ``String|Number`` - Address to sign data with. Or an address or index of a local wallet in :ref:`web3.puffs.accounts.wallet <puffs_accounts_wallet>`.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
-.. note:: The 2. ``address`` parameter can also be an address or index from the :ref:`web3.eth.accounts.wallet <eth_accounts_wallet>`. It will then sign locally using the private key of this account.
+.. note:: The 2. ``address`` parameter can also be an address or index from the :ref:`web3.puffs.accounts.wallet <puffs_accounts_wallet>`. It will then sign locally using the private key of this account.
 
 
 -------
@@ -1127,12 +1124,12 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.sign("Hello world", "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe")
+    web3.puffs.sign("Hello world", "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe")
     .then(console.log);
     > "0x30755ed65396facf86c53e6217c52b4daebe72aa4941d89635409de4c9c7f9466d4e9aaec7977f05e923889b33c0d0dd27d7226b6e6f56ce737465c5cfd04be400"
 
     // the below is the same
-    web3.eth.sign(web3.utils.utf8ToHex("Hello world"), "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe")
+    web3.puffs.sign(web3.utils.utf8ToHex("Hello world"), "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe")
     .then(console.log);
     > "0x30755ed65396facf86c53e6217c52b4daebe72aa4941d89635409de4c9c7f9466d4e9aaec7977f05e923889b33c0d0dd27d7226b6e6f56ce737465c5cfd04be400"
 
@@ -1143,7 +1140,7 @@ signTransaction
 
 .. code-block:: javascript
 
-    web3.eth.signTransaction(transactionObject [, address,] [, callback])
+    web3.puffs.signTransaction(transactionObject [, address,] [, callback])
 
 Signs a transaction with the private key of the given address.
 If the given address is a local unlocked account, the transaction will be signed locally.
@@ -1153,7 +1150,7 @@ Parameters
 ----------
 
 
-1. ``Object`` - The transaction data to sign :ref:`web3.eth.sendTransaction() <eth-sendtransaction>` for more.
+1. ``Object`` - The transaction data to sign :ref:`web3.puffs.sendTransaction() <puffs-sendtransaction>` for more.
 1. ``string`` - The address of the account.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
@@ -1163,7 +1160,7 @@ Returns
 -------
 
 
-``Promise<object>`` - The RLP encoded transaction. The ``raw`` property can be used to send the transaction using :ref:`web3.eth.sendSignedTransaction <eth-sendsignedtransaction>`.
+``Promise<object>`` - The RLP encoded transaction. The ``raw`` property can be used to send the transaction using :ref:`web3.puffs.sendSignedTransaction <puffs-sendsignedtransaction>`.
 
 
 -------
@@ -1173,7 +1170,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.signTransaction({
+    web3.puffs.signTransaction({
         from: "0xEB014f8c8B418Db6b45774c326A0E64C78914dC0",
         gasPrice: "20000000000",
         gas: "21000",
@@ -1199,14 +1196,14 @@ Example
 
 ------------------------------------------------------------------------------
 
-.. _eth-call:
+.. _puffs-call:
 
 call
 =====================
 
 .. code-block:: javascript
 
-    web3.eth.call(callObject [, defaultBlock] [, callback])
+    web3.puffs.call(callObject [, defaultBlock] [, callback])
 
 Executes a message call transaction, which is directly executed in the VM of the node, but never mined into the blockchain.
 
@@ -1214,8 +1211,8 @@ Executes a message call transaction, which is directly executed in the VM of the
 Parameters
 ----------
 
-1. ``Object`` - A transaction object see :ref:`web3.eth.sendTransaction <eth-sendtransaction-return>`, with the difference that for calls the ``from`` property is optional as well.
-2. ``Number|String`` - (optional) If you pass this parameter it will not use the default block set with :ref:`web3.eth.defaultBlock <eth-defaultblock>`.
+1. ``Object`` - A transaction object see :ref:`web3.puffs.sendTransaction <puffs-sendtransaction-return>`, with the difference that for calls the ``from`` property is optional as well.
+2. ``Number|String`` - (optional) If you pass this parameter it will not use the default block set with :ref:`web3.puffs.defaultBlock <puffs-defaultblock>`.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 -------
@@ -1231,7 +1228,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.call({
+    web3.puffs.call({
         to: "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", // contract address
         data: "0xc6888fa10000000000000000000000000000000000000000000000000000000000000003"
     }).then(console.log);
@@ -1244,7 +1241,7 @@ estimateGas
 
 .. code-block:: javascript
 
-    web3.eth.estimateGas(callObject [, callback])
+    web3.puffs.estimateGas(callObject [, callback])
 
 Executes a message call or transaction and returns the amount of the gas used.
 
@@ -1253,7 +1250,7 @@ Parameters
 ----------
 
 
-1. ``Object`` - A transaction object see :ref:`web3.eth.sendTransaction <eth-sendtransaction-return>`, with the difference that for calls the ``from`` property is optional as well.
+1. ``Object`` - A transaction object see :ref:`web3.puffs.sendTransaction <puffs-sendtransaction-return>`, with the difference that for calls the ``from`` property is optional as well.
 2. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 
@@ -1270,7 +1267,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.estimateGas({
+    web3.puffs.estimateGas({
         to: "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe",
         data: "0xc6888fa10000000000000000000000000000000000000000000000000000000000000003"
     }).then(console.log);
@@ -1283,7 +1280,7 @@ getPastLogs
 
 .. code-block:: javascript
 
-    web3.eth.getPastLogs(options [, callback])
+    web3.puffs.getPastLogs(options [, callback])
 
 Gets past logs, matching the given options.
 
@@ -1298,7 +1295,7 @@ Parameters
   - ``topics`` - ``Array``: An array of values which must each appear in the log entries. The order is important, if you want to leave topics out use ``null``, e.g. ``[null, '0x12...']``. You can also pass an array for each topic with options for that topic e.g. ``[null, ['option1', 'option2']]``
 
 
-.. _eth-getpastlogs-return:
+.. _puffs-getpastlogs-return:
 
 -------
 Returns
@@ -1323,7 +1320,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getPastLogs({
+    web3.puffs.getPastLogs({
         address: "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe",
         topics: ["0x033456732123ffff2342342dd12342434324234234fd234fd23fd4f23d4234"]
     }).then(console.log);
@@ -1346,7 +1343,7 @@ getWork
 
 .. code-block:: javascript
 
-    web3.eth.getWork([callback])
+    web3.puffs.getWork([callback])
 
 Gets work for miners to mine on. Returns the hash of the current block, the seedHash, and the boundary condition to be met ("target").
 
@@ -1373,7 +1370,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getWork().then(console.log);
+    web3.puffs.getWork().then(console.log);
     > [
       "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
       "0x5EED00000000000000000000000000005EED0000000000000000000000000000",
@@ -1387,7 +1384,7 @@ submitWork
 
 .. code-block:: javascript
 
-    web3.eth.submitWork(nonce, powHash, digest, [callback])
+    web3.puffs.submitWork(nonce, powHash, digest, [callback])
 
 Used for submitting a proof-of-work solution.
 
@@ -1413,7 +1410,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.submitWork([
+    web3.puffs.submitWork([
         "0x0000000000000001",
         "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
         "0xD1FE5700000000000000000000000000D1FE5700000000000000000000000000"
@@ -1428,13 +1425,11 @@ requestAccounts
 
 .. code-block:: javascript
 
-    web3.eth.requestAccounts([callback])
+    web3.puffs.requestAccounts([callback])
 
 This method will request/enable the accounts from the current environment it is running (Metamask, Status or Mist).
 It doesn't work if you're connected to a node with a default Web3.js provider. (WebsocketProvider, HttpProvidder and IpcProvider)
 This method will only work if you're using the injected provider from a application like Status, Mist or Metamask.
-
-For further information about the behavior of this method please read the EIP of it: `EIP-1102 <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1102.md>`_
 
 ----------
 Parameters
@@ -1455,21 +1450,21 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.requestAccounts().then(console.log);
+    web3.puffs.requestAccounts().then(console.log);
     > ['0aae0B295369a9FD31d5F28D9Ec85E40f4cb692BAf', 0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe]
 
 ------------------------------------------------------------------------------
 
-.. _eth-chainId:
+.. _puffs-chainId:
 
 getChainId
 ==========
 
 .. code-block:: javascript
 
-    web3.eth.getChainId([callback])
+    web3.puffs.getChainId([callback])
 
-Returns the chain ID of the current connected node as described in the `EIP-695 <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-695.md>`_.
+Returns the chain ID of the current connected node
 
 -------
 Returns
@@ -1484,19 +1479,19 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getChainId().then(console.log);
+    web3.puffs.getChainId().then(console.log);
     > 420
 
 ------------------------------------------------------------------------------
 
-.. _eth-getNodeInfo:
+.. _puffs-getNodeInfo:
 
 getNodeInfo
 ===========
 
 .. code-block:: javascript
 
-    web3.eth.getNodeInfo([callback])
+    web3.puffs.getNodeInfo([callback])
 
 -------
 Returns
@@ -1511,28 +1506,28 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getNodeInfo().then(console.log);
+    web3.puffs.getNodeInfo().then(console.log);
     > "Mist/v0.9.3/darwin/go1.4.1"
 
 ------------------------------------------------------------------------------
 
-.. _eth-getProof:
+.. _puffs-getProof:
 
 getProof
 ========
 
 .. code-block:: javascript
 
-    web3.eth.getProof(address, storageKey, blockNumber, [callback])
+    web3.puffs.getProof(address, storageKey, blockNumber, [callback])
 
-Returns the account and storage-values of the specified account including the Merkle-proof as described in `EIP-1186 <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1186.md>`_.
+Returns the account and storage-values of the specified account including the Merkle-proof.
 
 ----------
 Parameters
 ----------
 
 1. ``String`` 20 Bytes:  The Address of the account or contract.
-2. ``Array`` 32 Bytes: Array of storage-keys which should be proofed and included. See :ref:`web3.eth.getStorageAt <eth-getStorageAt>`.
+2. ``Array`` 32 Bytes: Array of storage-keys which should be proofed and included. See :ref:`web3.puffs.getStorageAt <puffs-getStorageAt>`.
 3. ``Number | String | "latest" | "earliest"``: Integer block number, or the string "latest" or "earliest".
 4. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
@@ -1542,7 +1537,7 @@ Returns
 
 ``Promise<Object>`` - A account object.
 
-    ``balance`` - The balance of the account. See :ref:`web3.eth.getBalance <eth-getBalance>`.
+    ``balance`` - The balance of the account. See :ref:`web3.puffs.getBalance <puffs-getBalance>`.
     ``codeHash`` -  hash of the code of the account. For a simple Account without code it will return "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
     ``nonce`` -  Nonce of the account.
     ``storageHash`` - SHA3 of the StorageRoot. All storage will deliver a MerkleProof starting with this rootHash.
@@ -1558,7 +1553,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.getProof(
+    web3.puffs.getProof(
         "0x1234567890123456789012345678901234567890",
         ["0x0000000000000000000000000000000000000000000000000000000000000000","0x0000000000000000000000000000000000000000000000000000000000000001"],
         "latest"
