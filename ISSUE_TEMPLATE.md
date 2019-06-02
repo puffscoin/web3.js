@@ -13,14 +13,14 @@ The more details you include, the better the community will be able to help you!
 #### Expected behavior
 <!---------------------------------------------------------------------
     Example:
-    Calling `await web3.eth.getAccounts()` should return an array.
+    Calling `await web3.puffs.getAccounts()` should return an array.
 ----------------------------------------------------------------------->
 
 
 #### Actual behavior
 <!---------------------------------------------------------------------
     Example:
-    Calling `await web3.eth.getAccounts()` returns "monkey".
+    Calling `await web3.puffs.getAccounts()` returns "monkey".
 ----------------------------------------------------------------------->
 
 
