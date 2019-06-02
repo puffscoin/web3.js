@@ -31,7 +31,7 @@ export default class GetProofMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_getProof', 3, utils, formatters, moduleInstance);
+        super('puffs_getProof', 3, utils, formatters, moduleInstance);
     }
 
     /**
@@ -39,7 +39,7 @@ export default class GetProofMethod extends AbstractMethod {
      *
      * @method beforeExecution
      *
-     * @param {AbstractWeb3Module} moduleInstance - The package where the method is called from for example Eth.
+     * @param {AbstractWeb3Module} moduleInstance - The package where the method is called from for example puffs.
      */
     beforeExecution(moduleInstance) {
         this.parameters[0] = this.formatters.inputAddressFormatter(this.parameters[0]);
