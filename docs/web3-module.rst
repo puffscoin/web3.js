@@ -60,21 +60,21 @@ Example
         }
 
         /**
-         * Executes the eth_sign JSON-RPC method
+         * Executes the puffs_sign JSON-RPC method
          *
          * @method sign
          *
          * @returns {Promise}
          */
         sign() {
-            const method = new AbstractMethod('eth_sign', 2, Utils, formatters, this);
+            const method = new AbstractMethod('puffs_sign', 2, Utils, formatters, this);
             method.setArguments(arguments)
 
             return method.execute();
         }
 
         /**
-         * Executes the eth_subscribe JSON-RPC method with the subscription type logs
+         * Executes the puffs_subscribe JSON-RPC method with the subscription type logs
          *
          * @method logs
          *
