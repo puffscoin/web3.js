@@ -31,6 +31,6 @@ export default class GetUncleByBlockHashAndIndexMethod extends AbstractGetUncleM
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_getUncleByBlockHashAndIndex', utils, formatters, moduleInstance);
+        super('puffs_getUncleByBlockHashAndIndex', utils, formatters, moduleInstance);
     }
 }
