@@ -1,4 +1,4 @@
-.. _eth-admin:
+.. _puffs-admin:
 
 .. include:: include_announcement.rst
 
@@ -7,13 +7,13 @@ Admin Module
 ============
 
 
-The ``web3-eth-admin`` package allows you to interact with the PUFFScoin node's admin management.
+The ``web3-puffs-admin`` package allows you to interact with the PUFFScoin node's admin management.
 
 
 .. code-block:: javascript
 
     import Web3 from 'web3';
-    import {Admin} from 'web3-eth-admin';
+    import {Admin} from 'web3-puffs-admin';
 
     // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const admin = new Admin(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
@@ -163,7 +163,7 @@ Example
             listener: 31313
         },
         protocols: {
-            eth: {
+            puffs: {
             difficulty: 17334254859343145000,
             genesis: "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3",
             head: "0xb83f73fbe6220c111136aefd27b160bf4a34085c65ba89f24246b3162257c36a",
@@ -219,7 +219,7 @@ Example
 
     admin.getPeers().then(console.log);
     > [{
-            caps: ["eth/61", "eth/62", "eth/63"],
+            caps: ["puffs/61", "puffs/62", "puffs/63"],
             id: "08a6b39263470c78d3e4f58e3c997cd2e7af623afce64656cfc56480babcea7a9138f3d09d7b9879344c2d2e457679e3655d4b56eaff5fd4fd7f147bdb045124",
             name: "gpuffs/v1.9.0-Amsterdam-cc7b14e9/linux-amd64/go1.10.4",
             network: {
@@ -227,14 +227,14 @@ Example
                 remoteAddress: "71.62.31.72:31313"
             },
             protocols: {
-                eth: {
+                puffs: {
                     difficulty: 17334052235346465000,
                     head: "5794b768dae6c6ee5366e6ca7662bdff2882576e09609bf778633e470e0e7852",
                     version: 63
                 }
             }
         }, /* ... */ {
-            caps: ["eth/61", "eth/62", "eth/63"],
+            caps: ["puffs/61", "puffs/62", "puffs/63"],
             id: "fcad9f6d3faf89a0908a11ddae9d4be3a1039108263b06c96171eb3b0f3ba85a7095a03bb65198c35a04829032d198759edfca9b63a8b69dc47a205d94fce7cc",
             name: "gpuffs/v1.9.0-Amsterdam-cc7b14e9/linux-amd64/go1.10.4",
             network: {
@@ -242,7 +242,7 @@ Example
                 remoteAddress: "121.196.232.205:31313"
             },
             protocols: {
-            eth: {
+            puffs: {
                 difficulty: 17335165914080772000,
                 head: "5794b768dae6c6ee5366e6ca7662bdff2882576e09609bf778633e470e0e7852",
                 version: 63
@@ -260,7 +260,7 @@ setSolc
 
     admin.setSolc(string, [, callback])
 
-Sets the Solidity compiler path to be used by the node when invoking the eth_compileSolidity RPC method
+Sets the Solidity compiler path to be used by the node when invoking the puffs_compileSolidity RPC method
 The RPC method used is ``admin_setSolc``.
 
 ----------
@@ -310,7 +310,7 @@ Parameters
 1. ``host`` - ``String`` - (optional) The network interface to open the listener socket on (defaults to "localhost").
 2. ``port`` - ``number`` - (optional) The network port to open the listener socket on (defaults to 11363).
 3. ``cors`` - ``string`` - (optional) Cross-origin resource sharing header to use (defaults to "").
-4. ``apis`` - ``string`` -  (optional) API modules to offer over this interface (defaults to "eth,net,web3").
+4. ``apis`` - ``string`` -  (optional) API modules to offer over this interface (defaults to "puffs,net,web3").
 5. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
 -------
