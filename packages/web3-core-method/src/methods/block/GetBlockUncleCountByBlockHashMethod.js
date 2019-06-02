@@ -31,6 +31,6 @@ export default class GetBlockUncleCountByBlockHashMethod extends AbstractGetBloc
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_getUncleCountByBlockHash', utils, formatters, moduleInstance);
+        super('puffs_getUncleCountByBlockHash', utils, formatters, moduleInstance);
     }
 }
