@@ -50,7 +50,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'web3.js'
 copyright = u'2019, PUFFScoin'
-author = u'Abvhiael Stuart (adapted from Ethereum by Samuel Furter, Fabian Vogelsteller, Marek Kotewicz, Jeffrey Wilcke, Marian Oancea, and Gav Wood)'
+author = u'Abvhiael Stuart (adapted from Ethereum)'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
