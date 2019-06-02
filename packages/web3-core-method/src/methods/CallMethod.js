@@ -40,7 +40,7 @@ export default class CallMethod extends AbstractMethod {
      *
      * @method beforeExecution
      *
-     * @param {AbstractWeb3Module} moduleInstance - The package where the method is called from for example Eth.
+     * @param {AbstractWeb3Module} moduleInstance - The package where the method is called from for example puffs.
      */
     beforeExecution(moduleInstance) {
         this.parameters[0] = this.formatters.inputCallFormatter(this.parameters[0], moduleInstance);
