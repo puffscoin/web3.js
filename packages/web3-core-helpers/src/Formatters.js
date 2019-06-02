@@ -26,7 +26,7 @@ import isArray from 'lodash/isArray';
 import isObject from 'lodash/isObject';
 import isNumber from 'lodash/isNumber';
 import * as Utils from 'web3-utils';
-import {Iban} from 'web3-eth-iban';
+import {Iban} from 'web3-puffs-iban';
 
 /**
  * TODO: This method could be removed because it is just a wrapper for the toBN method of Utils
@@ -193,7 +193,7 @@ export const inputTransactionFormatter = (txObject, moduleInstance) => {
 };
 
 /**
- * Hex encodes the data passed to eth_sign and personal_sign
+ * Hex encodes the data passed to puffs_sign and personal_sign
  *
  * @method inputSignFormatter
  *
