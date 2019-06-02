@@ -19,7 +19,7 @@
         "@babel/runtime": "^7.3.1",
         "lodash": "^4.17.11",
         "web3-core": "1.0.0-beta.55",
-        "web3-eth-iban": "1.0.0-beta.55",
+        "web3-puffs-iban": "1.0.0-beta.55",
         "web3-utils": "1.0.0-beta.55"
     },
     "devDependencies": {
