@@ -40,7 +40,7 @@ export default class AbstractGetTransactionFromBlockMethod extends AbstractMetho
      *
      * @method beforeExecution
      *
-     * @param {AbstractWeb3Module} moduleInstance - The package where the method is called from for example Eth.
+     * @param {AbstractWeb3Module} moduleInstance - The package where the method is called from for example puffs.
      */
     beforeExecution(moduleInstance) {
         this.parameters[0] = this.formatters.inputBlockNumberFormatter(this.parameters[0]);
