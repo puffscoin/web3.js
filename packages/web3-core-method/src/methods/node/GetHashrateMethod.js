@@ -31,7 +31,7 @@ export default class GetHashrateMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_hashrate', 0, utils, formatters, moduleInstance);
+        super('puffs_hashrate', 0, utils, formatters, moduleInstance);
     }
 
     /**
