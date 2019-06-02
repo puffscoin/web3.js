@@ -19,7 +19,7 @@ Source: `AbstractSubscription <https://github.com/puffscoin/web3.js/tree/1.0/pac
 
 The ``AbstractSubscription`` class extends from the ``EventEmitter`` object and does have the following constructor parameters:
 
-- :ref:`type <web3-module-abstract-subscription-subscribe>` - ``String`` The subscriptions type ``eth_subscribe`` or ``shh_subscribe``.
+- :ref:`type <web3-module-abstract-subscription-subscribe>` - ``String`` The subscriptions type ``puffs_subscribe`` or ``shh_subscribe``.
 - :ref:`method <web3-module-abstract-subscription-subscribe>` - ``String`` The subscription method which is the first parameter in the JSON-RPC payload object.
 - :ref:`options <web3-module-abstract-subscription-subscribe>` - ``Object`` The options object of the subscription.
 - :ref:`formatters <web3-module-abstract-subscription-subscribe>` - ``Object`` The formatters object.
@@ -158,7 +158,7 @@ The property ``type`` does contain the subscription type.
 Returns
 -------
 
-``String`` - ``eth_subscribe`` or ``shh_subscribe``
+``String`` - ``puffs_subscribe`` or ``shh_subscribe``
 
 
 ------------------------------------------------------------------------------------------------------------------------
