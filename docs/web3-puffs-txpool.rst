@@ -1,4 +1,4 @@
-.. _eth-txpool:
+.. _puffs-txpool:
 
 .. include:: include_announcement.rst
 
@@ -7,13 +7,13 @@ TxPool Module
 =============
 
 
-The ``web3-eth-txpool`` package gives you access to several non-standard RPC methods to inspect the contents of the transaction pool containing all the currently pending transactions as well as the ones queued for future processing.
+The ``web3-puffs-txpool`` package gives you access to several non-standard RPC methods to inspect the contents of the transaction pool containing all the currently pending transactions as well as the ones queued for future processing.
 
 
 .. code-block:: javascript
 
     import Web3 from 'web3';
-    import {TxPool} from 'web3-eth-txpool';
+    import {TxPool} from 'web3-puffs-txpool';
 
     // "Web3.givenProvider" will be set if in a PUFFScoin supported browser.
     const txPool = new TxPool(Web3.givenProvider || 'ws://some.local-or-remote.node:11364', null, options);
