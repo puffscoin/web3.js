@@ -17,10 +17,10 @@
  * @date 2018
  */
 
-import {Accounts} from 'web3-eth-accounts';
-import {Ens} from 'web3-eth-ens';
+import {Accounts} from 'web3-puffs-accounts';
+import {Ens} from 'web3-puffs-ens';
 
-const ens = new Ens('http://localhost:7545', null, new Accounts('http://localhost:7545'));
+const ens = new Ens('http://localhost:11363', null, new Accounts('http://localhost:11363'));
 
 // $ExpectType Registry
 ens.registry;
