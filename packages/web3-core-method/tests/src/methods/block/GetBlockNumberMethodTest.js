@@ -18,7 +18,7 @@ describe('GetBlockNumberMethodTest', () => {
     it('constructor check', () => {
         expect(method).toBeInstanceOf(AbstractMethod);
 
-        expect(method.rpcMethod).toEqual('eth_blockNumber');
+        expect(method.rpcMethod).toEqual('puffs_blockNumber');
 
         expect(method.parametersAmount).toEqual(0);
 
