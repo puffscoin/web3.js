@@ -128,7 +128,7 @@ export default class TransactionObserver {
     }
 
     /**
-     * Observes the transaction with sending eth_getTransactionReceipt and checking if there is really a new block
+     * Observes the transaction with sending puffs_getTransactionReceipt and checking if there is really a new block
      *
      * @method checkOverHttp
      *
