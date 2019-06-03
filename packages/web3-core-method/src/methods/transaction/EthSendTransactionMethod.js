@@ -22,7 +22,7 @@
 
 import SendTransactionMethod from './SendTransactionMethod';
 
-export default class EthSendTransactionMethod extends SendTransactionMethod {
+export default class PuffsSendTransactionMethod extends SendTransactionMethod {
     /**
      * @param {Utils} utils
      * @param {Object} formatters
@@ -46,7 +46,7 @@ export default class EthSendTransactionMethod extends SendTransactionMethod {
      * @returns {String}
      */
     static get Type() {
-        return 'eth-send-transaction-method';
+        return 'puffs-send-transaction-method';
     }
 
     /**
@@ -57,7 +57,7 @@ export default class EthSendTransactionMethod extends SendTransactionMethod {
      * @param {AbstractWeb3Module} moduleInstance - The module where the method is called from for example Eth.
      */
     beforeExecution(moduleInstance) {
-        if (this.rpcMethod !== 'eth_sendRawTransaction') {
+        if (this.rpcMethod !== 'puffs_sendRawTransaction') {
             super.beforeExecution(moduleInstance);
         }
     }
@@ -78,7 +78,7 @@ export default class EthSendTransactionMethod extends SendTransactionMethod {
         if (!this.parameters[0].gasPrice && this.parameters[0].gasPrice !== 0) {
             if (!this.moduleInstance.defaultGasPrice) {
                 this.moduleInstance.currentProvider
-                    .send('eth_gasPrice', [])
+                    .send('puffs_gasPrice', [])
                     .then((gasPrice) => {
                         this.parameters[0].gasPrice = gasPrice;
 
@@ -149,7 +149,7 @@ export default class EthSendTransactionMethod extends SendTransactionMethod {
         const response = await this.moduleInstance.transactionSigner.sign(transaction, privateKey);
 
         this.parameters = [response.rawTransaction];
-        this.rpcMethod = 'eth_sendRawTransaction';
+        this.rpcMethod = 'puffs_sendRawTransaction';
 
         return super.execute();
     }
