@@ -31,7 +31,7 @@ export default class NewHeadsSubscription extends AbstractSubscription {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_subscribe', 'newHeads', null, utils, formatters, moduleInstance);
+        super('puffs_subscribe', 'newHeads', null, utils, formatters, moduleInstance);
     }
 
     /**
