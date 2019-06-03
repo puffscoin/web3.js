@@ -1,6 +1,6 @@
 import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
-import NewHeadsSubscription from '../../../../src/subscriptions/eth/NewHeadsSubscription';
+import NewHeadsSubscription from '../../../../src/subscriptions/puffs/NewHeadsSubscription';
 
 // Mocks
 jest.mock('web3-utils');
@@ -19,7 +19,7 @@ describe('NewHeadsSubscriptionTest', () => {
     it('constructor check', () => {
         expect(newHeadsSubscription.method).toEqual('newHeads');
 
-        expect(newHeadsSubscription.type).toEqual('eth_subscribe');
+        expect(newHeadsSubscription.type).toEqual('puffs_subscribe');
 
         expect(newHeadsSubscription.options).toEqual(null);
 
