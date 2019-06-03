@@ -14,7 +14,7 @@ describe('IsMiningMethodTest', () => {
     it('constructor check', () => {
         expect(method).toBeInstanceOf(AbstractMethod);
 
-        expect(method.rpcMethod).toEqual('eth_mining');
+        expect(method.rpcMethod).toEqual('puffs_mining');
 
         expect(method.parametersAmount).toEqual(0);
 
