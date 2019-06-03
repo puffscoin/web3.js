@@ -1,10 +1,10 @@
-import {AbiCoder} from 'web3-eth-abi';
+import {AbiCoder} from 'web3-puffs-abi';
 import {CallMethod} from 'web3-core-method';
 import AbiItemModel from '../../../src/models/AbiItemModel';
 import CallContractMethod from '../../../src/methods/CallContractMethod';
 
 // Mocks
-jest.mock('web3-eth-abi');
+jest.mock('web3-puffs-abi');
 jest.mock('../../../src/models/AbiItemModel');
 
 /**
