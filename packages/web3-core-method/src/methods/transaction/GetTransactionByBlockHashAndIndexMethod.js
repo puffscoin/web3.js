@@ -31,6 +31,6 @@ export default class GetTransactionByBlockHashAndIndexMethod extends AbstractGet
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_getTransactionByBlockHashAndIndex', utils, formatters, moduleInstance);
+        super('puffs_getTransactionByBlockHashAndIndex', utils, formatters, moduleInstance);
     }
 }
