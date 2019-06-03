@@ -1,8 +1,8 @@
-# web3-eth-accounts
+# web3-puffs-accounts
 
 This is a sub module of [web3.js][repo]
 
-This is the accounts module to be used in the `web3-eth` module.
+This is the accounts module to be used in the `web3-puffs` module.
 Please read the [documentation][docs] for more.
 
 ## Installation
@@ -10,16 +10,16 @@ Please read the [documentation][docs] for more.
 ### Node.js
 
 ```bash
-npm install web3-eth-accounts
+npm install web3-puffs-accounts
 ```
 
 ## Usage
 
 ```js
-import {Accounts} from 'web3-eth-accounts';
+import {Accounts} from 'web3-puffs-accounts';
 
 const accounts = new Accounts(
-    'http://127.0.0.1:4546',
+    'http://127.0.0.1:11364',
     null,
     options
 );
