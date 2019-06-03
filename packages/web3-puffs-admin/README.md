@@ -1,4 +1,4 @@
-# web3-eth-admin
+# web3-puffs-admin
 
 This is a sub module of [web3.js][repo]
 
@@ -8,13 +8,13 @@ Please read the [documentation][docs] for more.
 ## Installation
 
 ```bash
-npm install web3-eth-admin
+npm install web3-puffs-admin
 ```
 
 ## Usage
 
 ```js
-import {Admin} from 'web3-eth-admin';
+import {Admin} from 'web3-puffs-admin';
 
 const admin = new Admin(
     'http://127.0.0.1:11364',
