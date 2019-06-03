@@ -1,28 +1,28 @@
 import * as Utils from 'web3-utils';
-import {AbiCoder as EthersAbiCoder} from 'ethers/utils/abi-coder';
+import {AbiCoder as PuffssAbiCoder} from 'puffss/utils/abi-coder';
 import AbiCoder from '../src/AbiCoder';
 
 // Mocks
 jest.mock('web3-utils');
-jest.mock('ethers/utils/abi-coder');
+jest.mock('puffss/utils/abi-coder');
 
 /**
  * AbiCoder test
  */
 describe('AbiCoderTest', () => {
-    let abiCoder, ethersAbiCoderMock;
+    let abiCoder, puffssAbiCoderMock;
 
     beforeEach(() => {
-        new EthersAbiCoder();
-        ethersAbiCoderMock = EthersAbiCoder.mock.instances[0];
+        new PuffssAbiCoder();
+        puffssAbiCoderMock = PuffssAbiCoder.mock.instances[0];
 
-        abiCoder = new AbiCoder(Utils, ethersAbiCoderMock);
+        abiCoder = new AbiCoder(Utils, puffssAbiCoderMock);
     });
 
     it('constructor check', () => {
         expect(abiCoder.utils).toEqual(Utils);
 
-        expect(abiCoder.ethersAbiCoder).toEqual(ethersAbiCoderMock);
+        expect(abiCoder.puffssAbiCoder).toEqual(puffssAbiCoderMock);
     });
 
     it('calls encodeFunctionSignature with a string as parameter', () => {
@@ -74,19 +74,19 @@ describe('AbiCoderTest', () => {
     });
 
     it('calls encodeParameters', () => {
-        ethersAbiCoderMock.encode.mockReturnValueOnce(true);
+        puffssAbiCoderMock.encode.mockReturnValueOnce(true);
 
         expect(abiCoder.encodeParameters([{components: true}], [])).toEqual(true);
 
-        expect(ethersAbiCoderMock.encode).toHaveBeenCalledWith([{components: true}], []);
+        expect(puffssAbiCoderMock.encode).toHaveBeenCalledWith([{components: true}], []);
     });
 
     it('calls encodeParameter', () => {
-        ethersAbiCoderMock.encode.mockReturnValueOnce(true);
+        puffssAbiCoderMock.encode.mockReturnValueOnce(true);
 
         expect(abiCoder.encodeParameter({components: true}, '')).toEqual(true);
 
-        expect(ethersAbiCoderMock.encode).toHaveBeenCalledWith([{components: true}], ['']);
+        expect(puffssAbiCoderMock.encode).toHaveBeenCalledWith([{components: true}], ['']);
     });
 
     it('calls encodeFunctionCall and returns the expected string', () => {
@@ -94,19 +94,19 @@ describe('AbiCoderTest', () => {
             return '0x000000000';
         });
 
-        ethersAbiCoderMock.encode.mockReturnValueOnce('0x0');
+        puffssAbiCoderMock.encode.mockReturnValueOnce('0x0');
 
         expect(abiCoder.encodeFunctionCall({inputs: [{components: true}]}, [])).toEqual('0x000000000');
 
-        expect(ethersAbiCoderMock.encode).toHaveBeenCalledWith([{components: true}], []);
+        expect(puffssAbiCoderMock.encode).toHaveBeenCalledWith([{components: true}], []);
     });
 
     it('calls decodeParameters and returns the expected object', () => {
-        ethersAbiCoderMock.decode.mockReturnValueOnce('0');
+        puffssAbiCoderMock.decode.mockReturnValueOnce('0');
 
         expect(abiCoder.decodeParameters([{name: 'output'}], '0x0')).toEqual({output: '0', 0: '0'});
 
-        expect(ethersAbiCoderMock.decode).toHaveBeenCalledWith([{name: 'output'}], '0x0');
+        expect(puffssAbiCoderMock.decode).toHaveBeenCalledWith([{name: 'output'}], '0x0');
     });
 
     it('calls decodeParameters and throws an error', () => {
@@ -128,15 +128,15 @@ describe('AbiCoderTest', () => {
     });
 
     it('calls decodeParameter and returns the expected object', () => {
-        ethersAbiCoderMock.decode.mockReturnValueOnce('0');
+        puffssAbiCoderMock.decode.mockReturnValueOnce('0');
 
         expect(abiCoder.decodeParameter({name: 'output'}, '0x0')).toEqual('0');
 
-        expect(ethersAbiCoderMock.decode).toHaveBeenCalledWith([{name: 'output'}], '0x0');
+        expect(puffssAbiCoderMock.decode).toHaveBeenCalledWith([{name: 'output'}], '0x0');
     });
 
     it('calls decodeLog and returns the expected object', () => {
-        ethersAbiCoderMock.decode
+        puffssAbiCoderMock.decode
             .mockReturnValueOnce('0')
             .mockReturnValueOnce([['', '', '0']])
             .mockReturnValueOnce(['0', '0']);
@@ -180,10 +180,10 @@ describe('AbiCoderTest', () => {
             fourth: '0'
         });
 
-        expect(ethersAbiCoderMock.decode).toHaveBeenNthCalledWith(1, [inputs[0].type], '0x0');
+        expect(puffssAbiCoderMock.decode).toHaveBeenNthCalledWith(1, [inputs[0].type], '0x0');
 
-        expect(ethersAbiCoderMock.decode).toHaveBeenNthCalledWith(2, [inputs[1].type], '0x0');
+        expect(puffssAbiCoderMock.decode).toHaveBeenNthCalledWith(2, [inputs[1].type], '0x0');
 
-        expect(ethersAbiCoderMock.decode).toHaveBeenNthCalledWith(3, [inputs[2], inputs[3]], '0x0');
+        expect(puffssAbiCoderMock.decode).toHaveBeenNthCalledWith(3, [inputs[2], inputs[3]], '0x0');
     });
 });
