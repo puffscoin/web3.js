@@ -20,7 +20,7 @@
 import {PromiEvent} from 'web3-core-method';
 import {AbstractWeb3Module} from 'web3-core';
 import isFunction from 'lodash/isFunction';
-import namehash from 'eth-ens-namehash';
+import namehash from 'puffs-ens-namehash';
 
 // TODO: Remove the wrapped methods and create a proxy for handling a ENS method call.
 export default class Ens extends AbstractWeb3Module {
