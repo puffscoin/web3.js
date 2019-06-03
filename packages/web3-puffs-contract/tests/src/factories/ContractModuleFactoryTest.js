@@ -1,4 +1,4 @@
-import {AbiCoder} from 'web3-eth-abi';
+import {AbiCoder} from 'web3-puffs-abi';
 import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
 
@@ -22,7 +22,7 @@ import MethodFactory from '../../../src/factories/MethodFactory';
 import ContractModuleFactory from '../../../src/factories/ContractModuleFactory';
 
 // Mocks
-jest.mock('web3-eth-abi');
+jest.mock('web3-puffs-abi');
 jest.mock('web3-utils');
 jest.mock('web3-core-helpers');
 jest.mock('../../../src/validators/MethodOptionsValidator');
