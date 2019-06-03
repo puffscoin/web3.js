@@ -72,7 +72,7 @@ export default class TransactionObserver {
     }
 
     /**
-     * Observes the transaction with the newHeads subscriptions which sends the eth_getTransactionReceipt method on each item
+     * Observes the transaction with the newHeads subscriptions which sends the puffs_getTransactionReceipt method on each item
      *
      * @method startSocketObserver
      *
