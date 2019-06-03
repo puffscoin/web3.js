@@ -17,9 +17,9 @@
  * @date 2018
  */
 
-import {Accounts} from 'web3-eth-accounts';
-import {AbiCoder} from 'web3-eth-abi';
-import {Contract, ContractModuleFactory} from 'web3-eth-contract';
+import {Accounts} from 'web3-puffs-accounts';
+import {AbiCoder} from 'web3-puffs-abi';
+import {Contract, ContractModuleFactory} from 'web3-puffs-contract';
 import {provider} from 'web3-providers';
 import {AbstractWeb3Module, PromiEvent, Web3ModuleOptions, TransactionConfig} from 'web3-core';
 import {formatters} from 'web3-core-helpers';
