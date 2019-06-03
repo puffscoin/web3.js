@@ -1,6 +1,6 @@
 import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
-import LogSubscription from '../../../../src/subscriptions/eth/LogSubscription';
+import LogSubscription from '../../../../src/subscriptions/puffs/LogSubscription';
 import AbstractWeb3Module from '../../../__mocks__/AbstractWeb3Module';
 import GetPastLogsMethod from '../../../__mocks__/GetPastLogsMethod';
 import SocketProvider from '../../../__mocks__/SocketProvider';
@@ -27,7 +27,7 @@ describe('LogSubscriptionTest', () => {
     it('constructor check', () => {
         expect(logSubscription.method).toEqual('logs');
 
-        expect(logSubscription.type).toEqual('eth_subscribe');
+        expect(logSubscription.type).toEqual('puffs_subscribe');
 
         expect(logSubscription.options).toEqual({});
 
