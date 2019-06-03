@@ -17,7 +17,7 @@
  * @date 2019
  */
 
-import {Debug, Stats, TransactionTrace, WorldState, MemStats, BlockTraceResult} from 'web3-eth-debug';
+import {Debug, Stats, TransactionTrace, WorldState, MemStats, BlockTraceResult} from 'web3-puffs-debug';
 
 const debug = new Debug('http://localhost:11363');
 
@@ -200,10 +200,10 @@ debug.setVerbosity(5);
 debug.setVerbosity(5, (error: Error, result: null) => {});
 
 // $ExpectType Promise<null>
-debug.setVerbosityPattern("eth/*=6");
+debug.setVerbosityPattern("puffs/*=6");
 
 // $ExpectType Promise<null>
-debug.setVerbosityPattern("eth/*=6", (error: Error, result: null) => {});
+debug.setVerbosityPattern("puffs/*=6", (error: Error, result: null) => {});
 
 // $ExpectType Promise<null>
 debug.writeBlockProfile("");
