@@ -17,7 +17,7 @@
  * @date 2018
  */
 
-import {Contract} from 'web3-eth-contract';
+import {Contract} from 'web3-puffs-contract';
 
 const contract = new Contract('http://localhost:500', []);
 
