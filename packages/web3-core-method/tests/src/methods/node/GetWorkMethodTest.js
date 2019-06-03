@@ -14,7 +14,7 @@ describe('GetWorkMethodTest', () => {
     it('constructor check', () => {
         expect(method).toBeInstanceOf(AbstractMethod);
 
-        expect(method.rpcMethod).toEqual('eth_getWork');
+        expect(method.rpcMethod).toEqual('puffs_getWork');
 
         expect(method.parametersAmount).toEqual(0);
 
