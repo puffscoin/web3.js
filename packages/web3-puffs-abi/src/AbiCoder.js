@@ -28,13 +28,13 @@ import isObject from 'lodash/isObject';
 export default class AbiCoder {
     /**
      * @param {Utils} utils
-     * @param {EthersAbiCoder} ethersAbiCoder
+     * @param {PuffssAbiCoder} puffssAbiCoder
      *
      * @constructor
      */
     constructor(utils, ethersAbiCoder) {
         this.utils = utils;
-        this.ethersAbiCoder = ethersAbiCoder;
+        this.puffssAbiCoder = puffssAbiCoder;
     }
 
     /**
@@ -96,7 +96,7 @@ export default class AbiCoder {
      * @returns {String} encoded list of params
      */
     encodeParameters(types, params) {
-        return this.ethersAbiCoder.encode(types, params);
+        return this.puffssAbiCoder.encode(types, params);
     }
 
     /**
@@ -149,7 +149,7 @@ export default class AbiCoder {
             throw new Error(`Invalid bytes string given: ${bytes}`);
         }
 
-        const result = this.ethersAbiCoder.decode(outputs, bytes);
+        const result = this.puffssAbiCoder.decode(outputs, bytes);
         let returnValues = {};
         let decodedValue;
 
