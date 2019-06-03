@@ -22,11 +22,11 @@
 
 export AbstractSubscription from '../lib/subscriptions/AbstractSubscription';
 
-// Eth
-export LogSubscription from './subscriptions/eth/LogSubscription';
-export NewHeadsSubscription from './subscriptions/eth/NewHeadsSubscription';
-export NewPendingTransactionsSubscription from './subscriptions/eth/NewPendingTransactionsSubscription';
-export SyncingSubscription from './subscriptions/eth/SyncingSubscription';
+// Puffs
+export LogSubscription from './subscriptions/puffs/LogSubscription';
+export NewHeadsSubscription from './subscriptions/puffs/NewHeadsSubscription';
+export NewPendingTransactionsSubscription from './subscriptions/puffs/NewPendingTransactionsSubscription';
+export SyncingSubscription from './subscriptions/puffs/SyncingSubscription';
 
 // Shh
 export MessagesSubscription from './subscriptions/shh/MessagesSubscription';
