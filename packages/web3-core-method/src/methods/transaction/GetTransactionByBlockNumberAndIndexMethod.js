@@ -31,6 +31,6 @@ export default class GetTransactionByBlockNumberAndIndexMethod extends AbstractG
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_getTransactionByBlockNumberAndIndex', utils, formatters, moduleInstance);
+        super('puffs_getTransactionByBlockNumberAndIndex', utils, formatters, moduleInstance);
     }
 }
