@@ -22,15 +22,15 @@
 
 import isFunction from 'lodash/isFunction';
 import isObject from 'lodash/isObject';
-import Hash from 'eth-lib/lib/hash';
-import RLP from 'eth-lib/lib/rlp';
-import Bytes from 'eth-lib/lib/bytes';
-import {encodeSignature, recover} from 'eth-lib/lib/account'; // TODO: Remove this dependency
+import Hash from 'puffs-lib/lib/hash';
+import RLP from 'puffs-lib/lib/rlp';
+import Bytes from 'puffs-lib/lib/bytes';
+import {encodeSignature, recover} from 'puffs-lib/lib/account'; // TODO: Remove this dependency
 import {AbstractWeb3Module} from 'web3-core';
 import Account from './models/Account';
 import Wallet from './models/Wallet';
 
-// TODO: Rename Accounts module to Wallet and move the Wallet class to the eth module.
+// TODO: Rename Accounts module to Wallet and move the Wallet class to the puffs module.
 export default class Accounts extends AbstractWeb3Module {
     /**
      * @param {Web3PuffscoinProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
@@ -124,13 +124,13 @@ export default class Accounts extends AbstractWeb3Module {
 
         const messageBuffer = Buffer.from(data);
         const preambleBuffer = Buffer.from(`\u0019Puffscoin Signed Message:\n${data.length}`);
-        const ethMessage = Buffer.concat([preambleBuffer, messageBuffer]);
+        const puffsMessage = Buffer.concat([preambleBuffer, messageBuffer]);
 
-        return Hash.keccak256s(ethMessage);
+        return Hash.keccak256s(puffsMessage);
     }
 
     /**
-     * TODO: Add deprecation message and extend the signTransaction method in the eth module
+     * TODO: Add deprecation message and extend the signTransaction method in the puffs module
      *
      * Signs a transaction object with the given privateKey
      *
