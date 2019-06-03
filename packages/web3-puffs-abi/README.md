@@ -1,20 +1,20 @@
-# web3-eth-abi
+# web3-puffs-abi
 
 This is a sub module of [web3.js][repo]
 
-This is the ABI module will be used in the `web3-eth` package.
+This is the ABI module will be used in the `web3-puffs` package.
 Please read the [documentation][docs] for more.
 
 ## Installation
 
 ```bash
-npm install web3-eth-abi
+npm install web3-puffs-abi
 ```
 
 ## Usage
 
 ```js
-import {AbiCoder} from 'web3-eth-abi';
+import {AbiCoder} from 'web3-puffs-abi';
 
 new AbiCoder();
 ```
