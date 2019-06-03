@@ -18,7 +18,7 @@ describe('GetHashrateMethodTest', () => {
     it('constructor check', () => {
         expect(method).toBeInstanceOf(AbstractMethod);
 
-        expect(method.rpcMethod).toEqual('eth_hashrate');
+        expect(method.rpcMethod).toEqual('puffs_hashrate');
 
         expect(method.parametersAmount).toEqual(0);
 
