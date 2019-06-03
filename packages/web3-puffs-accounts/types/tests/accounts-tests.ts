@@ -16,7 +16,7 @@
  * @author Josh Stevens <joshstevens19@hotmail.co.uk>
  * @date 2018
  */
-import {Accounts} from 'web3-eth-accounts';
+import {Accounts} from 'web3-puffs-accounts';
 
 const accounts = new Accounts('http://localhost:11363');
 
