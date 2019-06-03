@@ -21,10 +21,10 @@
  */
 
 import isArray from 'lodash/isArray';
-import {EthSendTransactionMethod} from 'web3-core-method';
+import {PuffsSendTransactionMethod} from 'web3-core-method';
 
 // TODO: Implement revert handling (AbstractContractMethod)
-export default class SendContractMethod extends EthSendTransactionMethod {
+export default class SendContractMethod extends PuffsSendTransactionMethod {
     /**
      * @param {Utils} utils
      * @param {Object} formatters
