@@ -1,9 +1,9 @@
-import {AbiCoder} from 'web3-eth-abi';
+import {AbiCoder} from 'web3-puffs-abi';
 import AbiItemModel from '../../../src/models/AbiItemModel';
 import MethodEncoder from '../../../src/encoders/MethodEncoder';
 
 // Mocks
-jest.mock('web3-eth-abi');
+jest.mock('web3-puffs-abi');
 jest.mock('../../../src/models/AbiItemModel');
 
 /**
