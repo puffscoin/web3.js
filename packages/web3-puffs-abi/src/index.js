@@ -21,8 +21,8 @@
  */
 
 import * as Utils from 'web3-utils';
-import {AbiCoder as EthersAbiCoder} from 'ethers/utils/abi-coder';
-import EthAbiCoder from './AbiCoder.js';
+import {AbiCoder as PuffssAbiCoder} from 'puffss/utils/abi-coder';
+import PuffsAbiCoder from './AbiCoder.js';
 
 /**
  * Returns an object of AbiCoder
@@ -32,5 +32,5 @@ import EthAbiCoder from './AbiCoder.js';
  * @constructor
  */
 export function AbiCoder() {
-    return new EthAbiCoder(Utils, new EthersAbiCoder());
+    return new PuffsAbiCoder(Utils, new PuffssAbiCoder());
 }
