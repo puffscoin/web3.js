@@ -1,12 +1,12 @@
-import {AbstractContract} from 'web3-eth-contract';
+import {AbstractContract} from 'web3-puffs-contract';
 import {Network} from 'web3-net';
-import namehash from 'eth-ens-namehash';
+import namehash from 'puffs-ens-namehash';
 import {RESOLVER_ABI} from '../../../ressources/ABI/Resolver';
 import Registry from '../../../src/contracts/Registry';
 
 // Mocks
 jest.mock('web3-net');
-jest.mock('eth-ens-namehash');
+jest.mock('puffs-ens-namehash');
 
 /**
  * Registry test
