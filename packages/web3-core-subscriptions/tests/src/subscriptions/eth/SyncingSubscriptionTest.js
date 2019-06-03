@@ -1,5 +1,5 @@
 import {formatters} from 'web3-core-helpers';
-import SyncingSubscription from '../../../../src/subscriptions/eth/SyncingSubscription';
+import SyncingSubscription from '../../../../src/subscriptions/puffs/SyncingSubscription';
 
 // Mocks
 jest.mock('web3-core-helpers');
@@ -19,7 +19,7 @@ describe('SyncingSubscriptionTest', () => {
 
         expect(syncingSubscription.method).toEqual('syncing');
 
-        expect(syncingSubscription.type).toEqual('eth_subscribe');
+        expect(syncingSubscription.type).toEqual('puffs_subscribe');
 
         expect(syncingSubscription.options).toEqual(null);
 
