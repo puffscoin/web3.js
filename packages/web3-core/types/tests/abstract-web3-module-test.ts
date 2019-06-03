@@ -79,4 +79,4 @@ abstractWeb3Module.isSameProvider('http://localhost:11363');
 abstractWeb3Module.isSameProvider(httpProvider);
 
 // $ExpectType Promise<boolean>
-abstractWeb3Module.clearSubscriptions('eth_unsubscribe');
+abstractWeb3Module.clearSubscriptions('puffs_unsubscribe');
