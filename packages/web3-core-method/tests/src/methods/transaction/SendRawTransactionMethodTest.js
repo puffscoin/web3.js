@@ -18,7 +18,7 @@ describe('SendRawTransactionMethodTest', () => {
     it('constructor check', () => {
         expect(method).toBeInstanceOf(AbstractObservedTransactionMethod);
 
-        expect(method.rpcMethod).toEqual('eth_sendRawTransaction');
+        expect(method.rpcMethod).toEqual('puffs_sendRawTransaction');
     });
 
     it('calls afterExecution and returns the expected value', () => {
