@@ -1,7 +1,7 @@
 import {ChainIdMethod, EstimateGasMethod, GetTransactionCountMethod} from 'web3-core-method';
 import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
-import {AbiCoder} from 'web3-eth-abi';
+import {AbiCoder} from 'web3-puffs-abi';
 
 import MethodFactory from '../../../src/factories/MethodFactory';
 import ContractModuleFactory from '../../../src/factories/ContractModuleFactory';
@@ -14,7 +14,7 @@ import AllPastEventLogsMethod from '../../../src/methods/AllPastEventLogsMethod'
 // Mocks
 jest.mock('web3-utils');
 jest.mock('web3-core-helpers');
-jest.mock('web3-eth-abi');
+jest.mock('web3-puffs-abi');
 jest.mock('web3-core-method');
 jest.mock('../../../src/factories/ContractModuleFactory');
 jest.mock('../../../src/methods/CallContractMethod');
