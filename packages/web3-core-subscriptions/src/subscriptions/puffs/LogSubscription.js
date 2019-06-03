@@ -23,7 +23,7 @@
 import AbstractSubscription from '../../../lib/subscriptions/AbstractSubscription';
 import isFunction from 'lodash/isFunction';
 
-// TODO: Move the past logs logic to the eth module
+// TODO: Move the past logs logic to the puffs module
 export default class LogSubscription extends AbstractSubscription {
     /**
      * @param {Object} options
@@ -35,7 +35,7 @@ export default class LogSubscription extends AbstractSubscription {
      * @constructor
      */
     constructor(options, utils, formatters, moduleInstance, getPastLogsMethod) {
-        super('eth_subscribe', 'logs', options, utils, formatters, moduleInstance);
+        super('puffs_subscribe', 'logs', options, utils, formatters, moduleInstance);
         this.getPastLogsMethod = getPastLogsMethod;
     }
 
