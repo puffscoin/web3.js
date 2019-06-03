@@ -20,9 +20,9 @@
 import scryptsy from 'scrypt.js';
 import isString from 'lodash/isString';
 import isObject from 'lodash/isObject';
-import * as EthLibAccount from 'eth-lib/lib/account'; // TODO: Remove this dependency
+import * as PuffsLibAccount from 'puffs-lib/lib/account'; // TODO: Remove this dependency
 import uuid from 'uuid';
-import Hash from 'eth-lib/lib/hash';
+import Hash from 'puffs-lib/lib/hash';
 import randomBytes from 'randombytes';
 import {pbkdf2Sync} from 'pbkdf2';
 import {createCipheriv, createDecipheriv} from 'browserify-cipher';
@@ -42,7 +42,7 @@ export default class Account {
     }
 
     /**
-     * TODO: Add deprecation message, remove accounts dependency and extend the signTransaction method in the eth module.
+     * TODO: Add deprecation message, remove accounts dependency and extend the signTransaction method in the puffs module.
      * Signs a transaction object with the given privateKey
      *
      * @method signTransaction
@@ -74,10 +74,10 @@ export default class Account {
         const messageBuffer = Buffer.from(data);
         const preamble = `\u0019Puffscoin Signed Message:\n${data.length}`;
         const preambleBuffer = Buffer.from(preamble);
-        const ethMessage = Buffer.concat([preambleBuffer, messageBuffer]);
-        const hash = Hash.keccak256s(ethMessage);
-        const signature = EthLibAccount.sign(hash, this.privateKey);
-        const vrs = EthLibAccount.decodeSignature(signature);
+        const puffsMessage = Buffer.concat([preambleBuffer, messageBuffer]);
+        const hash = Hash.keccak256s(puffsMessage);
+        const signature = PuffsLibAccount.sign(hash, this.privateKey);
+        const vrs = PuffsLibAccount.decodeSignature(signature);
 
         return {
             message: data,
@@ -110,7 +110,7 @@ export default class Account {
      * @returns {Account}
      */
     static from(entropy, accounts = {}) {
-        return new Account(EthLibAccount.create(entropy || randomHex(32)), accounts);
+        return new Account(PuffsLibAccount.create(entropy || randomHex(32)), accounts);
     }
 
     /**
@@ -122,7 +122,7 @@ export default class Account {
      * @returns {Account}
      */
     static fromPrivateKey(privateKey, accounts = {}) {
-        return new Account(EthLibAccount.fromPrivate(privateKey), accounts);
+        return new Account(PuffsLibAccount.fromPrivate(privateKey), accounts);
     }
 
     /**
