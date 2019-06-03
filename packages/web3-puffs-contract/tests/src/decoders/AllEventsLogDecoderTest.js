@@ -1,10 +1,10 @@
-import {AbiCoder} from 'web3-eth-abi';
+import {AbiCoder} from 'web3-puffs-abi';
 import AllEventsLogDecoder from '../../../src/decoders/AllEventsLogDecoder';
 import AbiModel from '../../../src/models/AbiModel';
 import AbiItemModel from '../../../src/models/AbiItemModel';
 
 // Mocks
-jest.mock('web3-eth-abi');
+jest.mock('web3-puffs-abi');
 jest.mock('../../../src/models/AbiModel');
 jest.mock('../../../src/models/AbiItemModel');
 
