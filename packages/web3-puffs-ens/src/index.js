@@ -20,8 +20,8 @@
 import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
 import {ProviderResolver} from 'web3-providers';
-import {ContractModuleFactory} from 'web3-eth-contract';
-import {AbiCoder} from 'web3-eth-abi';
+import {ContractModuleFactory} from 'web3-puffs-contract';
+import {AbiCoder} from 'web3-puffs-abi';
 import {Network} from 'web3-net';
 import EnsModuleFactory from './factories/EnsModuleFactory';
 
