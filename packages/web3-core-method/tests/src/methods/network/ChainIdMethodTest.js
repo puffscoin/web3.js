@@ -18,7 +18,7 @@ describe('ChainIdMethodTest', () => {
     it('constructor check', () => {
         expect(method).toBeInstanceOf(AbstractMethod);
 
-        expect(method.rpcMethod).toEqual('eth_chainId');
+        expect(method.rpcMethod).toEqual('puffs_chainId');
 
         expect(method.parametersAmount).toEqual(0);
 
