@@ -22,7 +22,7 @@
 
 import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
-import {AbiCoder} from 'web3-eth-abi';
+import {AbiCoder} from 'web3-puffs-abi';
 import ContractModuleFactory from './factories/ContractModuleFactory';
 
 export AbstractContract from './AbstractContract';
