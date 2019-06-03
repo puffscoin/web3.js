@@ -18,8 +18,8 @@
  */
 
 import isFunction from 'lodash/isFunction';
-import namehash from 'eth-ens-namehash';
-import {AbstractContract} from 'web3-eth-contract';
+import namehash from 'puffs-ens-namehash';
+import {AbstractContract} from 'web3-puffs-contract';
 import {REGISTRY_ABI} from '../../ressources/ABI/Registry';
 import {RESOLVER_ABI} from '../../ressources/ABI/Resolver';
 
