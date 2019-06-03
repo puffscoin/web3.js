@@ -14,6 +14,6 @@ describe('GetBlockUncleCountByBlockNumberMethodTest', () => {
     it('constructor check', () => {
         expect(method).toBeInstanceOf(AbstractGetBlockUncleCountMethod);
 
-        expect(method.rpcMethod).toEqual('eth_getUncleCountByBlockNumber');
+        expect(method.rpcMethod).toEqual('puffs_getUncleCountByBlockNumber');
     });
 });
