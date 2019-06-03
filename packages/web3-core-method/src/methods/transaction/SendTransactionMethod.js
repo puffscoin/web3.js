@@ -32,7 +32,7 @@ export default class SendTransactionMethod extends AbstractObservedTransactionMe
      * @constructor
      */
     constructor(utils, formatters, moduleInstance, transactionObserver) {
-        super('eth_sendTransaction', 1, utils, formatters, moduleInstance, transactionObserver);
+        super('puffs_sendTransaction', 1, utils, formatters, moduleInstance, transactionObserver);
     }
 
     /**
@@ -40,7 +40,7 @@ export default class SendTransactionMethod extends AbstractObservedTransactionMe
      *
      * @method beforeExecution
      *
-     * @param {AbstractWeb3Module} moduleInstance - The package where the method is called from for example Eth.
+     * @param {AbstractWeb3Module} moduleInstance - The package where the method is called from for example Puffs.
      */
     beforeExecution(moduleInstance) {
         this.parameters[0] = this.formatters.inputTransactionFormatter(this.parameters[0], moduleInstance);
