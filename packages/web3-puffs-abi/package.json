@@ -1,13 +1,13 @@
 {
-    "name": "web3-eth-abi",
+    "name": "web3-puffs-abi",
     "namespace": "puffscoin",
     "version": "1.0.0-beta.55",
     "description": "Web3 module encode and decode EVM in/output.",
-    "repository": "https://github.com/puffscoin/web3.js/tree/1.0/packages/web3-eth-abi",
+    "repository": "https://github.com/puffscoin/web3.js/tree/1.0/packages/web3-puffs-abi",
     "license": "LGPL-3.0",
-    "main": "dist/web3-eth-abi.cjs.js",
-    "module": "dist/web3-eth-abi.esm.js",
-    "browser": "dist/web3-eth-abi.umd.js",
+    "main": "dist/web3-puffs-abi.cjs.js",
+    "module": "dist/web3-puffs-abi.esm.js",
+    "browser": "dist/web3-puffs-abi.umd.js",
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
@@ -17,7 +17,7 @@
     "types": "types/index.d.ts",
     "dependencies": {
         "@babel/runtime": "^7.3.1",
-        "ethers": "^4.0.27",
+        "puffss": "^4.0.27",
         "lodash": "^4.17.11",
         "web3-utils": "1.0.0-beta.55"
     },
