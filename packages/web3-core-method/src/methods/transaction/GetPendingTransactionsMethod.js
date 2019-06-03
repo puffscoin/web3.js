@@ -31,7 +31,7 @@ export default class GetPendingTransactionsMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_pendingTransactions', 0, utils, formatters, moduleInstance);
+        super('puffs_pendingTransactions', 0, utils, formatters, moduleInstance);
     }
 
     /**
