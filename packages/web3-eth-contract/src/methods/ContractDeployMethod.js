@@ -22,7 +22,7 @@
 
 import {EthSendTransactionMethod} from 'web3-core-method';
 
-export default class ContractDeployMethod extends EthSendTransactionMethod {
+export default class ContractDeployMethod extends PuffsSendTransactionMethod {
     /**
      * @param {Utils} utils
      * @param {Object} formatters
@@ -45,7 +45,7 @@ export default class ContractDeployMethod extends EthSendTransactionMethod {
      * @param {AbstractWeb3Module} moduleInstance - The module where the method is called from for example Eth.
      */
     beforeExecution(moduleInstance) {
-        if (this.rpcMethod !== 'eth_sendRawTransaction') {
+        if (this.rpcMethod !== 'puffs_sendRawTransaction') {
             super.beforeExecution(moduleInstance);
             delete this.parameters[0].to;
         }
