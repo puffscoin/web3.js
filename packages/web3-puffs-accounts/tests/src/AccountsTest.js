@@ -1,9 +1,9 @@
 import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
-import Hash from 'eth-lib/lib/hash';
-import RLP from 'eth-lib/lib/rlp';
-import Bytes from 'eth-lib/lib/bytes';
-import {encodeSignature, recover} from 'eth-lib/lib/account';
+import Hash from 'puffs-lib/lib/hash';
+import RLP from 'puffs-lib/lib/rlp';
+import Bytes from 'puffs-lib/lib/bytes';
+import {encodeSignature, recover} from 'puffs-lib/lib/account';
 import TransactionSigner from '../__mocks__/TransactionSigner';
 import Accounts from '../../src/Accounts';
 import Account from '../../src/models/Account';
@@ -12,11 +12,11 @@ import {AbstractWeb3Module} from 'web3-core';
 // Mocks
 jest.mock('web3-utils');
 jest.mock('web3-core-helpers');
-jest.mock('eth-lib/lib/rlp');
-jest.mock('eth-lib/lib/nat');
-jest.mock('eth-lib/lib/bytes');
-jest.mock('eth-lib/lib/hash');
-jest.mock('eth-lib/lib/account');
+jest.mock('puffs-lib/lib/rlp');
+jest.mock('puffs-lib/lib/nat');
+jest.mock('puffs-lib/lib/bytes');
+jest.mock('puffs-lib/lib/hash');
+jest.mock('puffs-lib/lib/account');
 jest.mock('../../src/models/Account');
 
 /**
