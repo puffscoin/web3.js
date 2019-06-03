@@ -1,4 +1,4 @@
-# web3-eth-debug
+# web3-puffs-debug
 
 This is a sub module of [web3.js][repo]
 
@@ -8,13 +8,13 @@ Please read the [documentation][docs] for more.
 ## Installation
 
 ```bash
-npm install web3-eth-debug
+npm install web3-puffs-debug
 ```
 
 ## Usage
 
 ```js
-import {Debug} from 'web3-eth-debug';
+import {Debug} from 'web3-puffs-debug';
 
 const debug = new Debug(
     'http://127.0.0.1:11364',
