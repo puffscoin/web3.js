@@ -1,18 +1,18 @@
 import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
 import {Network} from 'web3-net';
-import {AbiCoder} from 'web3-eth-abi';
+import {AbiCoder} from 'web3-puffs-abi';
 import Registry from '../../src/contracts/Registry';
-import namehash from 'eth-ens-namehash';
+import namehash from 'puffs-ens-namehash';
 import Ens from '../../src/Ens';
 import EnsModuleFactory from '../../src/factories/EnsModuleFactory';
 
 // Mocks
 jest.mock('web3-net');
 jest.mock('web3-utils');
-jest.mock('web3-eth-abi');
+jest.mock('web3-puffs-abi');
 jest.mock('web3-core-helpers');
-jest.mock('eth-ens-namehash');
+jest.mock('puffs-ens-namehash');
 jest.mock('../../src/factories/EnsModuleFactory');
 jest.mock('../../src/contracts/Registry');
 
