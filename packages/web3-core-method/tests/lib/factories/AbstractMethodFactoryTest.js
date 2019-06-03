@@ -3,7 +3,7 @@ import {NewHeadsSubscription} from 'web3-core-subscriptions';
 import AbstractMethod from '../../../lib/methods/AbstractMethod';
 import AbstractMethodFactory from '../../../lib/factories/AbstractMethodFactory';
 import AbstractObservedTransactionMethod from '../../../lib/methods/transaction/AbstractObservedTransactionMethod';
-import EthSendTransactionMethod from '../../../src/methods/transaction/EthSendTransactionMethod';
+import PuffsSendTransactionMethod from '../../../src/methods/transaction/PuffsSendTransactionMethod';
 import TransactionObserver from '../../../src/observers/TransactionObserver';
 import GetTransactionReceiptMethod from '../../../src/methods/transaction/GetTransactionReceiptMethod';
 import GetBlockByNumberMethod from '../../../src/methods/block/GetBlockByNumberMethod';
@@ -32,7 +32,7 @@ describe('AbstractMethodFactoryTest', () => {
         abstractMethodFactory.methods = {
             send: AbstractMethod,
             sendObserved: AbstractObservedTransactionMethod,
-            sendEthObserved: EthSendTransactionMethod
+            sendPuffsObserved: PuffsSendTransactionMethod
         };
     });
 
@@ -101,17 +101,17 @@ describe('AbstractMethodFactoryTest', () => {
         expect(TransactionObserver).toHaveBeenCalledTimes(1);
     });
 
-    it('calls createMethod and returns a object of type EthSendTransactionMethod', () => {
+    it('calls createMethod and returns a object of type PuffsSendTransactionMethod', () => {
         new AbstractWeb3Module();
         const moduleInstanceMock = AbstractWeb3Module.mock.instances[0];
         moduleInstanceMock.currentProvider = {supportsSubscriptions: jest.fn()};
         moduleInstanceMock.currentProvider.supportsSubscriptions.mockReturnValueOnce(false);
 
-        expect(abstractMethodFactory.hasMethod('sendEthObserved')).toEqual(true);
+        expect(abstractMethodFactory.hasMethod('sendPuffsObserved')).toEqual(true);
 
-        const observedMethod = abstractMethodFactory.createMethod('sendEthObserved', moduleInstanceMock);
+        const observedMethod = abstractMethodFactory.createMethod('sendPuffsObserved', moduleInstanceMock);
 
-        expect(observedMethod).toBeInstanceOf(EthSendTransactionMethod);
+        expect(observedMethod).toBeInstanceOf(PuffsSendTransactionMethod);
 
         expect(moduleInstanceMock.currentProvider.supportsSubscriptions).toHaveBeenCalled();
 
