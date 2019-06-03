@@ -20,7 +20,7 @@ describe('GetStorageAtMethodTest', () => {
     it('constructor check', () => {
         expect(method).toBeInstanceOf(AbstractMethod);
 
-        expect(method.rpcMethod).toEqual('eth_getStorageAt');
+        expect(method.rpcMethod).toEqual('puffs_getStorageAt');
 
         expect(method.parametersAmount).toEqual(3);
 
