@@ -3,16 +3,16 @@ import randomBytes from 'randombytes';
 import {pbkdf2Sync} from 'pbkdf2';
 import {createCipheriv, createDecipheriv} from 'browserify-cipher';
 import uuid from 'uuid';
-import Hash from 'eth-lib/lib/hash';
-import {fromPrivate, sign, decodeSignature} from 'eth-lib/lib/account';
+import Hash from 'puffs-lib/lib/hash';
+import {fromPrivate, sign, decodeSignature} from 'puffs-lib/lib/account';
 import {hexToBytes, isHexStrict, keccak256} from 'web3-utils';
 import TransactionSigner from '../../__mocks__/TransactionSigner';
 import Accounts from '../../../src/Accounts';
 import Account from '../../../src/models/Account';
 
 // Mocks
-jest.mock('eth-lib/lib/account');
-jest.mock('eth-lib/lib/hash');
+jest.mock('puffs-lib/lib/account');
+jest.mock('puffs-lib/lib/hash');
 jest.mock('web3-utils');
 jest.mock('uuid');
 jest.mock('randombytes');
