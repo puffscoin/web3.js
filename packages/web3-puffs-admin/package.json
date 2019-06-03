@@ -1,13 +1,13 @@
 {
-    "name": "web3-eth-admin",
+    "name": "web3-puffs-admin",
     "namespace": "puffscoin",
     "version": "1.0.0-beta.55",
     "description": "Web3 module to interact with the PUFFScoin blockchain accounts stored in the node.",
-    "repository": "https://github.com/puffscoin/web3.js/tree/1.0/packages/web3-eth-admin",
+    "repository": "https://github.com/puffscoin/web3.js/tree/1.0/packages/web3-puffs-admin",
     "license": "LGPL-3.0",
-    "main": "dist/web3-eth-admin.cjs.js",
-    "module": "dist/web3-eth-admin.esm.js",
-    "browser": "dist/web3-eth-admin.umd.js",
+    "main": "dist/web3-puffs-admin.cjs.js",
+    "module": "dist/web3-puffs-admin.esm.js",
+    "browser": "dist/web3-puffs-admin.umd.js",
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
