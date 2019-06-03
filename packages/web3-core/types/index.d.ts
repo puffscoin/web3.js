@@ -231,7 +231,7 @@ export interface NodeInfo {
       discovery: string | number;
       listener: string | number;
     };
-    protocols: any // Any because it's not documented what each protocol (eth, shh etc.) is defining here
+    protocols: any // Any because it's not documented what each protocol (puffs, shh etc.) is defining here
 }
 
 export interface PeerInfo {
@@ -242,5 +242,5 @@ export interface PeerInfo {
         localAddress: string;
         remoteAddress: string;
     };
-    protocols: any; // Any because it's not documented what each protocol (eth, shh etc.) is defining here
+    protocols: any; // Any because it's not documented what each protocol (puffs, shh etc.) is defining here
 }
