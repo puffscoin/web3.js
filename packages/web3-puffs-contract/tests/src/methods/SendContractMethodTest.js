@@ -1,5 +1,5 @@
 import {formatters} from 'web3-core-helpers';
-import {EthSendTransactionMethod} from 'web3-core-method';
+import {PuffsSendTransactionMethod} from 'web3-core-method';
 import AbiModel from '../../../src/models/AbiModel';
 import AllEventsLogDecoder from '../../../src/decoders/AllEventsLogDecoder';
 import SendContractMethod from '../../../src/methods/SendContractMethod';
@@ -40,7 +40,7 @@ describe('SendContractMethodTest', () => {
 
         expect(sendContractMethod.abiModel).toEqual(abiModelMock);
 
-        expect(sendContractMethod).toBeInstanceOf(EthSendTransactionMethod);
+        expect(sendContractMethod).toBeInstanceOf(PuffsSendTransactionMethod);
     });
 
     it('calls afterExecution and returns the expected result', () => {
