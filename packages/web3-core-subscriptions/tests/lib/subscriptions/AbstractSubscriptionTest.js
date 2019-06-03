@@ -33,7 +33,7 @@ describe('AbstractSubscriptionTest', () => {
         });
 
         abstractSubscription = new AbstractSubscription(
-            'eth_subscribe',
+            'puffs_subscribe',
             'rpc_method',
             {},
             Utils,
@@ -43,7 +43,7 @@ describe('AbstractSubscriptionTest', () => {
     });
 
     it('constructor check', () => {
-        expect(abstractSubscription.type).toEqual('eth_subscribe');
+        expect(abstractSubscription.type).toEqual('puffs_subscribe');
 
         expect(abstractSubscription.method).toEqual('rpc_method');
 
@@ -170,7 +170,7 @@ describe('AbstractSubscriptionTest', () => {
         moduleInstanceMock.currentProvider.unsubscribe = jest.fn((id, type) => {
             expect(id).toEqual('ID');
 
-            expect(type).toEqual('eth_unsubscribe');
+            expect(type).toEqual('puffs_unsubscribe');
 
             return Promise.resolve(true);
         });
@@ -195,14 +195,14 @@ describe('AbstractSubscriptionTest', () => {
         moduleInstanceMock.currentProvider.unsubscribe = jest.fn((id, type) => {
             expect(id).toEqual('ID');
 
-            expect(type).toEqual('eth_unsubscribe');
+            expect(type).toEqual('puffs_unsubscribe');
 
             return Promise.resolve(false);
         });
 
         const callback = jest.fn();
         abstractSubscription.id = 'ID';
-        abstractSubscription.type = 'eth_s';
+        abstractSubscription.type = 'puffs_s';
 
         await expect(abstractSubscription.unsubscribe(callback)).rejects.toThrow('Error on unsubscribe!');
 
