@@ -31,7 +31,7 @@ export default class SyncingSubscription extends AbstractSubscription {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_subscribe', 'syncing', null, utils, formatters, moduleInstance);
+        super('puffs_subscribe', 'syncing', null, utils, formatters, moduleInstance);
         this.isSyncing = null;
     }
 
