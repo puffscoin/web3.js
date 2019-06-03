@@ -14,7 +14,7 @@ describe('RequestAccountsMethodTest', () => {
     it('constructor check', () => {
         expect(method).toBeInstanceOf(AbstractMethod);
 
-        expect(method.rpcMethod).toEqual('eth_requestAccounts');
+        expect(method.rpcMethod).toEqual('puffs_requestAccounts');
 
         expect(method.parametersAmount).toEqual(0);
 
