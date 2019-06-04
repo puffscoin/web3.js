@@ -1,13 +1,13 @@
 {
-    "name": "web3-eth-iban",
+    "name": "web3-puffs-iban",
     "namespace": "puffscoin",
     "version": "1.0.0-beta.55",
     "description": "This package converts PUFFScoin addresses to IBAN addresses a vice versa.",
-    "repository": "https://github.com/puffscoin/web3.js/tree/1.0/packages/web3-eth-iban",
+    "repository": "https://github.com/puffscoin/web3.js/tree/1.0/packages/web3-puffs-iban",
     "license": "LGPL-3.0",
-    "main": "dist/web3-eth-iban.cjs.js",
-    "module": "dist/web3-eth-iban.esm.js",
-    "browser": "dist/web3-eth-iban.umd.js",
+    "main": "dist/web3-puffs-iban.cjs.js",
+    "module": "dist/web3-puffs-iban.esm.js",
+    "browser": "dist/web3-puffs-iban.umd.js",
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
