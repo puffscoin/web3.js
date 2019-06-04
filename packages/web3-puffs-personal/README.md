@@ -1,23 +1,23 @@
-# web3-eth-personal
+# web3-puffs-personal
 
 This is a sub module of [web3.js][repo]
 
-This is the personal module to be used in the `web3-eth` module.
+This is the personal module to be used in the `web3-puffs` module.
 Please read the [documentation][docs] for more.
 
 ## Installation
 
 ```bash
-npm install web3-eth-personal
+npm install web3-puffs-personal
 ```
 
 ## Usage
 
 ```js
-import {Personal} from 'web3-eth-personal';
+import {Personal} from 'web3-puffs-personal';
 
 const personal = new Personal(
-    'http://127.0.0.1:4546',
+    'http://127.0.0.1:11364',
     null,
     options
 );
