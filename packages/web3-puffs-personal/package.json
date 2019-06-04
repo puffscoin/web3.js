@@ -1,13 +1,13 @@
 {
-    "name": "web3-eth-personal",
+    "name": "web3-puffs-personal",
     "namespace": "puffscoin",
     "version": "1.0.0-beta.55",
     "description": "Web3 module to interact with the Puffscoin blockchain accounts stored in the node.",
-    "repository": "https://github.com/puffscoin/web3.js/tree/1.0/packages/web3-eth-personal",
+    "repository": "https://github.com/puffscoin/web3.js/tree/1.0/packages/web3-puffs-personal",
     "license": "LGPL-3.0",
-    "main": "dist/web3-eth-personal.cjs.js",
-    "module": "dist/web3-eth-personal.esm.js",
-    "browser": "dist/web3-eth-personal.umd.js",
+    "main": "dist/web3-puffs-personal.cjs.js",
+    "module": "dist/web3-puffs-personal.esm.js",
+    "browser": "dist/web3-puffs-personal.umd.js",
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
@@ -20,7 +20,7 @@
         "web3-core": "1.0.0-beta.55",
         "web3-core-helpers": "1.0.0-beta.55",
         "web3-core-method": "1.0.0-beta.55",
-        "web3-eth-accounts": "1.0.0-beta.55",
+        "web3-puffs-accounts": "1.0.0-beta.55",
         "web3-net": "1.0.0-beta.55",
         "web3-providers": "1.0.0-beta.55",
         "web3-utils": "1.0.0-beta.55"
