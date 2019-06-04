@@ -1,20 +1,20 @@
-# web3-eth-iban
+# web3-puffs-iban
 
 This is a sub module of [web3.js][repo]
 
-This is the IBAN module to be used in the `web3-eth` module.
+This is the IBAN module to be used in the `web3-puffs` module.
 Please read the [documentation][docs] for more.
 
 ## Installation
 
 ```bash
-npm install web3-eth-iban
+npm install web3-puffs-iban
 ```
 
 ## Usage
 
 ```js
-import {Iban} from 'web3-eth-iban';
+import {Iban} from 'web3-puffs-iban';
 
 new Iban('XE75JRZCTTLBSYEQBGAS7GID8DKR7QY0QA3');
 ```
