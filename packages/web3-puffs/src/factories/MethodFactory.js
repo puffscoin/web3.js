@@ -46,7 +46,7 @@ import {
     SubmitWorkMethod,
     VersionMethod,
     SendRawTransactionMethod,
-    EthSendTransactionMethod,
+    PuffsSendTransactionMethod,
     GetProofMethod
 } from 'web3-core-method';
 
@@ -55,9 +55,9 @@ import GetUncleMethod from '../methods/GetUncleMethod';
 import GetBlockTransactionCountMethod from '../methods/GetBlockTransactionCountMethod';
 import GetBlockUncleCountMethod from '../methods/GetBlockUncleCountMethod';
 import GetTransactionFromBlockMethod from '../methods/GetTransactionFromBlockMethod';
-import EthSignTransactionMethod from '../methods/EthSignTransactionMethod';
-import EthSignMethod from '../methods/EthSignMethod';
-import EthGetAccountsMethod from '../methods/EthGetAccountsMethod';
+import PuffsSignTransactionMethod from '../methods/PuffsSignTransactionMethod';
+import PuffsSignMethod from '../methods/PuffsSignMethod';
+import PuffsGetAccountsMethod from '../methods/PuffsGetAccountsMethod';
 
 export default class MethodFactory extends AbstractMethodFactory {
     /**
@@ -77,7 +77,7 @@ export default class MethodFactory extends AbstractMethodFactory {
             getHashrate: GetHashrateMethod,
             isSyncing: IsSyncingMethod,
             getGasPrice: GetGasPriceMethod,
-            getAccounts: EthGetAccountsMethod,
+            getAccounts: PuffsGetAccountsMethod,
             getBlockNumber: GetBlockNumberMethod,
             getBalance: GetBalanceMethod,
             getStorageAt: GetStorageAtMethod,
@@ -92,9 +92,9 @@ export default class MethodFactory extends AbstractMethodFactory {
             getTransactionReceipt: GetTransactionReceiptMethod,
             getTransactionCount: GetTransactionCountMethod,
             sendSignedTransaction: SendRawTransactionMethod,
-            signTransaction: EthSignTransactionMethod,
-            sendTransaction: EthSendTransactionMethod,
-            sign: EthSignMethod,
+            signTransaction: PuffsSignTransactionMethod,
+            sendTransaction: PuffsSendTransactionMethod,
+            sign: PuffsSignMethod,
             call: CallMethod,
             estimateGas: EstimateGasMethod,
             submitWork: SubmitWorkMethod,
