@@ -2,7 +2,7 @@ import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
 import {AbstractWeb3Module} from 'web3-core';
 import {SignMethod} from 'web3-core-method';
-import EthSignMethod from '../../../src/methods/EthSignMethod';
+import PuffsSignMethod from '../../../src/methods/PuffsSignMethod';
 
 // Mocks
 jest.mock('web3-utils');
@@ -10,9 +10,9 @@ jest.mock('web3-core-helpers');
 jest.mock('web3-core');
 
 /**
- * EthSignMethod test
+ * PuffsSignMethod test
  */
-describe('EthSignMethodTest', () => {
+describe('PuffsSignMethodTest', () => {
     let method, moduleInstanceMock, accountsMock;
 
     beforeEach(() => {
@@ -28,7 +28,7 @@ describe('EthSignMethodTest', () => {
         formatters.inputAddressFormatter.mockReturnValue('0x0');
         formatters.inputSignFormatter.mockReturnValue('string');
 
-        method = new EthSignMethod(Utils, formatters, moduleInstanceMock);
+        method = new PuffsSignMethod(Utils, formatters, moduleInstanceMock);
         method.parameters = ['nope', '0x0'];
     });
 
