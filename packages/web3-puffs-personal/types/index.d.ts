@@ -18,7 +18,7 @@
  * @date 2018
  */
 
-import {Accounts} from 'web3-eth-accounts';
+import {Accounts} from 'web3-puffs-accounts';
 import {provider} from 'web3-providers';
 import {AbstractWeb3Module, RLPEncodedTransaction, TransactionConfig, Web3ModuleOptions} from 'web3-core';
 import * as net from 'net';
