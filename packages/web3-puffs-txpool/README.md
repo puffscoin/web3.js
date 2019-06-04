@@ -1,4 +1,4 @@
-# web3-eth-txpool
+# web3-puffs-txpool
 
 This is a sub package of [web3.js][repo]
 
@@ -8,13 +8,13 @@ Please read the [documentation][docs] for more.
 ## Installation
 
 ```bash
-npm install web3-eth-txpool
+npm install web3-puffs-txpool
 ```
 
 ## Usage
 
 ```js
-import {TxPool} from 'web3-eth-txpool';
+import {TxPool} from 'web3-puffs-txpool';
 
 const txPool = new TxPool(
     'http://127.0.0.1:11364',
