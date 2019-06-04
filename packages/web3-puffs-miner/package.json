@@ -1,13 +1,13 @@
 {
-    "name": "web3-eth-miner",
+    "name": "web3-puffs-miner",
     "namespace": "puffscoin",
     "version": "1.0.0-beta.55",
     "description": "Web3 module to interact with the Puffscoin blockchain accounts stored in the node.",
-    "repository": "https://github.com/puffscoin/web3.js/tree/1.0/packages/web3-eth-miner",
+    "repository": "https://github.com/puffscoin/web3.js/tree/1.0/packages/web3-puffs-miner",
     "license": "LGPL-3.0",
-    "main": "dist/web3-eth-miner.cjs.js",
-    "module": "dist/web3-eth-miner.esm.js",
-    "browser": "dist/web3-eth-miner.umd.js",
+    "main": "dist/web3-puffs-miner.cjs.js",
+    "module": "dist/web3-puffs-miner.esm.js",
+    "browser": "dist/web3-puffs-miner.umd.js",
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
