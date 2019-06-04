@@ -20,7 +20,7 @@
  * @date 2018
  */
 
-import {Iban, IndirectOptions} from 'web3-eth-iban';
+import {Iban, IndirectOptions} from 'web3-puffs-iban';
 
 const iban = 'XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS';
 const address = '0x45cd08334aeedd8a06265b2ae302e3597d8faa28';
@@ -95,7 +95,7 @@ Iban.fromAddress(null);
 Iban.fromAddress(undefined);
 
 // $ExpectType Iban
-Iban.fromBban('ETHXREGGAVOFYORK');
+Iban.fromBban('PUFFSXREGGAVOFYORK');
 
 // $ExpectError
 Iban.fromBban(345);
