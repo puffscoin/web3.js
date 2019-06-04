@@ -31,7 +31,7 @@ export default class GetBlockMethod extends AbstractGetBlockMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_getBlockByNumber', utils, formatters, moduleInstance);
+        super('puffs_getBlockByNumber', utils, formatters, moduleInstance);
     }
 
     /**
@@ -43,7 +43,7 @@ export default class GetBlockMethod extends AbstractGetBlockMethod {
      */
     beforeExecution(moduleInstance) {
         if (this.isHash(this.parameters[0])) {
-            this.rpcMethod = 'eth_getBlockByHash';
+            this.rpcMethod = 'puffs_getBlockByHash';
         }
 
         super.beforeExecution(moduleInstance);
