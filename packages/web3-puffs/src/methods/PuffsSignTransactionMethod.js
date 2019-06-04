@@ -15,7 +15,7 @@
     along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * @file SignTransactionMethod.js
+ * @file PuffsSignTransactionMethod.js
  * @author Samuel Furter <samuel@ethereum.org>
  * @date 2018
  */
@@ -23,7 +23,7 @@
 import isString from 'lodash/isString';
 import {SignTransactionMethod} from 'web3-core-method';
 
-export default class EthSignTransactionMethod extends SignTransactionMethod {
+export default class PuffsSignTransactionMethod extends SignTransactionMethod {
     /**
      * @param {Utils} utils
      * @param {Object} formatters
