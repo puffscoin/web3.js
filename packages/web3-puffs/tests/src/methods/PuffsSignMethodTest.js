@@ -110,13 +110,13 @@ describe('PuffsSignMethodTest', () => {
         method.execute();
     });
 
-    it('calls execute and the account does not exist in the eth-accounts wallet', async () => {
+    it('calls execute and the account does not exist in the puffs-accounts wallet', async () => {
         accountsMock.wallet = {nope: {privateKey: '0x0'}};
 
         moduleInstanceMock.currentProvider = {send: jest.fn()};
 
         method.execute();
 
-        expect(moduleInstanceMock.currentProvider.send).toHaveBeenCalledWith('eth_sign', method.parameters);
+        expect(moduleInstanceMock.currentProvider.send).toHaveBeenCalledWith('puffs_sign', method.parameters);
     });
 });
