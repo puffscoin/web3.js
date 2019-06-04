@@ -17,7 +17,7 @@
  * @date 2019
  */
 
-import {Txpool} from 'web3-eth-txpool';
+import {Txpool} from 'web3-puffs-txpool';
 import {TxPoolContent, TxPoolInspect, TxPoolStatus} from 'web3-core';
 
 const txpool = new Txpool('http://localhost:11363');
