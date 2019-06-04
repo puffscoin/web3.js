@@ -15,14 +15,14 @@
     along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * @file EthSignMethod.js
+ * @file PuffsSignMethod.js
  * @author Samuel Furter <samuel@ethereum.org>
  * @date 2018
  */
 
 import {SignMethod} from 'web3-core-method';
 
-export default class EthSignMethod extends SignMethod {
+export default class PuffsSignMethod extends SignMethod {
     /**
      * @param {Utils} utils
      * @param {Object} formatters
