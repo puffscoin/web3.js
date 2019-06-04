@@ -2,7 +2,7 @@ import {
     CallMethod,
     ChainIdMethod,
     EstimateGasMethod,
-    EthSendTransactionMethod,
+    PuffsSendTransactionMethod,
     GetBalanceMethod,
     GetBlockNumberMethod,
     GetCodeMethod,
@@ -34,9 +34,9 @@ import GetUncleMethod from '../../../src/methods/GetUncleMethod';
 import GetBlockTransactionCountMethod from '../../../src/methods/GetBlockTransactionCountMethod';
 import GetBlockUncleCountMethod from '../../../src/methods/GetBlockUncleCountMethod';
 import GetTransactionFromBlockMethod from '../../../src/methods/GetTransactionFromBlockMethod';
-import EthSignTransactionMethod from '../../../src/methods/EthSignTransactionMethod';
-import EthSignMethod from '../../../src/methods/EthSignMethod';
-import EthGetAccountsMethod from '../../../src/methods/EthGetAccountsMethod';
+import PuffsSignTransactionMethod from '../../../src/methods/PuffsSignTransactionMethod';
+import PuffsSignMethod from '../../../src/methods/PuffsSignMethod';
+import PuffsGetAccountsMethod from '../../../src/methods/PuffsGetAccountsMethod';
 
 jest.mock('web3-utils');
 jest.mock('web3-core-helpers');
@@ -66,7 +66,7 @@ describe('MethodFactoryTest', () => {
             getHashrate: GetHashrateMethod,
             isSyncing: IsSyncingMethod,
             getGasPrice: GetGasPriceMethod,
-            getAccounts: EthGetAccountsMethod,
+            getAccounts: PuffsGetAccountsMethod,
             getBlockNumber: GetBlockNumberMethod,
             getBalance: GetBalanceMethod,
             getStorageAt: GetStorageAtMethod,
@@ -81,9 +81,9 @@ describe('MethodFactoryTest', () => {
             getTransactionReceipt: GetTransactionReceiptMethod,
             getTransactionCount: GetTransactionCountMethod,
             sendSignedTransaction: SendRawTransactionMethod,
-            signTransaction: EthSignTransactionMethod,
-            sendTransaction: EthSendTransactionMethod,
-            sign: EthSignMethod,
+            signTransaction: PuffsSignTransactionMethod,
+            sendTransaction: PuffsSendTransactionMethod,
+            sign: PuffsSignMethod,
             call: CallMethod,
             estimateGas: EstimateGasMethod,
             submitWork: SubmitWorkMethod,
