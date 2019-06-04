@@ -59,24 +59,24 @@ export default class TransactionSigner {
             privateKey = privateKey.substring(2);
         }
 
-        const ethTx = new PuffscoinTx(transaction);
-        ethTx.sign(Buffer.from(privateKey, 'hex'));
+        const puffsTx = new PuffscoinTx(transaction);
+        puffsTx.sign(Buffer.from(privateKey, 'hex'));
 
-        const validationResult = ethTx.validate(true);
+        const validationResult = puffsTx.validate(true);
 
         if (validationResult !== '') {
             throw new Error(`TransactionSigner Error: ${validationResult}`);
         }
 
-        const rlpEncoded = ethTx.serialize().toString('hex');
+        const rlpEncoded = puffsTx.serialize().toString('hex');
         const rawTransaction = '0x' + rlpEncoded;
         const transactionHash = this.utils.keccak256(rawTransaction);
 
         return {
-            messageHash: Buffer.from(ethTx.hash(false)).toString('hex'),
-            v: '0x' + Buffer.from(ethTx.v).toString('hex'),
-            r: '0x' + Buffer.from(ethTx.r).toString('hex'),
-            s: '0x' + Buffer.from(ethTx.s).toString('hex'),
+            messageHash: Buffer.from(puffsTx.hash(false)).toString('hex'),
+            v: '0x' + Buffer.from(puffsTx.v).toString('hex'),
+            r: '0x' + Buffer.from(puffsTx.r).toString('hex'),
+            s: '0x' + Buffer.from(puffsTx.s).toString('hex'),
             rawTransaction,
             transactionHash
         };
