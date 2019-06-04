@@ -16,9 +16,6 @@
 */
 /**
  * @file Iban.js
- *
- * Details: https://github.com/ethereum/wiki/wiki/ICAP:-Inter-exchange-Client-Address-Protocol
- *
  * @author Marek Kotewicz <marek@parity.io>
  * @date 2015
  */
@@ -182,7 +179,7 @@ export default class Iban {
      * @returns {Iban} the IBAN object
      */
     static createIndirect(options) {
-        return Iban.fromBban(`ETH${options.institution}${options.identifier}`);
+        return Iban.fromBban(`PUFFS${options.institution}${options.identifier}`);
     }
 
     /**
@@ -208,7 +205,7 @@ export default class Iban {
      */
     isValid() {
         return (
-            /^XE\d{2}(ETH[0-9A-Z]{13}|[0-9A-Z]{30,31})$/.test(this._iban) &&
+            /^XE\d{2}(PUFFS[0-9A-Z]{13}|[0-9A-Z]{30,31})$/.test(this._iban) &&
             module9710(iso13616Prepare(this._iban)) === 1
         );
     }
