@@ -17,7 +17,7 @@
  * @date 2019
  */
 
-import {Miner} from 'web3-eth-miner';
+import {Miner} from 'web3-puffs-miner';
 
 const miner = new Miner('http://localhost:7545');
 
