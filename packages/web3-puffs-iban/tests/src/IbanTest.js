@@ -126,7 +126,7 @@ describe('IbanTest', () => {
     });
 
     it('calls createIndirect and returns the expected Iban object', () => {
-        expect(Iban.createIndirect({institution: 'ME', identifier: 'SAM'}).toString()).toEqual('XE63ETHMESAM');
+        expect(Iban.createIndirect({institution: 'ME', identifier: 'SAM'}).toString()).toEqual('XE63PUFFSMESAM');
     });
 
     it('calls the static isValid method', () => {
@@ -145,11 +145,11 @@ describe('IbanTest', () => {
             {object: '{}', is: false},
             {object: '{"a": 123, "b" :3,}', is: false},
             {object: '{"c" : 2}', is: false},
-            {object: 'XE81ETHXREGGAVOFYORK', is: true},
-            {object: 'XE82ETHXREGGAVOFYORK', is: false}, // control number is invalid
+            {object: 'XE81PUFFSXREGGAVOFYORK', is: true},
+            {object: 'XE82PUFFSXREGGAVOFYORK', is: false}, // control number is invalid
             {object: 'XE81ETCXREGGAVOFYORK', is: false},
-            {object: 'XE81ETHXREGGAVOFYORKD', is: false},
-            {object: 'XE81ETHXREGGaVOFYORK', is: false},
+            {object: 'XE81PUFFSXREGGAVOFYORKD', is: false},
+            {object: 'XE81PUFFSXREGGaVOFYORK', is: false},
             {object: 'XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS', is: true},
             {object: 'XE7438O073KYGTWWZN0F2WZ0R8PX5ZPPZS', is: false}, // control number is invalid
             {object: 'XD7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS', is: false},
