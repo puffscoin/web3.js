@@ -1,28 +1,28 @@
 import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
 import {AbstractSubscription, LogSubscription} from 'web3-core-subscriptions';
-import {AbiCoder} from 'web3-eth-abi';
-import {Accounts} from 'web3-eth-accounts';
-import {Ens} from 'web3-eth-ens';
-import {Iban} from 'web3-eth-iban';
-import {Personal} from 'web3-eth-personal';
+import {AbiCoder} from 'web3-puffs-abi';
+import {Accounts} from 'web3-puffs-accounts';
+import {Ens} from 'web3-puffs-ens';
+import {Iban} from 'web3-puffs-iban';
+import {Personal} from 'web3-puffs-personal';
 import {Network} from 'web3-net';
-import {ContractModuleFactory} from 'web3-eth-contract';
+import {ContractModuleFactory} from 'web3-puffs-contract';
 import MethodFactory from '../../src/factories/MethodFactory';
 import TransactionSigner from '../../src/signers/TransactionSigner';
 import SubscriptionsFactory from '../../src/factories/SubscriptionsFactory';
-import Eth from '../../src/Eth';
+import Puffs from '../../src/Puffs';
 
 // Mocks
 jest.mock('web3-core');
 jest.mock('web3-core-subscriptions');
-jest.mock('web3-eth-abi');
-jest.mock('web3-eth-accounts');
-jest.mock('web3-eth-ens');
-jest.mock('web3-eth-iban');
-jest.mock('web3-eth-personal');
+jest.mock('web3-puffs-abi');
+jest.mock('web3-puffs-accounts');
+jest.mock('web3-puffs-ens');
+jest.mock('web3-puffs-iban');
+jest.mock('web3-puffs-personal');
 jest.mock('web3-net');
-jest.mock('web3-eth-contract');
+jest.mock('web3-puffs-contract');
 jest.mock('web3-utils');
 jest.mock('web3-core-helpers');
 jest.mock('../../src/factories/MethodFactory');
@@ -30,10 +30,10 @@ jest.mock('../../src/signers/TransactionSigner');
 jest.mock('../../src/factories/SubscriptionsFactory');
 
 /**
- * Eth test
+ * Puffs test
  */
-describe('EthTest', () => {
-    let eth,
+describe('PuffsTest', () => {
+    let puffs,
         providerMock,
         methodFactoryMock,
         contractModuleFactoryMock,
@@ -75,7 +75,7 @@ describe('EthTest', () => {
         new TransactionSigner();
         transactionSignerMock = TransactionSigner.mock.instances[0];
 
-        eth = new Eth(
+        puffs = new Puffs(
             providerMock,
             methodFactoryMock,
             networkMock,
@@ -94,37 +94,37 @@ describe('EthTest', () => {
     });
 
     it('constructor check', () => {
-        expect(eth.contractModuleFactory).toEqual(contractModuleFactoryMock);
+        expect(puffs.contractModuleFactory).toEqual(contractModuleFactoryMock);
 
-        expect(eth.net).toEqual(networkMock);
+        expect(puffs.net).toEqual(networkMock);
 
-        expect(eth.accounts).toEqual(accountsMock);
+        expect(puffs.accounts).toEqual(accountsMock);
 
-        expect(eth.personal).toEqual(personalMock);
+        expect(puffs.personal).toEqual(personalMock);
 
-        expect(eth.Iban).toEqual(Iban);
+        expect(puffs.Iban).toEqual(Iban);
 
-        expect(eth.abi).toEqual(abiCoderMock);
+        expect(puffs.abi).toEqual(abiCoderMock);
 
-        expect(eth.ens).toEqual(ensMock);
+        expect(puffs.ens).toEqual(ensMock);
 
-        expect(eth.utils).toEqual(Utils);
+        expect(puffs.utils).toEqual(Utils);
 
-        expect(eth.formatters).toEqual(formatters);
+        expect(puffs.formatters).toEqual(formatters);
 
-        expect(eth.initiatedContracts).toEqual([]);
+        expect(puffs.initiatedContracts).toEqual([]);
 
-        expect(eth.Contract).toBeInstanceOf(Function);
+        expect(puffs.Contract).toBeInstanceOf(Function);
     });
 
     it('sets the defaultGasPrice property', () => {
-        eth.initiatedContracts = [{defaultGasPrice: 20}];
+        puffs.initiatedContracts = [{defaultGasPrice: 20}];
 
-        eth.defaultGasPrice = 10;
+        puffs.defaultGasPrice = 10;
 
-        expect(eth.initiatedContracts[0].defaultGasPrice).toEqual(10);
+        expect(puffs.initiatedContracts[0].defaultGasPrice).toEqual(10);
 
-        expect(eth.defaultGasPrice).toEqual(10);
+        expect(puffs.defaultGasPrice).toEqual(10);
 
         expect(networkMock.defaultGasPrice).toEqual(10);
 
@@ -132,12 +132,12 @@ describe('EthTest', () => {
     });
 
     it('sets the defaultGas property', () => {
-        eth.initiatedContracts = [{defaultGas: 20}];
-        eth.defaultGas = 10;
+        puffs.initiatedContracts = [{defaultGas: 20}];
+        puffs.defaultGas = 10;
 
-        expect(eth.initiatedContracts[0].defaultGas).toEqual(10);
+        expect(puffs.initiatedContracts[0].defaultGas).toEqual(10);
 
-        expect(eth.defaultGas).toEqual(10);
+        expect(puffs.defaultGas).toEqual(10);
 
         expect(networkMock.defaultGas).toEqual(10);
 
@@ -145,12 +145,12 @@ describe('EthTest', () => {
     });
 
     it('sets the transactionBlockTimeout property', () => {
-        eth.initiatedContracts = [{transactionBlockTimeout: 20}];
-        eth.transactionBlockTimeout = 10;
+        puffs.initiatedContracts = [{transactionBlockTimeout: 20}];
+        puffs.transactionBlockTimeout = 10;
 
-        expect(eth.initiatedContracts[0].transactionBlockTimeout).toEqual(10);
+        expect(puffs.initiatedContracts[0].transactionBlockTimeout).toEqual(10);
 
-        expect(eth.transactionBlockTimeout).toEqual(10);
+        expect(puffs.transactionBlockTimeout).toEqual(10);
 
         expect(networkMock.transactionBlockTimeout).toEqual(10);
 
@@ -158,12 +158,12 @@ describe('EthTest', () => {
     });
 
     it('sets the transactionConfirmationBlocks property', () => {
-        eth.initiatedContracts = [{transactionConfirmationBlocks: 20}];
-        eth.transactionConfirmationBlocks = 10;
+        puffs.initiatedContracts = [{transactionConfirmationBlocks: 20}];
+        puffs.transactionConfirmationBlocks = 10;
 
-        expect(eth.initiatedContracts[0].transactionConfirmationBlocks).toEqual(10);
+        expect(puffs.initiatedContracts[0].transactionConfirmationBlocks).toEqual(10);
 
-        expect(eth.transactionConfirmationBlocks).toEqual(10);
+        expect(puffs.transactionConfirmationBlocks).toEqual(10);
 
         expect(networkMock.transactionConfirmationBlocks).toEqual(10);
 
@@ -171,12 +171,12 @@ describe('EthTest', () => {
     });
 
     it('sets the transactionPollingTimeout property', () => {
-        eth.initiatedContracts = [{transactionPollingTimeout: 20}];
-        eth.transactionPollingTimeout = 10;
+        puffs.initiatedContracts = [{transactionPollingTimeout: 20}];
+        puffs.transactionPollingTimeout = 10;
 
-        expect(eth.initiatedContracts[0].transactionPollingTimeout).toEqual(10);
+        expect(puffs.initiatedContracts[0].transactionPollingTimeout).toEqual(10);
 
-        expect(eth.transactionPollingTimeout).toEqual(10);
+        expect(puffs.transactionPollingTimeout).toEqual(10);
 
         expect(networkMock.transactionPollingTimeout).toEqual(10);
 
@@ -184,15 +184,15 @@ describe('EthTest', () => {
     });
 
     it('sets the defaultAccount property', () => {
-        eth.initiatedContracts = [{defaultAccount: '0x0'}];
+        puffs.initiatedContracts = [{defaultAccount: '0x0'}];
 
         Utils.toChecksumAddress.mockReturnValueOnce('0x1');
 
-        eth.defaultAccount = '0x1';
+        puffs.defaultAccount = '0x1';
 
-        expect(eth.initiatedContracts[0].defaultAccount).toEqual('0x1');
+        expect(puffs.initiatedContracts[0].defaultAccount).toEqual('0x1');
 
-        expect(eth.defaultAccount).toEqual('0x1');
+        expect(puffs.defaultAccount).toEqual('0x1');
 
         expect(networkMock.defaultAccount).toEqual('0x1');
 
@@ -202,12 +202,12 @@ describe('EthTest', () => {
     });
 
     it('sets the defaultBlock property', () => {
-        eth.initiatedContracts = [{defaultBlock: 20}];
-        eth.defaultBlock = 10;
+        puffs.initiatedContracts = [{defaultBlock: 20}];
+        puffs.defaultBlock = 10;
 
-        expect(eth.initiatedContracts[0].defaultBlock).toEqual(10);
+        expect(puffs.initiatedContracts[0].defaultBlock).toEqual(10);
 
-        expect(eth.defaultBlock).toEqual(10);
+        expect(puffs.defaultBlock).toEqual(10);
 
         expect(networkMock.defaultBlock).toEqual(10);
 
@@ -226,9 +226,9 @@ describe('EthTest', () => {
 
         const callback = () => {};
 
-        expect(eth.subscribe('logs', {}, callback)).toBeInstanceOf(LogSubscription);
+        expect(puffs.subscribe('logs', {}, callback)).toBeInstanceOf(LogSubscription);
 
-        expect(subscriptionsFactoryMock.getSubscription).toHaveBeenCalledWith(eth, 'logs', {});
+        expect(subscriptionsFactoryMock.getSubscription).toHaveBeenCalledWith(puffs, 'logs', {});
 
         expect(logSubscriptionMock.subscribe).toHaveBeenCalledWith(callback);
     });
@@ -245,9 +245,9 @@ describe('EthTest', () => {
 
         const callback = () => {};
 
-        expect(eth.subscribe('newBlockHeaders', {}, callback)).toBeInstanceOf(AbstractSubscription);
+        expect(puffs.subscribe('newBlockHeaders', {}, callback)).toBeInstanceOf(AbstractSubscription);
 
-        expect(subscriptionsFactoryMock.getSubscription).toHaveBeenCalledWith(eth, 'newBlockHeaders', {});
+        expect(subscriptionsFactoryMock.getSubscription).toHaveBeenCalledWith(puffs, 'newBlockHeaders', {});
 
         expect(abstractSubscriptionMock.subscribe).toHaveBeenCalledWith(callback);
     });
@@ -264,9 +264,9 @@ describe('EthTest', () => {
 
         const callback = () => {};
 
-        expect(eth.subscribe('pendingTransactions', {}, callback)).toBeInstanceOf(AbstractSubscription);
+        expect(puffs.subscribe('pendingTransactions', {}, callback)).toBeInstanceOf(AbstractSubscription);
 
-        expect(subscriptionsFactoryMock.getSubscription).toHaveBeenCalledWith(eth, 'pendingTransactions', {});
+        expect(subscriptionsFactoryMock.getSubscription).toHaveBeenCalledWith(puffs, 'pendingTransactions', {});
 
         expect(abstractSubscriptionMock.subscribe).toHaveBeenCalledWith(callback);
     });
@@ -283,9 +283,9 @@ describe('EthTest', () => {
 
         const callback = () => {};
 
-        expect(eth.subscribe('syncing', {}, callback)).toBeInstanceOf(AbstractSubscription);
+        expect(puffs.subscribe('syncing', {}, callback)).toBeInstanceOf(AbstractSubscription);
 
-        expect(subscriptionsFactoryMock.getSubscription).toHaveBeenCalledWith(eth, 'syncing', {});
+        expect(subscriptionsFactoryMock.getSubscription).toHaveBeenCalledWith(puffs, 'syncing', {});
 
         expect(abstractSubscriptionMock.subscribe).toHaveBeenCalledWith(callback);
     });
@@ -293,20 +293,20 @@ describe('EthTest', () => {
     it('calls the Contract factory method with options from the constructor', () => {
         contractModuleFactoryMock.createContract.mockReturnValueOnce({});
 
-        eth.currentProvider = providerMock;
-        expect(new eth.Contract([], '0x0', {data: '', from: '0x0', gas: '0x0', gasPrice: '0x0'})).toEqual({});
+        puffs.currentProvider = providerMock;
+        expect(new puffs.Contract([], '0x0', {data: '', from: '0x0', gas: '0x0', gasPrice: '0x0'})).toEqual({});
 
-        expect(eth.initiatedContracts).toHaveLength(1);
+        expect(puffs.initiatedContracts).toHaveLength(1);
 
-        expect(contractModuleFactoryMock.createContract).toHaveBeenCalledWith(providerMock, eth.accounts, [], '0x0', {
+        expect(contractModuleFactoryMock.createContract).toHaveBeenCalledWith(providerMock, puffs.accounts, [], '0x0', {
             defaultAccount: '0x0',
-            defaultBlock: eth.defaultBlock,
+            defaultBlock: puffs.defaultBlock,
             defaultGas: '0x0',
             defaultGasPrice: '0x0',
-            transactionBlockTimeout: eth.transactionBlockTimeout,
-            transactionConfirmationBlocks: eth.transactionConfirmationBlocks,
-            transactionPollingTimeout: eth.transactionPollingTimeout,
-            transactionSigner: eth.transactionSigner,
+            transactionBlockTimeout: puffs.transactionBlockTimeout,
+            transactionConfirmationBlocks: puffs.transactionConfirmationBlocks,
+            transactionPollingTimeout: puffs.transactionPollingTimeout,
+            transactionSigner: puffs.transactionSigner,
             data: ''
         });
     });
@@ -314,20 +314,20 @@ describe('EthTest', () => {
     it('calls the Contract factory method without options from the constructor', () => {
         contractModuleFactoryMock.createContract.mockReturnValueOnce({});
 
-        eth.currentProvider = providerMock;
-        expect(new eth.Contract([], '0x0', {})).toEqual({});
+        puffs.currentProvider = providerMock;
+        expect(new puffs.Contract([], '0x0', {})).toEqual({});
 
-        expect(eth.initiatedContracts).toHaveLength(1);
+        expect(puffs.initiatedContracts).toHaveLength(1);
 
-        expect(contractModuleFactoryMock.createContract).toHaveBeenCalledWith(providerMock, eth.accounts, [], '0x0', {
-            defaultAccount: eth.defaultAccount,
-            defaultBlock: eth.defaultBlock,
-            defaultGas: eth.defaultGas,
-            defaultGasPrice: eth.defaultGasPrice,
-            transactionBlockTimeout: eth.transactionBlockTimeout,
-            transactionConfirmationBlocks: eth.transactionConfirmationBlocks,
-            transactionPollingTimeout: eth.transactionPollingTimeout,
-            transactionSigner: eth.transactionSigner,
+        expect(contractModuleFactoryMock.createContract).toHaveBeenCalledWith(providerMock, puffs.accounts, [], '0x0', {
+            defaultAccount: puffs.defaultAccount,
+            defaultBlock: puffs.defaultBlock,
+            defaultGas: puffs.defaultGas,
+            defaultGasPrice: puffs.defaultGasPrice,
+            transactionBlockTimeout: puffs.transactionBlockTimeout,
+            transactionConfirmationBlocks: puffs.transactionConfirmationBlocks,
+            transactionPollingTimeout: puffs.transactionPollingTimeout,
+            transactionSigner: puffs.transactionSigner,
             data: undefined
         });
     });
