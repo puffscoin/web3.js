@@ -1,14 +1,14 @@
 import {formatters} from 'web3-core-helpers';
 import {SignTransactionMethod} from 'web3-core-method';
-import EthSignTransactionMethod from '../../../src/methods/EthSignTransactionMethod';
+import PuffsSignTransactionMethod from '../../../src/methods/PuffsSignTransactionMethod';
 
 // Mocks
 jest.mock('web3-core-helpers');
 
 /**
- * EthSignTransactionMethod test
+ * PuffsSignTransactionMethod test
  */
-describe('EthSignTransactionMethodTest', () => {
+describe('PuffsSignTransactionMethodTest', () => {
     let method, moduleInstanceMock;
 
     beforeEach(() => {
@@ -20,7 +20,7 @@ describe('EthSignTransactionMethodTest', () => {
             })
         };
 
-        method = new EthSignTransactionMethod(null, formatters, moduleInstanceMock);
+        method = new PuffsSignTransactionMethod(null, formatters, moduleInstanceMock);
     });
 
     it('constructor check', () => {
