@@ -31,7 +31,7 @@ export default class GetBlockUncleCountMethod extends AbstractGetBlockUncleCount
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('eth_getUncleCountByBlockNumber', utils, formatters, moduleInstance);
+        super('puffs_getUncleCountByBlockNumber', utils, formatters, moduleInstance);
     }
 
     /**
@@ -43,7 +43,7 @@ export default class GetBlockUncleCountMethod extends AbstractGetBlockUncleCount
      */
     beforeExecution(moduleInstance) {
         if (this.isHash(this.parameters[0])) {
-            this.rpcMethod = 'eth_getUncleCountByBlockHash';
+            this.rpcMethod = 'puffs_getUncleCountByBlockHash';
         }
 
         super.beforeExecution(moduleInstance);
