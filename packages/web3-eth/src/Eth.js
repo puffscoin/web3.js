@@ -15,7 +15,7 @@
     along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * @file Eth.js
+ * @file Puffs.js
  * @author Samuel Furter <samuel@ethereum.org>
  * @date 2018
  */
@@ -74,7 +74,7 @@ export default class Eth extends AbstractWeb3Module {
         this._transactionSigner = options.transactionSigner;
 
         /**
-         * This wrapper function is required for the "new web3.eth.Contract(...)" call.
+         * This wrapper function is required for the "new web3.puffs.Contract(...)" call.
          *
          * @param {Object} abi
          * @param {String} address
@@ -152,7 +152,7 @@ export default class Eth extends AbstractWeb3Module {
      * @returns {Promise<Boolean|Error>}
      */
     clearSubscriptions() {
-        return super.clearSubscriptions('eth_unsubscribe');
+        return super.clearSubscriptions('puffs_unsubscribe');
     }
 
     /**
@@ -376,7 +376,7 @@ export default class Eth extends AbstractWeb3Module {
 
     /**
      * Extends setProvider method from AbstractWeb3Module.
-     * This is required for updating the provider also in the sub packages and objects related to Eth.
+     * This is required for updating the provider also in the sub packages and objects related to Puffs.
      *
      * @param {Object|String} provider
      * @param {Net} net
