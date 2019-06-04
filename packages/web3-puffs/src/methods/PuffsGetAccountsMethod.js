@@ -15,14 +15,14 @@
     along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * @file EthGetAccountsMethod.js
+ * @file PuffsGetAccountsMethod.js
  * @author Samuel Furter <samuel@ethereum.org>
  * @date 2018
  */
 
 import {GetAccountsMethod} from 'web3-core-method';
 
-export default class EthGetAccountsMethod extends GetAccountsMethod {
+export default class PuffsGetAccountsMethod extends GetAccountsMethod {
     /**
      * @param {Utils} utils
      * @param {Object} formatters
