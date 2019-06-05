@@ -45,7 +45,7 @@ export type Unit =
     | 'finney'
     | 'milliether'
     | 'milli'
-    | 'ether'
+    | 'puffs'
     | 'kether'
     | 'grand'
     | 'mether'
@@ -190,7 +190,7 @@ export interface Units {
     finney: string;
     milliether: string;
     milli: string;
-    ether: string;
+    puffs: string;
     kether: string;
     grand: string;
     mether: string;
