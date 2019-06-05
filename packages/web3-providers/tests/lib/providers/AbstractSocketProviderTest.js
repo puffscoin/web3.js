@@ -124,12 +124,12 @@ describe('AbstractSocketProviderTest', () => {
 
         abstractSocketProvider.subscriptions['0x0'] = {
             id: '0x0',
-            subscribeMethod: 'eth_subscribe',
+            subscribeMethod: 'puffs_subscribe',
             parameters: ['logs', {}]
         };
 
         abstractSocketProvider.send = jest.fn((subscribeMethod, parameters) => {
-            expect(subscribeMethod).toEqual('eth_subscribe');
+            expect(subscribeMethod).toEqual('puffs_subscribe');
 
             expect(parameters).toEqual(['logs', {}]);
 
@@ -231,7 +231,7 @@ describe('AbstractSocketProviderTest', () => {
     });
 
     it('calls unsubscribe and subscription id does not exist', () => {
-        expect(abstractSocketProvider.unsubscribe('no', 'eth_unsubscribe')).rejects.toThrow(
+        expect(abstractSocketProvider.unsubscribe('no', 'puffs_unsubscribe')).rejects.toThrow(
             'Provider error: Subscription with ID no does not exist.'
         );
     });
