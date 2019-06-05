@@ -25,10 +25,10 @@
 import {AbstractWeb3Module} from 'web3-core';
 import {ProviderDetector, ProvidersModuleFactory} from 'web3-providers';
 import * as Utils from 'web3-utils';
-import {Eth} from 'web3-eth';
+import {Puffs} from 'web3-puffs';
 import {Shh} from 'web3-shh';
 import {Network} from 'web3-net';
-import {Personal} from 'web3-eth-personal';
+import {Personal} from 'web3-puffs-personal';
 import {version} from '../package.json';
 
 export default class Web3 extends AbstractWeb3Module {
@@ -42,14 +42,14 @@ export default class Web3 extends AbstractWeb3Module {
     constructor(provider, net, options = {}) {
         super(provider, options, null, net);
 
-        this.eth = new Eth(this.currentProvider, net, options);
+        this.puffs = new Puffs(this.currentProvider, net, options);
         this.shh = new Shh(this.currentProvider, net, options);
         this.utils = Utils;
         this.version = version;
     }
 
     /**
-     * Sets the defaultGasPrice property on the eth module and also on the shh module
+     * Sets the defaultGasPrice property on the puffs module and also on the shh module
      *
      * @property defaultGasPrice
      *
@@ -57,7 +57,7 @@ export default class Web3 extends AbstractWeb3Module {
      */
     set defaultGasPrice(value) {
         super.defaultGasPrice = value;
-        this.eth.defaultGasPrice = value;
+        this.puffs.defaultGasPrice = value;
         this.shh.defaultGasPrice = value;
     }
 
@@ -73,7 +73,7 @@ export default class Web3 extends AbstractWeb3Module {
     }
 
     /**
-     * Sets the defaultGas property on the eth module and also on the shh module
+     * Sets the defaultGas property on the puffs module and also on the shh module
      *
      * @property defaultGas
      *
@@ -81,7 +81,7 @@ export default class Web3 extends AbstractWeb3Module {
      */
     set defaultGas(value) {
         super.defaultGas = value;
-        this.eth.defaultGas = value;
+        this.puffs.defaultGas = value;
         this.shh.defaultGas = value;
     }
 
@@ -105,7 +105,7 @@ export default class Web3 extends AbstractWeb3Module {
      */
     set transactionBlockTimeout(value) {
         super.transactionBlockTimeout = value;
-        this.eth.transactionBlockTimeout = value;
+        this.puffs.transactionBlockTimeout = value;
         this.shh.transactionBlockTimeout = value;
     }
 
@@ -129,7 +129,7 @@ export default class Web3 extends AbstractWeb3Module {
      */
     set transactionConfirmationBlocks(value) {
         super.transactionConfirmationBlocks = value;
-        this.eth.transactionConfirmationBlocks = value;
+        this.puffs.transactionConfirmationBlocks = value;
         this.shh.transactionConfirmationBlocks = value;
     }
 
@@ -153,7 +153,7 @@ export default class Web3 extends AbstractWeb3Module {
      */
     set transactionPollingTimeout(value) {
         super.transactionPollingTimeout = value;
-        this.eth.transactionPollingTimeout = value;
+        this.puffs.transactionPollingTimeout = value;
         this.shh.transactionPollingTimeout = value;
     }
 
@@ -169,7 +169,7 @@ export default class Web3 extends AbstractWeb3Module {
     }
 
     /**
-     * Sets the defaultAccount property on the eth module and also on the shh module
+     * Sets the defaultAccount property on the puffs module and also on the shh module
      *
      * @property defaultAccount
      *
@@ -177,7 +177,7 @@ export default class Web3 extends AbstractWeb3Module {
      */
     set defaultAccount(value) {
         super.defaultAccount = value;
-        this.eth.defaultAccount = value;
+        this.puffs.defaultAccount = value;
         this.shh.defaultAccount = value;
     }
 
@@ -193,7 +193,7 @@ export default class Web3 extends AbstractWeb3Module {
     }
 
     /**
-     * Sets the defaultBlock property on the eth module and also on the shh module
+     * Sets the defaultBlock property on the puffs module and also on the shh module
      *
      * @property defaultBlock
      *
@@ -201,7 +201,7 @@ export default class Web3 extends AbstractWeb3Module {
      */
     set defaultBlock(value) {
         super.defaultBlock = value;
-        this.eth.defaultBlock = value;
+        this.puffs.defaultBlock = value;
         this.shh.defaultBlock = value;
     }
 
@@ -229,7 +229,7 @@ export default class Web3 extends AbstractWeb3Module {
     setProvider(provider, net) {
         return (
             super.setProvider(provider, net) &&
-            this.eth.setProvider(provider, net) &&
+            this.puffs.setProvider(provider, net) &&
             this.shh.setProvider(provider, net)
         );
     }
@@ -252,8 +252,8 @@ export default class Web3 extends AbstractWeb3Module {
         const providerResolver = new ProvidersModuleFactory().createProviderResolver();
 
         return {
-            Eth: (provider, options, net) => {
-                return new Eth(providerResolver.resolve(provider, net), options);
+            Puffs: (provider, options, net) => {
+                return new Puffs(providerResolver.resolve(provider, net), options);
             },
             Net: (provider, options, net) => {
                 return new Network(providerResolver.resolve(provider, net), options);
