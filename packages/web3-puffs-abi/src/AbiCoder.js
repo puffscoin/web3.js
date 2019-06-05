@@ -32,7 +32,7 @@ export default class AbiCoder {
      *
      * @constructor
      */
-    constructor(utils, ethersAbiCoder) {
+    constructor(utils, puffssAbiCoder) {
         this.utils = utils;
         this.puffssAbiCoder = puffssAbiCoder;
     }
