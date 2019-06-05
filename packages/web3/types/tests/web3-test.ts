@@ -39,8 +39,8 @@ web3.utils;
 // $ExpectType string
 web3.version;
 
-// $ExpectType Eth
-web3.eth;
+// $ExpectType Puffs
+web3.puffs;
 
 // $ExpectType Shh
 web3.shh;
