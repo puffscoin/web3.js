@@ -30,17 +30,17 @@ import {
     TransactionReceipt,
     Web3ModuleOptions,
 } from 'web3-core';
-import {Contract, ContractOptions} from 'web3-eth-contract';
-import {Iban} from 'web3-eth-iban';
-import {Accounts} from 'web3-eth-accounts';
-import {AbiCoder} from 'web3-eth-abi';
+import {Contract, ContractOptions} from 'web3-puffs-contract';
+import {Iban} from 'web3-puffs-iban';
+import {Accounts} from 'web3-puffs-accounts';
+import {AbiCoder} from 'web3-puffs-abi';
 import {Network} from 'web3-net';
-import {Personal} from 'web3-eth-personal';
+import {Personal} from 'web3-puffs-personal';
 import {AbiItem} from 'web3-utils';
-import {Ens} from 'web3-eth-ens';
+import {Ens} from 'web3-puffs-ens';
 import * as net from 'net';
 
-export class Eth extends AbstractWeb3Module {
+export class Puffs extends AbstractWeb3Module {
     constructor(
         provider: provider,
         net?: net.Socket | null,
