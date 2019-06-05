@@ -21,7 +21,7 @@
 import {Log, Transaction, TransactionReceipt, RLPEncodedTransaction} from 'web3-core';
 import {Puffs, BlockHeader, Syncing, Block, GetProof} from 'web3-puffs';
 
-const eth = new Eth('http://localhost:11363');
+const puffs = new Puffs('http://localhost:11363');
 
 // $ExpectType new (jsonInterface: AbiItem | AbiItem[], address?: string | undefined, options?: ContractOptions | undefined) => Contract
 puffs.Contract;
