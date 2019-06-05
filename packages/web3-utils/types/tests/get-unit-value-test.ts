@@ -24,7 +24,7 @@ import BN = require('bn.js');
 import {getUnitValue} from 'web3-utils';
 
 // $ExpectType string
-getUnitValue('ether');
+getUnitValue('puffs');
 
 // $ExpectError
 getUnitValue('fake');
