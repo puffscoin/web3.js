@@ -44,13 +44,13 @@ abstractSocketProvider.sendBatch(
 );
 
 // $ExpectType Promise<string>
-abstractSocketProvider.subscribe('eth_subscribe', 'logs', []);
+abstractSocketProvider.subscribe('puffs_subscribe', 'logs', []);
 
 // $ExpectType Promise<boolean>
-abstractSocketProvider.unsubscribe('subId', 'eth_unsubscribe');
+abstractSocketProvider.unsubscribe('subId', 'puffs_unsubscribe');
 
 // $ExpectType Promise<boolean>
-abstractSocketProvider.clearSubscriptions('eth_unsubscribe');
+abstractSocketProvider.clearSubscriptions('puffs_unsubscribe');
 
 // $ExpectType void
 abstractSocketProvider.on('type', () => {});
