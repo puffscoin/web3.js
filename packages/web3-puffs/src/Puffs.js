@@ -22,7 +22,7 @@
 
 import {AbstractWeb3Module} from 'web3-core';
 
-export default class Eth extends AbstractWeb3Module {
+export default class Puffs extends AbstractWeb3Module {
     /**
      * @param {Web3PuffscoinProvider|HttpProvider|WebsocketProvider|IpcProvider|String} provider
      * @param {MethodFactory} methodFactory
