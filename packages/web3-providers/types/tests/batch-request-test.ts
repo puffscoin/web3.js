@@ -31,7 +31,7 @@ const batchRequest = new BatchRequest(
 );
 
 // $ExpectType void
-batchRequest.add(new AbstractMethod('eth_coinbase', 1, Utils, formatters, new AbstractWeb3Module('http://localhost:7545')));
+batchRequest.add(new AbstractMethod('puffs_coinbase', 1, Utils, formatters, new AbstractWeb3Module('http://localhost:11363')));
 
 // $ExpectType Promise<{ methods: AbstractMethod[]; response: any[]; } | Error[]>
 batchRequest.execute();
