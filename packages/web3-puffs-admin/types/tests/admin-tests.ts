@@ -118,10 +118,10 @@ admin.startRPC(null, 11363, "");
 admin.startRPC(null, 11363, "", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startRPC(null, 11363, null, "eth,web3,net");
+admin.startRPC(null, 11363, null, "puffs,web3,net");
 
 // $ExpectType Promise<boolean>
-admin.startRPC(null, 11363, "eth,web3,net", null, (error: Error, result: boolean) => {});
+admin.startRPC(null, 11363, "puffs,web3,net", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
 admin.startRPC(null, null, "", "puffs,web3,net");
@@ -217,7 +217,7 @@ admin.startWS(null, 11364, "");
 admin.startWS(null, 11364, "", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startWS(null, 11364, null, "eth,web3,net");
+admin.startWS(null, 11364, null, "puffs,web3,net");
 
 // $ExpectType Promise<boolean>
 admin.startWS(null, 11364, "puffs,web3,net", null, (error: Error, result: boolean) => {});
@@ -235,7 +235,7 @@ admin.startWS("127.0.0.1", 11364, "");
 admin.startWS("127.0.0.1", 11364, "", null, (error: Error, result: boolean) => {});
 
 // $ExpectType Promise<boolean>
-admin.startWS("127.0.0.1", 11364, null, "eth,net,web3");
+admin.startWS("127.0.0.1", 11364, null, "puffs,net,web3");
 
 // $ExpectType Promise<boolean>
 admin.startWS("127.0.0.1", 11364, "puffs,net,web3", null, (error: Error, result: boolean) => {});
