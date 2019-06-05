@@ -56,6 +56,6 @@ describe('PuffsSignTransactionMethodTest', () => {
         method.parameters = [{}];
         method.execute();
 
-        expect(moduleInstanceMock.currentProvider.send).toHaveBeenCalledWith('eth_signTransaction', method.parameters);
+        expect(moduleInstanceMock.currentProvider.send).toHaveBeenCalledWith('puffs_signTransaction', method.parameters);
     });
 });
