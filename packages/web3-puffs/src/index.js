@@ -54,7 +54,7 @@ export function TransactionSigner() {
  * @param {Net} net
  * @param {Object} options
  *
- * @returns {Eth}
+ * @returns {Puffs}
  * @constructor
  */
 export function Puffs(provider, net = null, options = {}) {
