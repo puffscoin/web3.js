@@ -12,7 +12,7 @@ describe('GetBlockUncleCountMethodTest', () => {
     });
 
     it('constructor check', () => {
-        expect(getBlockUncleCountMethod.rpcMethod).toEqual('eth_getUncleCountByBlockNumber');
+        expect(getBlockUncleCountMethod.rpcMethod).toEqual('puffs_getUncleCountByBlockNumber');
     });
 
     it('calls execute with hash', () => {
@@ -20,7 +20,7 @@ describe('GetBlockUncleCountMethodTest', () => {
 
         getBlockUncleCountMethod.beforeExecution({});
 
-        expect(getBlockUncleCountMethod.rpcMethod).toEqual('eth_getUncleCountByBlockHash');
+        expect(getBlockUncleCountMethod.rpcMethod).toEqual('puffs_getUncleCountByBlockHash');
     });
 
     it('calls execute with number', () => {
@@ -28,6 +28,6 @@ describe('GetBlockUncleCountMethodTest', () => {
 
         getBlockUncleCountMethod.beforeExecution({});
 
-        expect(getBlockUncleCountMethod.rpcMethod).toEqual('eth_getUncleCountByBlockNumber');
+        expect(getBlockUncleCountMethod.rpcMethod).toEqual('puffs_getUncleCountByBlockNumber');
     });
 });
