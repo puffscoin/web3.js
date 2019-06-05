@@ -64,7 +64,7 @@ import {ProviderResolver, BatchRequest} 'web3-providers';
 const provider = new ProviderResolver().resolve('ws://localhost:11364');
 const batchRequest = new BatchRequest(provider);
 
-batchRequest.add(web3.eth.getBalance.request(
+batchRequest.add(web3.puffs.getBalance.request(
     '0x0000000000000000000000000000000000000000',
     'latest',
     callback
