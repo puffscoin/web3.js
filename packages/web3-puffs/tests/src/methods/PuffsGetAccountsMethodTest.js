@@ -6,7 +6,7 @@ import PuffsGetAccountsMethod from '../../../src/methods/PuffsGetAccountsMethod'
 jest.mock('web3-core');
 
 /**
- * EthGetAccountsMethod test
+ * PuffsGetAccountsMethod test
  */
 describe('PuffsGetAccountsMethodTest', () => {
     let method, moduleInstanceMock, accountsMock;
