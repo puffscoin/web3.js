@@ -104,7 +104,7 @@ describe('UtilsTest', () => {
 
         expect(fromWei('1000000000000000000', 'finney')).toEqual('1000');
 
-        expect(fromWei('1000000000000000000', 'ether')).toEqual('1');
+        expect(fromWei('1000000000000000000', 'puffs')).toEqual('1');
 
         expect(fromWei('1000000000000000000', 'kether')).toEqual('0.001');
 
@@ -510,7 +510,7 @@ describe('UtilsTest', () => {
 
         expect(toWei('1', 'finney')).toEqual('1000000000000000');
 
-        expect(toWei('1', 'ether')).toEqual('1000000000000000000');
+        expect(toWei('1', 'puffs')).toEqual('1000000000000000000');
 
         expect(toWei('1', 'kether')).toEqual('1000000000000000000000');
 
