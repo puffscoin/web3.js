@@ -25,8 +25,8 @@ import isObject from 'lodash/isObject';
 import isString from 'lodash/isString';
 import isArray from 'lodash/isArray';
 import * as utils from './Utils';
-import * as ethjsUnit from 'ethjs-unit';
-import Hash from 'eth-lib/lib/hash';
+import * as puffsjsUnit from 'puffsjs-unit';
+import Hash from 'puffs-lib/lib/hash';
 import randombytes from 'randombytes';
 
 export BN from 'bn.js';
@@ -160,17 +160,17 @@ export const asciiToHex = (value, length = 32) => {
  *
  * @method getUnitValue
  *
- * @param {String} unit the unit to convert to, default ether
+ * @param {String} unit the unit to convert to, default puffs
  *
  * @returns {BN} value of the unit (in Wei)
  * @throws error if the unit is not correct
  */
 export const getUnitValue = (unit) => {
-    unit = unit ? unit.toLowerCase() : 'ether';
-    if (!ethjsUnit.unitMap[unit]) {
+    unit = unit ? unit.toLowerCase() : 'puffs';
+    if (!puffsjsUnit.unitMap[unit]) {
         throw new Error(
             `This unit "${unit}" doesn't exist, please use the one of the following units${JSON.stringify(
-                ethjsUnit.unitMap,
+                puffsjsUnit.unitMap,
                 null,
                 2
             )}`
@@ -181,7 +181,7 @@ export const getUnitValue = (unit) => {
 };
 
 /**
- * Takes a number of wei and converts it to any other ether unit.
+ * Takes a number of wei and converts it to any other puffs unit.
  *
  * Possible units are:
  *   SI Short   SI Full        Effigy       Other
@@ -190,7 +190,7 @@ export const getUnitValue = (unit) => {
  * - gwei       nanoether      shannon      nano
  * - --         microether     szabo        micro
  * - --         milliether     finney       milli
- * - ether      --             --
+ * - puffs      --             --
  * - kether                    --           grand
  * - mether
  * - gether
@@ -199,7 +199,7 @@ export const getUnitValue = (unit) => {
  * @method fromWei
  *
  * @param {String|BN} number can be a BigNumber, number string or a HEX of a decimal
- * @param {String} unit the unit to convert to, default ether
+ * @param {String} unit the unit to convert to, default puffs
  *
  * @returns {String} Returns a string
  */
@@ -210,7 +210,7 @@ export const fromWei = (number, unit) => {
         throw new Error('Please pass numbers as strings or BN objects to avoid precision errors.');
     }
 
-    return utils.isBN(number) ? ethjsUnit.fromWei(number, unit) : ethjsUnit.fromWei(number, unit).toString(10);
+    return utils.isBN(number) ? puffsjsUnit.fromWei(number, unit) : puffsjsUnit.fromWei(number, unit).toString(10);
 };
 
 /**
@@ -224,7 +224,7 @@ export const fromWei = (number, unit) => {
  * - --         microether     szabo        micro
  * - --         microether     szabo        micro
  * - --         milliether     finney       milli
- * - ether      --             --
+ * - puffs      --             --
  * - kether                    --           grand
  * - mether
  * - gether
@@ -244,7 +244,7 @@ export const toWei = (number, unit) => {
         throw new Error('Please pass numbers as strings or BN objects to avoid precision errors.');
     }
 
-    return utils.isBN(number) ? ethjsUnit.toWei(number, unit) : ethjsUnit.toWei(number, unit).toString(10);
+    return utils.isBN(number) ? puffsjsUnit.toWei(number, unit) : puffsjsUnit.toWei(number, unit).toString(10);
 };
 
 /**
