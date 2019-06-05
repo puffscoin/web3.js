@@ -13,7 +13,7 @@ describe('GetUncleMethodTest', () => {
     });
 
     it('constructor check', () => {
-        expect(getUncleMethod.rpcMethod).toEqual('eth_getUncleByBlockNumberAndIndex');
+        expect(getUncleMethod.rpcMethod).toEqual('puffs_getUncleByBlockNumberAndIndex');
     });
 
     it('calls execute with hash', () => {
@@ -21,7 +21,7 @@ describe('GetUncleMethodTest', () => {
 
         getUncleMethod.beforeExecution({});
 
-        expect(getUncleMethod.rpcMethod).toEqual('eth_getUncleByBlockHashAndIndex');
+        expect(getUncleMethod.rpcMethod).toEqual('puffs_getUncleByBlockHashAndIndex');
     });
 
     it('calls execute with number', () => {
@@ -29,6 +29,6 @@ describe('GetUncleMethodTest', () => {
 
         getUncleMethod.beforeExecution({});
 
-        expect(getUncleMethod.rpcMethod).toEqual('eth_getUncleByBlockNumberAndIndex');
+        expect(getUncleMethod.rpcMethod).toEqual('puffs_getUncleByBlockNumberAndIndex');
     });
 });
