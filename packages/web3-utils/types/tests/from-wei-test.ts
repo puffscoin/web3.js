@@ -30,9 +30,9 @@ fromWei(bigNumber);
 // $ExpectType string
 fromWei('1');
 // $ExpectType string
-fromWei(bigNumber, 'ether');
+fromWei(bigNumber, 'puffs');
 // $ExpectType string
-fromWei('1', 'ether');
+fromWei('1', 'puffs');
 
 // $ExpectError
 fromWei(232);
